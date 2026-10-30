@@ -1,0 +1,12 @@
+# Legacy URLs the original aahasolutions.com redirected. Read automatically by Netlify and Cloudflare Pages;
+# for other hosts, recreate these as 301 rules in the host's own settings.
+/index.php                                                   /                                                    301
+/blog.php                                                    /software-development-blog-in-pondicherry.php        301
+/contact-us.php                                              /contact/                                            301
+/cloud-service-company-in-pondicherry.php                    /cloud-services-company/                             301
+/cloud-technology-service-company-in-pondicherry.php         /cloud-services-company/                             301
+/mobile-application-company-in-pondicherry.php               /mobile-app-development-company/                     301
+/web-application-company-in-pondicherry.php                  /web-application-development-company/                301
+/web-development-company-in-pondicherry.php                  /web-application-development-company/                301
+/crm-development-company-in-pondicherry.php                  /crm-development-company/                            301
+/custom-software-development-company-in-pondicherry.php      /custom-software-development-company/                301

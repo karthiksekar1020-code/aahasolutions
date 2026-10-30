@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trending Development of Software – AAHA Solutions</title>
+  <meta name="description" content="With so much happening in the world of technology, we are expecting some exciting software development trends in 2020. The Rise of AI Artificial intelligence (AI) is already being used for a number of...">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="icon" href="/assets/images/favicon2.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Poppins', 'Inter', sans-serif; 
+      background: #fff; 
+      color: #334155; 
+      margin: 0; 
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    /* ── TOPBAR ── */
+    .bp-topbar { 
+      background: #0f172a; 
+      padding: 16px 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      border-bottom: 1px solid #1e293b; 
+    }
+    .bp-topbar-inner { 
+      max-width: 860px; 
+      margin: 0 auto; 
+      padding: 0 24px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .bp-brand { 
+      font-size: 1.2rem; 
+      font-weight: 800; 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: -0.02em;
+    }
+    .bp-brand span { 
+      color: #82C341; 
+    }
+    .bp-back { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 7px; 
+      color: #cbd5e1;
+      font-size: 15px; 
+      font-weight: 600;
+      text-decoration: none; 
+      padding: 7px 16px; 
+      border-radius: 8px;
+      border: 1px solid #334155; 
+      background: rgba(255,255,255,0.03);
+      transition: all .2s ease; 
+      cursor: pointer;
+    }
+    .bp-back:hover { 
+      color: #fff; 
+      border-color: #82C341; 
+      background: rgba(130,195,65,0.12);
+      text-decoration: none; 
+    }
+
+    /* ── CONTAINER ── */
+    .bp-container { 
+      max-width: 840px; 
+      margin: 0 auto; 
+      padding: 50px 24px 90px; 
+    }
+
+    /* ── HEADER ── */
+    .bp-header { 
+      margin-bottom: 32px; 
+    }
+    .bp-cat { 
+      display: inline-block; 
+      background: rgba(130,195,65,.12); 
+      color: #3b6e15;
+      font-size: 14px; 
+      font-weight: 700; 
+      padding: 5px 16px; 
+      border-radius: 20px;
+      border: 1px solid rgba(130,195,65,.3); 
+      margin-bottom: 18px; 
+      letter-spacing: .4px; 
+      text-transform: uppercase; 
+    }
+    .bp-title { 
+      font-size: 36px; 
+      font-weight: 800; 
+      color: #0f172a;
+      line-height: 1.25; 
+      margin: 0 0 20px; 
+      letter-spacing: -0.02em; 
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+    .bp-meta { 
+      display: flex; 
+      gap: 22px; 
+      flex-wrap: wrap; 
+      color: #475569; 
+      font-size: 15px; 
+      font-weight: 500; 
+    }
+    .bp-meta span { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .bp-featured-img { 
+      margin-bottom: 44px; 
+      width: 100%; 
+    }
+    .bp-featured-img img { 
+      width: 100%; 
+      max-height: 480px; 
+      object-fit: cover;
+      border-radius: 12px; 
+      box-shadow: 0 6px 25px rgba(0,0,0,.08); 
+      display: block; 
+    }
+
+    /* ── INSIDE ARTICLE CONTENT ── */
+    .bp-body { 
+      padding: 0; 
+    }
+    .bp-content { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important; 
+    }
+    
+    /* Headings inside content */
+    .bp-content h2, .bp-content h3, .bp-content h4 { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 800 !important; 
+      color: #0f172a !important; 
+      letter-spacing: -0.02em !important; 
+      line-height: 1.35 !important; 
+    }
+    .bp-content h2 { 
+      font-size: 32px !important; 
+      margin: 45px 0 18px !important; 
+    }
+    .bp-content h3 { 
+      font-size: 26px !important; 
+      margin: 38px 0 16px !important; 
+    }
+    .bp-content h4 { 
+      font-size: 22px !important; 
+      margin: 30px 0 14px !important; 
+    }
+    
+    .bp-content p,
+    .bp-content span,
+    .bp-content div { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important;
+    }
+
+    .bp-content p {
+      margin-bottom: 26px !important; 
+    }
+
+    .bp-content strong,
+    .bp-content b { 
+      color: #0f172a !important; 
+      font-weight: 700 !important; 
+    }
+    .bp-content a { 
+      color: #2563eb !important; 
+      text-decoration: underline !important; 
+    }
+    .bp-content a:hover { 
+      color: #1d4ed8 !important; 
+      text-decoration: none !important; 
+    }
+    
+    /* Quotes */
+    .bp-content blockquote, 
+    .bp-content p > em:only-child, 
+    .bp-content p > i:only-child { 
+      font-style: italic; 
+      font-size: 21px !important; 
+      color: #1e293b !important; 
+      line-height: 1.8 !important; 
+      border-left: 4px solid #82C341 !important; 
+      padding-left: 24px !important; 
+      margin: 32px 0 !important; 
+      display: block;
+      background: #f8fafc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    /* Lists */
+    .bp-content ul, .bp-content ol { 
+      margin: 0 0 26px 30px; 
+      font-size: 21px !important;
+      line-height: 1.85 !important;
+    }
+    .bp-content li { 
+      margin-bottom: 12px; 
+      color: #1e293b !important;
+      font-size: 21px !important;
+    }
+
+    /* ── FOOTER BAR ── */
+    .bp-footer-bar { 
+      border-top: 1px solid #e2e8f0; 
+      padding: 34px 0 0; 
+      margin-top: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+    .bp-back-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      background: #f8fafc;
+      color: #334155; 
+      padding: 11px 22px; 
+      border-radius: 10px; 
+      font-size: 15px;
+      font-weight: 700; 
+      text-decoration: none; 
+      transition: all .2s ease; 
+      border: 1px solid #cbd5e1; 
+      cursor: pointer;
+    }
+    .bp-back-btn:hover { 
+      background: #82C341; 
+      border-color: #82C341;
+      color: #fff; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(130,195,65,0.35);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="bp-topbar">
+  <div class="bp-topbar-inner">
+    <a href="/index.php" class="bp-brand">AAHA <span>Solutions</span></a>
+    <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back">← Back</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="bp-container">
+  <div class="bp-header">
+    <div class="bp-cat">software trends</div>
+    <h1 class="bp-title">Trending Development of Software</h1>
+    <div class="bp-meta">
+      <span><i class="fas fa-calendar-alt" style="color: #82C341; margin-right: 4px;"></i> 24 March 2020</span>
+      <span><i class="fas fa-user" style="color: #82C341; margin-right: 4px;"></i> Admin</span>
+    </div>
+  </div>
+
+      <div class="bp-featured-img">
+      <img src="/assets/images/blog/trending-development-of-software-1781091351.jpg" alt="Trending Development of Software" onerror="this.parentElement.style.display='none';">
+    </div>
+  
+  <div class="bp-body">
+    <article class="bp-content">
+      <p>With so much happening in the world of technology, we are expecting some exciting software development trends in 2020.</p>
+<h2>The Rise of AI</h2>
+<p><a href="https://aahasolutions.com/artificial-intelligence-company-in-pondicherry.html">Artificial intelligence</a> (AI) is already being used for a number of jobs that require enhanced analytical skill, or that need to process large amounts of information with a high degree of accuracy.</p>
+<p>Some of these roles include helping doctors with diagnoses, supporting businesses with customer relationship management via chatbots, as well as providing technology for autonomous vehicles.</p>
+<p>In 2020, we are already embarking on a number of AI-projects, such as predicting the measurement of surgical implants based on x-rays. Software development companies are continuing to use automated testing, but this year we will see a lot of other aspects of software development, like code generation, being undertaken by AI.</p>
+<p>AI is predicted to be one of the bigger software development trends of 2020, with more tasks being assigned to computers for higher accuracy, reliability, and speed.</p>
+<h2>Blockchain</h2>
+<p>Blockchain technology may have been the reason why bitcoin became so popular, but it is no longer restricted to this single use.</p>
+<p>We previously discussed how blockchain is going to help secure Internet of Things (IoT) networks because of the data security it offers. In addition, it can also be used to create smart contracts and provide transparency to business transactions. In fact, it might be one of the fastest growing software development trends in 2020.</p>
+<h2>The Internet of Things</h2>
+<p><a href="https://aahasolutions.com/iot-development-company-in-pondicherry.html">IoT</a>refers to ‘smart’ objects that are connected through a network, allowing them to communicate with each other. These include smart fridges, virtual assistants, and in the near future, autonomous vehicles. According to this report, we should see over 30 billion IoT devices in use in 2020. If you intend to stay ahead of the game, this might be a software development trend you invest in for your business.</p>
+<h2>Progressive Web Apps</h2>
+<p>Progressive Web Apps (PWAs) are web pages that are designed to look like a <a href="https://aahasolutions.com/blog/2020/02/06/top-mobile-app-development-company-in-pondicherry/">mobile app</a> – giving users the best of both worlds. Since they are built as a web page, they have a larger pool of plugins, ecosystem, and community to rely on. They are also easier to build and deploy than a native<a href="https://aahasolutions.com/mobile-application-company-in-pondicherry.php"> mobile application.</a></p>
+<p>In addition, they use less data, don’t need regular updates, can be optimised for search, and give your customers a better experience, through linkable resources, responsive design, app-like interactions, and offline services.</p>
+<h2>Cloud Services</h2>
+<p><a href="https://aahasolutions.com/cloud-technology-service-company-in-pondicherry.php">Cloud services</a> have been around for a while now, but it has slowly become more prevalent. In fact, two of the software development trends mentioned previously, IoT and Blockchain, actually rely on cloud computing. It is also an essential requirement for Edge computing too.</p>
+<p>In addition, there are other types of <a href="https://aahasolutions.com/blog/2019/12/05/what-is-cloud-computing-a-complete-guide/">cloud computing services</a> like Platform as a Service, Infrastructure as a Service, and Software as a Service.</p>
+<p>At DCSL Software we use <a href="https://aahasolutions.com/cloud-service-company-in-pondicherry.php">Microsoft Azure</a>,  but there are plenty of others emerging, making it one of the popular trends of 2020.</p>
+<h2>Conclusion</h2>
+<p>As you can see, <a href="https://aahasolutions.com/">software development trends in 2020</a> lean heavily towards quicker development and faster deployment. We are seeing more connectivity, which means there is a greater emphasis on developing security at the same time.</p>
+    </article>
+    
+    <div class="bp-footer-bar">
+      <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back-btn">← Back to Blog</a>
+      <span style="color:#64748b;font-size:14px">
+        © AAHA Solutions · 2026      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleGoBack(e) {
+  if (window.history.length > 1 && document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+    e.preventDefault();
+    window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Legacy servers migrating to a secure, auto-scaling cloud">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1512"/><stop offset="0.55" stop-color="#15362a"/><stop offset="1" stop-color="#1f4a35"/></linearGradient>
+    <linearGradient id="cloud" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8f59a"/><stop offset="1" stop-color="#75ae42"/></linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.45" r="0.5"><stop offset="0" stop-color="#75ae42" stop-opacity="0.45"/><stop offset="1" stop-color="#75ae42" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#75ae42" stroke-opacity="0.08"/></pattern>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c8f59a"/></marker>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+
+  <!-- legacy on-prem stack -->
+  <g transform="translate(70 120)">
+    <text x="60" y="-18" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#a7b8ae" letter-spacing="1.5">LEGACY</text>
+    <g fill="#1d332a" stroke="#3f6b4f" stroke-width="2">
+      <rect x="0" y="0" width="120" height="52" rx="10"/><rect x="0" y="66" width="120" height="52" rx="10"/><rect x="0" y="132" width="120" height="52" rx="10"/>
+    </g>
+    <g fill="#75ae42"><circle cx="20" cy="26" r="5"/><circle cx="20" cy="92" r="5"/><circle cx="20" cy="158" r="5"/></g>
+    <g stroke="#3f6b4f" stroke-width="3" stroke-linecap="round"><path d="M42 26H98M42 92H98M42 158H98"/></g>
+  </g>
+
+  <!-- migration paths -->
+  <g fill="none" stroke="#c8f59a" stroke-width="3" stroke-dasharray="9 9" stroke-linecap="round" marker-end="url(#arr)">
+    <path d="M200 146C300 146 330 200 420 212"/>
+    <path d="M200 212H410"/>
+    <path d="M200 278C300 278 330 232 420 222"/>
+  </g>
+
+  <!-- cloud -->
+  <g transform="translate(410 70)">
+    <path d="M110 250c-48 0-86-30-86-70 0-34 28-62 66-68 8-46 52-82 108-82 58 0 104 36 112 84 44 6 76 36 76 74 0 36-34 62-80 62z" fill="url(#cloud)"/>
+    <path d="M110 250c-48 0-86-30-86-70 0-34 28-62 66-68 8-46 52-82 108-82 58 0 104 36 112 84 44 6 76 36 76 74 0 36-34 62-80 62z" fill="none" stroke="#fff" stroke-opacity="0.35" stroke-width="3"/>
+    <!-- shield -->
+    <path d="M200 84l56 20v44c0 34-22 56-56 70c-34-14-56-36-56-70v-44z" fill="#0a1512"/>
+    <path d="M172 150l20 20 38-42" fill="none" stroke="#c8f59a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- scale bars (auto-scaling) -->
+  <g transform="translate(618 362)" fill="#75ae42">
+    <rect x="0" y="30" width="16" height="30" rx="4" opacity="0.5"/><rect x="26" y="16" width="16" height="44" rx="4" opacity="0.7"/><rect x="52" y="0" width="16" height="60" rx="4"/>
+  </g>
+  <text x="620" y="352" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#c8f59a" letter-spacing="1.2">AUTO-SCALING</text>
+</svg>

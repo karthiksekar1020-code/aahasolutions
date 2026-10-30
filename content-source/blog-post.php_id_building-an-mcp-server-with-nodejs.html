@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Building an MCP Server with Node.JS – AAHA Solutions</title>
+  <meta name="description" content="A large language model can generate responses from its available knowledge, but it cannot directly access every external system. The Model Context Protocol (MCP) provides a standardized way for AI applications to communicate with external tools and resources.">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="icon" href="/assets/images/favicon2.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Poppins', 'Inter', sans-serif; 
+      background: #fff; 
+      color: #334155; 
+      margin: 0; 
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    /* ── TOPBAR ── */
+    .bp-topbar { 
+      background: #0f172a; 
+      padding: 16px 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      border-bottom: 1px solid #1e293b; 
+    }
+    .bp-topbar-inner { 
+      max-width: 860px; 
+      margin: 0 auto; 
+      padding: 0 24px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .bp-brand { 
+      font-size: 1.2rem; 
+      font-weight: 800; 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: -0.02em;
+    }
+    .bp-brand span { 
+      color: #82C341; 
+    }
+    .bp-back { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 7px; 
+      color: #cbd5e1;
+      font-size: 15px; 
+      font-weight: 600;
+      text-decoration: none; 
+      padding: 7px 16px; 
+      border-radius: 8px;
+      border: 1px solid #334155; 
+      background: rgba(255,255,255,0.03);
+      transition: all .2s ease; 
+      cursor: pointer;
+    }
+    .bp-back:hover { 
+      color: #fff; 
+      border-color: #82C341; 
+      background: rgba(130,195,65,0.12);
+      text-decoration: none; 
+    }
+
+    /* ── CONTAINER ── */
+    .bp-container { 
+      max-width: 840px; 
+      margin: 0 auto; 
+      padding: 50px 24px 90px; 
+    }
+
+    /* ── HEADER ── */
+    .bp-header { 
+      margin-bottom: 32px; 
+    }
+    .bp-cat { 
+      display: inline-block; 
+      background: rgba(130,195,65,.12); 
+      color: #3b6e15;
+      font-size: 14px; 
+      font-weight: 700; 
+      padding: 5px 16px; 
+      border-radius: 20px;
+      border: 1px solid rgba(130,195,65,.3); 
+      margin-bottom: 18px; 
+      letter-spacing: .4px; 
+      text-transform: uppercase; 
+    }
+    .bp-title { 
+      font-size: 36px; 
+      font-weight: 800; 
+      color: #0f172a;
+      line-height: 1.25; 
+      margin: 0 0 20px; 
+      letter-spacing: -0.02em; 
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+    .bp-meta { 
+      display: flex; 
+      gap: 22px; 
+      flex-wrap: wrap; 
+      color: #475569; 
+      font-size: 15px; 
+      font-weight: 500; 
+    }
+    .bp-meta span { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .bp-featured-img { 
+      margin-bottom: 44px; 
+      width: 100%; 
+    }
+    .bp-featured-img img { 
+      width: 100%; 
+      max-height: 480px; 
+      object-fit: cover;
+      border-radius: 12px; 
+      box-shadow: 0 6px 25px rgba(0,0,0,.08); 
+      display: block; 
+    }
+
+    /* ── INSIDE ARTICLE CONTENT ── */
+    .bp-body { 
+      padding: 0; 
+    }
+    .bp-content { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important; 
+    }
+    
+    /* Headings inside content */
+    .bp-content h2, .bp-content h3, .bp-content h4 { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 800 !important; 
+      color: #0f172a !important; 
+      letter-spacing: -0.02em !important; 
+      line-height: 1.35 !important; 
+    }
+    .bp-content h2 { 
+      font-size: 32px !important; 
+      margin: 45px 0 18px !important; 
+    }
+    .bp-content h3 { 
+      font-size: 26px !important; 
+      margin: 38px 0 16px !important; 
+    }
+    .bp-content h4 { 
+      font-size: 22px !important; 
+      margin: 30px 0 14px !important; 
+    }
+    
+    .bp-content p,
+    .bp-content span,
+    .bp-content div { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important;
+    }
+
+    .bp-content p {
+      margin-bottom: 26px !important; 
+    }
+
+    .bp-content strong,
+    .bp-content b { 
+      color: #0f172a !important; 
+      font-weight: 700 !important; 
+    }
+    .bp-content a { 
+      color: #2563eb !important; 
+      text-decoration: underline !important; 
+    }
+    .bp-content a:hover { 
+      color: #1d4ed8 !important; 
+      text-decoration: none !important; 
+    }
+    
+    /* Quotes */
+    .bp-content blockquote, 
+    .bp-content p > em:only-child, 
+    .bp-content p > i:only-child { 
+      font-style: italic; 
+      font-size: 21px !important; 
+      color: #1e293b !important; 
+      line-height: 1.8 !important; 
+      border-left: 4px solid #82C341 !important; 
+      padding-left: 24px !important; 
+      margin: 32px 0 !important; 
+      display: block;
+      background: #f8fafc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    /* Lists */
+    .bp-content ul, .bp-content ol { 
+      margin: 0 0 26px 30px; 
+      font-size: 21px !important;
+      line-height: 1.85 !important;
+    }
+    .bp-content li { 
+      margin-bottom: 12px; 
+      color: #1e293b !important;
+      font-size: 21px !important;
+    }
+
+    /* ── FOOTER BAR ── */
+    .bp-footer-bar { 
+      border-top: 1px solid #e2e8f0; 
+      padding: 34px 0 0; 
+      margin-top: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+    .bp-back-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      background: #f8fafc;
+      color: #334155; 
+      padding: 11px 22px; 
+      border-radius: 10px; 
+      font-size: 15px;
+      font-weight: 700; 
+      text-decoration: none; 
+      transition: all .2s ease; 
+      border: 1px solid #cbd5e1; 
+      cursor: pointer;
+    }
+    .bp-back-btn:hover { 
+      background: #82C341; 
+      border-color: #82C341;
+      color: #fff; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(130,195,65,0.35);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="bp-topbar">
+  <div class="bp-topbar-inner">
+    <a href="/index.php" class="bp-brand">AAHA <span>Solutions</span></a>
+    <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back">← Back</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="bp-container">
+  <div class="bp-header">
+    <div class="bp-cat">General</div>
+    <h1 class="bp-title">Building an MCP Server with Node.JS</h1>
+    <div class="bp-meta">
+      <span><i class="fas fa-calendar-alt" style="color: #82C341; margin-right: 4px;"></i> 27 August 2026</span>
+      <span><i class="fas fa-user" style="color: #82C341; margin-right: 4px;"></i> admin</span>
+    </div>
+  </div>
+
+      <div class="bp-featured-img">
+      <img src="/assets/images/blog/building-an-mcp-server-with-nodejs-1793097562.jpeg" alt="Building an MCP Server with Node.JS" onerror="this.parentElement.style.display='none';">
+    </div>
+  
+  <div class="bp-body">
+    <article class="bp-content">
+      <h2>AI ENGINEERING · MCP ARCHITECTURE</h2><h2>Building an MCP Server with Node.js:</h2><h3>Connect AI to Real-World APIs</h3><h4>How does MCP connect AI to real-world systems?</h4><p>A large language model can generate responses from its available knowledge, but it cannot directly access every external system. The Model Context Protocol (MCP) provides a standardized way for AI applications to communicate with external tools and resources.</p><p>An MCP server acts as a bridge between an AI application and systems such as APIs, databases, files, and business applications. When the AI needs information from a connected system, it can use an MCP tool. The server communicates with that system and returns the result.</p><p>MCP allows AI applications to work with current information from connected services.</p><h4>What is an MCP server?</h4><p>An MCP server is a program that exposes tools, resources, and other capabilities for an MCP client to discover and use. A Node.js server can provide capabilities such as calling external APIs, searching databases, retrieving customer information, checking inventory, and accessing business data.</p><p>The server manages communication with external services while the host application and its MCP client coordinate how those capabilities are presented to the model.</p><h4>What are the main components of MCP?</h4><p>An MCP architecture separates responsibilities across the host, client, and server.</p><p><strong>• MCP Host — the AI application where the user interacts with the model.</strong></p><p><strong>• MCP Client — the protocol component that maintains communication with an MCP server and exposes the server's capabilities to the host.</strong></p><p><strong>• MCP Server — the component that exposes tools and resources and communicates with external systems.</strong></p><h4>The MCP Client: the missing link</h4><p>The MCP client is more than a network connection. It provides the controlled interface between an AI host and an MCP server. It establishes a transport, negotiates or discovers the server's capabilities according to the supported protocol revision, sends MCP requests, receives structured results, and manages the connection lifecycle.</p><p>A typical workflow is:</p><p>User → AI Host → MCP Client → MCP Server → External API → MCP Client → AI Host → User</p><p>This separation keeps model interaction, protocol communication, and external business logic independent.</p><h3>Understanding the MCP Client</h3><h4>What does an MCP client actually do?</h4><p>A client connects a host application to one MCP server at a time and provides the operations required to discover and use that server's capabilities. In a TypeScript implementation, the high-level Client class works with a pluggable transport.</p><p><strong>• Connection management — creates and closes the protocol connection.</strong></p><p><strong>• Capability discovery — obtains the tools, resources, prompts, and capabilities exposed by the server.</strong></p><p><strong>• Tool execution — sends a tool name and validated arguments to the server and receives the result.</strong></p><p><strong>• Resource access — requests resource data when the host needs additional context.</strong></p><p><strong>• Prompt access — retrieves server-provided prompt templates when supported.</strong></p><p><strong>• Error handling — surfaces protocol, transport, validation, and server-side failures in a structured form.</strong></p><h4>How does the client connect to a server?</h4><p>The transport is the communication layer used by the client. For local integrations, stdio is commonly used when the client launches the MCP server as a child process. For remote servers, Streamable HTTP is the modern transport supported by the current TypeScript SDK. Legacy HTTP+SSE remains relevant only for compatibility with older implementations.</p><p>The connection lifecycle should be treated as a managed resource: create the client, configure the transport, connect, perform discovery and operations, handle failures, and close the client when the application shuts down.</p><h4>How does tool discovery work?</h4><p>After connecting, the client can request the server's available tools. Each tool should expose a clear name, description, and input schema. The host can provide that metadata to a model so the model can decide whether a tool is appropriate for the user's request.</p><p>A simplified decision flow is:</p><p>User request → Model identifies a required capability → Host asks MCP Client to call the selected tool → Client sends MCP request → Server executes the tool → Client returns structured result → Model generates the response</p><h4>Why is this separation important?</h4><p>The model does not need to know how an external API works. The server owns API credentials and business logic, while the client owns protocol communication. This separation reduces coupling and makes it easier to replace a server, change a transport, or connect the same server to different compatible hosts.</p><h3>Building an MCP Client with Node.js</h3><h4>Current TypeScript SDK approach</h4><p>The current MCP TypeScript SDK v2 provides a dedicated client package. A basic client consists of a Client instance plus a transport. For a remote MCP endpoint, StreamableHTTPClientTransport can be used; for a local Node.js process, StdioClientTransport can spawn the server and communicate over stdin/stdout.</p><p>import { Client, StreamableHTTPClientTransport } from &quot;@modelcontextprotocol/client&quot;;const client = new Client({  name: &quot;node-mcp-client&quot;,  version: &quot;1.0.0&quot;});const transport = new StreamableHTTPClientTransport(  new URL(&quot;http://localhost:3000/mcp&quot;));await client.connect(transport);</p><h4>Discover and call a tool</h4><p>Once connected, the client can list the tools exposed by the server and invoke a selected tool with the required arguments.</p><p>const tools = await client.listTools();console.log(&quot;Available tools:&quot;, tools.tools.map(t =&gt; t.name));const result = await client.callTool({  name: &quot;get_customer&quot;,  arguments: { customerId: &quot;CUST-1001&quot; }});console.log(result);</p><p>The client should not embed the server's private API key. If get_customer requires authentication, the server should use its own protected credentials when contacting the business API. The client receives only the information that the server intentionally returns.</p><h4>Local stdio client</h4><p>For a local server process, the client can use StdioClientTransport. The transport starts the child process and communicates with it through standard input and output.</p><p>import { Client } from &quot;@modelcontextprotocol/client&quot;;import { StdioClientTransport } from &quot;@modelcontextprotocol/client/stdio&quot;;const client = new Client({  name: &quot;local-mcp-client&quot;,  version: &quot;1.0.0&quot;});const transport = new StdioClientTransport({  command: &quot;node&quot;,  args: [&quot;server.js&quot;]});await client.connect(transport);</p><p>The important design principle is that application code talks to the MCP Client API instead of manually constructing protocol messages wherever possible. This keeps protocol details in one controlled layer.</p><h4>Working with more than tools</h4><p>A capable client can also use listResources and readResource for contextual data, and listPrompts and getPrompt for server-provided prompt templates. These operations allow the host to combine structured business actions with contextual information.</p><h3>Reliable MCP Client Design</h3><h4>How should errors be handled?</h4><p>Failures can occur during connection, capability discovery, argument validation, transport communication, or tool execution. A production client should distinguish these cases so the host can provide a useful response instead of hiding the original failure.</p><p><strong>• Connection failure — verify the endpoint, process command, transport configuration, and server availability.</strong></p><p><strong>• Invalid arguments — validate required fields before sending a tool call.</strong></p><p><strong>• Authentication failure — keep credentials outside model-visible input and report authorization failures clearly.</strong></p><p><strong>• Tool failure — preserve the server's structured error information when possible.</strong></p><p><strong>• Timeout or network failure — apply bounded timeouts and retry only operations that are safe to retry.</strong></p><h4>Security considerations for MCP clients</h4><p><strong>• Treat tool descriptions and returned content as untrusted input; do not assume a tool result is safe merely because it came through MCP.</strong></p><p><strong>• Request only the capabilities the host actually needs.</strong></p><p><strong>• Use secure transport and appropriate authorization for remote servers.</strong></p><p><strong>• Do not place API keys, access tokens, or passwords in prompts, tool arguments, logs, or model-visible messages unless there is a specific security design for doing so.</strong></p><p><strong>• Require explicit user confirmation for high-impact actions such as payments, destructive changes, or sensitive data operations.</strong></p><h4>How should an MCP client be tested?</h4><p>Testing should cover the complete host-to-client-to-server workflow rather than only testing a single function.</p><p><strong>• Connection testing — confirm that the client can establish and close the transport correctly.</strong></p><p><strong>• Discovery testing — verify that expected tools, resources, and prompts are visible.</strong></p><p><strong>• Tool-call testing — verify correct names, arguments, results, and error states.</strong></p><p><strong>• Failure testing — simulate unavailable servers, invalid inputs, authentication errors, and timeouts.</strong></p><p><strong>• Security testing — verify that secrets are not exposed and sensitive operations are appropriately controlled.</strong></p><h4>What is the main advantage of an MCP client?</h4><p>The MCP client gives an AI host a consistent protocol boundary for connecting to MCP servers. Instead of building a separate integration mechanism for every external service, the host can use standardized client operations while each server owns its own business logic and external-system integration.</p><h3>Conclusion</h3><p>An MCP server connects AI applications to real-world tools and services, while the MCP client provides the controlled communication layer between the host and server. A well-designed Node.js client manages transport, capability discovery, tool execution, resource access, errors, and lifecycle concerns without exposing server-side credentials.</p><p>The key principles are simple: keep responsibilities separated, use the appropriate transport, discover capabilities before using them, validate inputs, protect credentials, handle failures explicitly, and test the complete workflow. With these practices, MCP clients can make AI applications more reliable, reusable, and easier to integrate with real-world systems.</p>    </article>
+    
+    <div class="bp-footer-bar">
+      <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back-btn">← Back to Blog</a>
+      <span style="color:#64748b;font-size:14px">
+        © AAHA Solutions · 2026      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleGoBack(e) {
+  if (window.history.length > 1 && document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+    e.preventDefault();
+    window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

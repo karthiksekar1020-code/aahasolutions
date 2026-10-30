@@ -1,0 +1,1016 @@
+[
+ {
+  "path": "/",
+  "status": 200,
+  "file": "home.html",
+  "bytes": 134981
+ },
+ {
+  "path": "/../",
+  "status": 200,
+  "file": ".._.html",
+  "bytes": 134981
+ },
+ {
+  "path": "/../application-services-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._application-services-company-in-pondicherry.php.html",
+  "bytes": 62948
+ },
+ {
+  "path": "/../artificial-intelligence-company-in-pondicherry.html",
+  "status": 404,
+  "file": ".._artificial-intelligence-company-in-pondicherry.html.html",
+  "bytes": 13
+ },
+ {
+  "path": "/../assets/css/services.css?v=2",
+  "status": 200,
+  "file": ".._assets_css_services.css_v_2.html",
+  "bytes": 97141
+ },
+ {
+  "path": "/../blockchain-development-company-in-pondicherry.html",
+  "status": 404,
+  "file": ".._blockchain-development-company-in-pondicherry.html.html",
+  "bytes": 13
+ },
+ {
+  "path": "/../blog",
+  "status": 500,
+  "file": ".._blog.html",
+  "bytes": 2765
+ },
+ {
+  "path": "/../chatbot-development-company-in-pondicherry.html",
+  "status": 404,
+  "file": ".._chatbot-development-company-in-pondicherry.html.html",
+  "bytes": 13
+ },
+ {
+  "path": "/../cloud-service-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._cloud-service-company-in-pondicherry.php.html",
+  "bytes": 77651
+ },
+ {
+  "path": "/../cloud-technology-service-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._cloud-technology-service-company-in-pondicherry.php.html",
+  "bytes": 77651
+ },
+ {
+  "path": "/../contact-us.php",
+  "status": 200,
+  "file": ".._contact-us.php.html",
+  "bytes": 64262
+ },
+ {
+  "path": "/../crm-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._crm-development-company-in-pondicherry.php.html",
+  "bytes": 73443
+ },
+ {
+  "path": "/../custom-software-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._custom-software-development-company-in-pondicherry.php.html",
+  "bytes": 68556
+ },
+ {
+  "path": "/../e-commerce-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._e-commerce-company-in-pondicherry.php.html",
+  "bytes": 66875
+ },
+ {
+  "path": "/../index.php",
+  "status": 200,
+  "file": ".._index.php.html",
+  "bytes": 135041
+ },
+ {
+  "path": "/../interactive-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._interactive-development-company-in-pondicherry.php.html",
+  "bytes": 61037
+ },
+ {
+  "path": "/../iot-development-company-in-pondicherry.html",
+  "status": 404,
+  "file": ".._iot-development-company-in-pondicherry.html.html",
+  "bytes": 13
+ },
+ {
+  "path": "/../it-internship-provider-in-pondicherry.php",
+  "status": 200,
+  "file": ".._it-internship-provider-in-pondicherry.php.html",
+  "bytes": 51851
+ },
+ {
+  "path": "/../machine-learning-development-company-in-pondicherry.html",
+  "status": 404,
+  "file": ".._machine-learning-development-company-in-pondicherry.html.html",
+  "bytes": 13
+ },
+ {
+  "path": "/../mobile-application-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._mobile-application-company-in-pondicherry.php.html",
+  "bytes": 73288
+ },
+ {
+  "path": "/../open-source-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._open-source-company-in-pondicherry.php.html",
+  "bytes": 74632
+ },
+ {
+  "path": "/../qa-testing-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._qa-testing-company-in-pondicherry.php.html",
+  "bytes": 69203
+ },
+ {
+  "path": "/../software-careers-in-pondicherry.php",
+  "status": 200,
+  "file": ".._software-careers-in-pondicherry.php.html",
+  "bytes": 48910
+ },
+ {
+  "path": "/../software-company-industrial-visit-pondicherry.php",
+  "status": 200,
+  "file": ".._software-company-industrial-visit-pondicherry.php.html",
+  "bytes": 61586
+ },
+ {
+  "path": "/../software-developement-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._software-developement-company-in-pondicherry.php.html",
+  "bytes": 56408
+ },
+ {
+  "path": "/../web-application-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._web-application-company-in-pondicherry.php.html",
+  "bytes": 73662
+ },
+ {
+  "path": "/../web-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": ".._web-development-company-in-pondicherry.php.html",
+  "bytes": 73662
+ },
+ {
+  "path": "/aahasolution",
+  "status": 404,
+  "file": "aahasolution.html",
+  "bytes": 13
+ },
+ {
+  "path": "/ai-development-company-india/",
+  "status": 200,
+  "file": "ai-development-company-india_.html",
+  "bytes": 81198
+ },
+ {
+  "path": "/application-services-company-in-pondicherry.php",
+  "status": 200,
+  "file": "application-services-company-in-pondicherry.php.html",
+  "bytes": 62948
+ },
+ {
+  "path": "/application-services-company-in-pondicherry.php/",
+  "status": 200,
+  "file": "application-services-company-in-pondicherry.php_.html",
+  "bytes": 62948
+ },
+ {
+  "path": "/application/android.php",
+  "status": 200,
+  "file": "application_android.php.html",
+  "bytes": 25008
+ },
+ {
+  "path": "/application/apache-solr.php",
+  "status": 200,
+  "file": "application_apache-solr.php.html",
+  "bytes": 26576
+ },
+ {
+  "path": "/application/aws.php",
+  "status": 200,
+  "file": "application_aws.php.html",
+  "bytes": 26494
+ },
+ {
+  "path": "/application/codeigniter.php",
+  "status": 200,
+  "file": "application_codeigniter.php.html",
+  "bytes": 26323
+ },
+ {
+  "path": "/application/django.php",
+  "status": 200,
+  "file": "application_django.php.html",
+  "bytes": 26810
+ },
+ {
+  "path": "/application/drupal.php",
+  "status": 200,
+  "file": "application_drupal.php.html",
+  "bytes": 26990
+ },
+ {
+  "path": "/application/joomla.php",
+  "status": 200,
+  "file": "application_joomla.php.html",
+  "bytes": 26422
+ },
+ {
+  "path": "/application/laravel.php",
+  "status": 200,
+  "file": "application_laravel.php.html",
+  "bytes": 25930
+ },
+ {
+  "path": "/application/magento.php",
+  "status": 200,
+  "file": "application_magento.php.html",
+  "bytes": 26252
+ },
+ {
+  "path": "/application/mean.php",
+  "status": 200,
+  "file": "application_mean.php.html",
+  "bytes": 26312
+ },
+ {
+  "path": "/application/moodle.php",
+  "status": 200,
+  "file": "application_moodle.php.html",
+  "bytes": 26502
+ },
+ {
+  "path": "/application/opencart.php",
+  "status": 200,
+  "file": "application_opencart.php.html",
+  "bytes": 26605
+ },
+ {
+  "path": "/application/phpbb.php",
+  "status": 200,
+  "file": "application_phpbb.php.html",
+  "bytes": 26423
+ },
+ {
+  "path": "/application/phpmyadmin.php",
+  "status": 200,
+  "file": "application_phpmyadmin.php.html",
+  "bytes": 27235
+ },
+ {
+  "path": "/application/prestashop.php",
+  "status": 200,
+  "file": "application_prestashop.php.html",
+  "bytes": 26030
+ },
+ {
+  "path": "/application/ruby.php",
+  "status": 200,
+  "file": "application_ruby.php.html",
+  "bytes": 27432
+ },
+ {
+  "path": "/application/sugarcrm.php",
+  "status": 200,
+  "file": "application_sugarcrm.php.html",
+  "bytes": 26448
+ },
+ {
+  "path": "/application/wordpress.php",
+  "status": 200,
+  "file": "application_wordpress.php.html",
+  "bytes": 26618
+ },
+ {
+  "path": "/application/zend.php",
+  "status": 200,
+  "file": "application_zend.php.html",
+  "bytes": 26230
+ },
+ {
+  "path": "/blockchain-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": "blockchain-development-company-in-pondicherry.php.html",
+  "bytes": 61043
+ },
+ {
+  "path": "/blockchain-development-company-in-pondicherry.php/",
+  "status": 200,
+  "file": "blockchain-development-company-in-pondicherry.php_.html",
+  "bytes": 61043
+ },
+ {
+  "path": "/blog-post.php?id=3-ways-ai-is-changing-the-medical-industry",
+  "status": 200,
+  "file": "blog-post.php_id_3-ways-ai-is-changing-the-medical-industry.html",
+  "bytes": 13205
+ },
+ {
+  "path": "/blog-post.php?id=5-things-to-avoid-when-developing-a-node-js-web-application",
+  "status": 200,
+  "file": "blog-post.php_id_5-things-to-avoid-when-developing-a-node-js-web-application.html",
+  "bytes": 16578
+ },
+ {
+  "path": "/blog-post.php?id=502",
+  "status": 200,
+  "file": "blog-post.php_id_502.html",
+  "bytes": 12980
+ },
+ {
+  "path": "/blog-post.php?id=527",
+  "status": 200,
+  "file": "blog-post.php_id_527.html",
+  "bytes": 20445
+ },
+ {
+  "path": "/blog-post.php?id=539",
+  "status": 200,
+  "file": "blog-post.php_id_539.html",
+  "bytes": 32681
+ },
+ {
+  "path": "/blog-post.php?id=5g-technology-iot",
+  "status": 200,
+  "file": "blog-post.php_id_5g-technology-iot.html",
+  "bytes": 16000
+ },
+ {
+  "path": "/blog-post.php?id=advantages-of-react-native",
+  "status": 200,
+  "file": "blog-post.php_id_advantages-of-react-native.html",
+  "bytes": 13443
+ },
+ {
+  "path": "/blog-post.php?id=ai-agents",
+  "status": 200,
+  "file": "blog-post.php_id_ai-agents.html",
+  "bytes": 20440
+ },
+ {
+  "path": "/blog-post.php?id=ai-hallucinations-corrected",
+  "status": 200,
+  "file": "blog-post.php_id_ai-hallucinations-corrected.html",
+  "bytes": 20764
+ },
+ {
+  "path": "/blog-post.php?id=ai-in-healthcare",
+  "status": 200,
+  "file": "blog-post.php_id_ai-in-healthcare.html",
+  "bytes": 18405
+ },
+ {
+  "path": "/blog-post.php?id=ai-memory-architectures",
+  "status": 200,
+  "file": "blog-post.php_id_ai-memory-architectures.html",
+  "bytes": 22390
+ },
+ {
+  "path": "/blog-post.php?id=analytics-of-things",
+  "status": 200,
+  "file": "blog-post.php_id_analytics-of-things.html",
+  "bytes": 12463
+ },
+ {
+  "path": "/blog-post.php?id=angular-vs-react",
+  "status": 200,
+  "file": "blog-post.php_id_angular-vs-react.html",
+  "bytes": 16190
+ },
+ {
+  "path": "/blog-post.php?id=apache-spark-for-big-data-project",
+  "status": 200,
+  "file": "blog-post.php_id_apache-spark-for-big-data-project.html",
+  "bytes": 13651
+ },
+ {
+  "path": "/blog-post.php?id=artificial-intelligence-a-simple-guide",
+  "status": 200,
+  "file": "blog-post.php_id_artificial-intelligence-a-simple-guide.html",
+  "bytes": 15253
+ },
+ {
+  "path": "/blog-post.php?id=automated-testing-on-projects-with-frequently-changing-code",
+  "status": 200,
+  "file": "blog-post.php_id_automated-testing-on-projects-with-frequently-changing-code.html",
+  "bytes": 15884
+ },
+ {
+  "path": "/blog-post.php?id=benefits-of-using-wordpress",
+  "status": 200,
+  "file": "blog-post.php_id_benefits-of-using-wordpress.html",
+  "bytes": 17584
+ },
+ {
+  "path": "/blog-post.php?id=best-languages-for-web-application-development-in-2021",
+  "status": 200,
+  "file": "blog-post.php_id_best-languages-for-web-application-development-in-2021.html",
+  "bytes": 24677
+ },
+ {
+  "path": "/blog-post.php?id=best-programming-languages-for-internet-of-things",
+  "status": 200,
+  "file": "blog-post.php_id_best-programming-languages-for-internet-of-things.html",
+  "bytes": 12640
+ },
+ {
+  "path": "/blog-post.php?id=beyond-the-hype",
+  "status": 200,
+  "file": "blog-post.php_id_beyond-the-hype.html",
+  "bytes": 14021
+ },
+ {
+  "path": "/blog-post.php?id=blockchain-in-small-medium-business",
+  "status": 200,
+  "file": "blog-post.php_id_blockchain-in-small-medium-business.html",
+  "bytes": 15619
+ },
+ {
+  "path": "/blog-post.php?id=bootstrap-web-development-company-in-india",
+  "status": 200,
+  "file": "blog-post.php_id_bootstrap-web-development-company-in-india.html",
+  "bytes": 14677
+ },
+ {
+  "path": "/blog-post.php?id=building-an-mcp-server-with-nodejs",
+  "status": 200,
+  "file": "blog-post.php_id_building-an-mcp-server-with-nodejs.html",
+  "bytes": 19863
+ },
+ {
+  "path": "/blog-post.php?id=business-in-online-presence",
+  "status": 200,
+  "file": "blog-post.php_id_business-in-online-presence.html",
+  "bytes": 15070
+ },
+ {
+  "path": "/blog-post.php?id=business-value-of-m2m",
+  "status": 200,
+  "file": "blog-post.php_id_business-value-of-m2m.html",
+  "bytes": 16724
+ },
+ {
+  "path": "/blog-post.php?id=convolutional-neural-networks",
+  "status": 200,
+  "file": "blog-post.php_id_convolutional-neural-networks.html",
+  "bytes": 13292
+ },
+ {
+  "path": "/blog-post.php?id=cyber-security",
+  "status": 200,
+  "file": "blog-post.php_id_cyber-security.html",
+  "bytes": 12015
+ },
+ {
+  "path": "/blog-post.php?id=digital-transformation-today",
+  "status": 200,
+  "file": "blog-post.php_id_digital-transformation-today.html",
+  "bytes": 16852
+ },
+ {
+  "path": "/blog-post.php?id=federated-learning",
+  "status": 200,
+  "file": "blog-post.php_id_federated-learning.html",
+  "bytes": 17144
+ },
+ {
+  "path": "/blog-post.php?id=future-beyond-chatbots",
+  "status": 200,
+  "file": "blog-post.php_id_future-beyond-chatbots.html",
+  "bytes": 14764
+ },
+ {
+  "path": "/blog-post.php?id=how-a-mobile-application-can-strengthen-your-business",
+  "status": 200,
+  "file": "blog-post.php_id_how-a-mobile-application-can-strengthen-your-business.html",
+  "bytes": 12351
+ },
+ {
+  "path": "/blog-post.php?id=how-does-aaha-solutions-estimates-a-blockchain-project-development",
+  "status": 200,
+  "file": "blog-post.php_id_how-does-aaha-solutions-estimates-a-blockchain-project-development.html",
+  "bytes": 16993
+ },
+ {
+  "path": "/blog-post.php?id=how-net-development-platform-helps-achieve-digital-transformation",
+  "status": 200,
+  "file": "blog-post.php_id_how-net-development-platform-helps-achieve-digital-transformation.html",
+  "bytes": 10028
+ },
+ {
+  "path": "/blog-post.php?id=how-to-create-quality-content-for-a-website-blog",
+  "status": 200,
+  "file": "blog-post.php_id_how-to-create-quality-content-for-a-website-blog.html",
+  "bytes": 17980
+ },
+ {
+  "path": "/blog-post.php?id=how-to-learn-laravel-a-step-by-step-guide",
+  "status": 200,
+  "file": "blog-post.php_id_how-to-learn-laravel-a-step-by-step-guide.html",
+  "bytes": 16827
+ },
+ {
+  "path": "/blog-post.php?id=how-to-prepare-for-custom-software-development",
+  "status": 200,
+  "file": "blog-post.php_id_how-to-prepare-for-custom-software-development.html",
+  "bytes": 12763
+ },
+ {
+  "path": "/blog-post.php?id=iot-and-digital-marketing-the-future-of-advertising",
+  "status": 200,
+  "file": "blog-post.php_id_iot-and-digital-marketing-the-future-of-advertising.html",
+  "bytes": 14900
+ },
+ {
+  "path": "/blog-post.php?id=kotlin-a-introduction",
+  "status": 200,
+  "file": "blog-post.php_id_kotlin-a-introduction.html",
+  "bytes": 13493
+ },
+ {
+  "path": "/blog-post.php?id=machine-learningruby-on-rails",
+  "status": 200,
+  "file": "blog-post.php_id_machine-learningruby-on-rails.html",
+  "bytes": 20779
+ },
+ {
+  "path": "/blog-post.php?id=magneto-for-e-commerce-development",
+  "status": 200,
+  "file": "blog-post.php_id_magneto-for-e-commerce-development.html",
+  "bytes": 15477
+ },
+ {
+  "path": "/blog-post.php?id=modern-website-design-to-improve-sales",
+  "status": 200,
+  "file": "blog-post.php_id_modern-website-design-to-improve-sales.html",
+  "bytes": 25514
+ },
+ {
+  "path": "/blog-post.php?id=neural-networks",
+  "status": 200,
+  "file": "blog-post.php_id_neural-networks.html",
+  "bytes": 15336
+ },
+ {
+  "path": "/blog-post.php?id=one-step-at-a-time-building-an-online-shop-online-shopping",
+  "status": 200,
+  "file": "blog-post.php_id_one-step-at-a-time-building-an-online-shop-online-shopping.html",
+  "bytes": 13259
+ },
+ {
+  "path": "/blog-post.php?id=python-and-php-a-comparison",
+  "status": 200,
+  "file": "blog-post.php_id_python-and-php-a-comparison.html",
+  "bytes": 43806
+ },
+ {
+  "path": "/blog-post.php?id=rag",
+  "status": 200,
+  "file": "blog-post.php_id_rag.html",
+  "bytes": 14117
+ },
+ {
+  "path": "/blog-post.php?id=react-native-in-mobile-app",
+  "status": 200,
+  "file": "blog-post.php_id_react-native-in-mobile-app.html",
+  "bytes": 17328
+ },
+ {
+  "path": "/blog-post.php?id=react-native-leading-framework",
+  "status": 200,
+  "file": "blog-post.php_id_react-native-leading-framework.html",
+  "bytes": 18058
+ },
+ {
+  "path": "/blog-post.php?id=role-of-iot-and-machine-learning-in-smart-cities",
+  "status": 200,
+  "file": "blog-post.php_id_role-of-iot-and-machine-learning-in-smart-cities.html",
+  "bytes": 16775
+ },
+ {
+  "path": "/blog-post.php?id=software-testing",
+  "status": 200,
+  "file": "blog-post.php_id_software-testing.html",
+  "bytes": 17760
+ },
+ {
+  "path": "/blog-post.php?id=supervised-learning",
+  "status": 200,
+  "file": "blog-post.php_id_supervised-learning.html",
+  "bytes": 13753
+ },
+ {
+  "path": "/blog-post.php?id=technology-is-becoming-the-core-to-every-business",
+  "status": 200,
+  "file": "blog-post.php_id_technology-is-becoming-the-core-to-every-business.html",
+  "bytes": 15765
+ },
+ {
+  "path": "/blog-post.php?id=the-internet-of-things-plays-an-important-role-in-customer-and-market-segments",
+  "status": 200,
+  "file": "blog-post.php_id_the-internet-of-things-plays-an-important-role-in-customer-and-market-segments.html",
+  "bytes": 15858
+ },
+ {
+  "path": "/blog-post.php?id=the-rise-of-python",
+  "status": 200,
+  "file": "blog-post.php_id_the-rise-of-python.html",
+  "bytes": 11854
+ },
+ {
+  "path": "/blog-post.php?id=the-ways-ai-can-help-small-business",
+  "status": 200,
+  "file": "blog-post.php_id_the-ways-ai-can-help-small-business.html",
+  "bytes": 14320
+ },
+ {
+  "path": "/blog-post.php?id=tips-for-creating-a-ux-ui-style-guide",
+  "status": 200,
+  "file": "blog-post.php_id_tips-for-creating-a-ux-ui-style-guide.html",
+  "bytes": 13991
+ },
+ {
+  "path": "/blog-post.php?id=top-mobile-app-development-company-in-pondicherry",
+  "status": 200,
+  "file": "blog-post.php_id_top-mobile-app-development-company-in-pondicherry.html",
+  "bytes": 18031
+ },
+ {
+  "path": "/blog-post.php?id=trending-development-of-software",
+  "status": 200,
+  "file": "blog-post.php_id_trending-development-of-software.html",
+  "bytes": 12829
+ },
+ {
+  "path": "/blog-post.php?id=understanding-recurrent-neural-networks",
+  "status": 200,
+  "file": "blog-post.php_id_understanding-recurrent-neural-networks.html",
+  "bytes": 12822
+ },
+ {
+  "path": "/blog-post.php?id=website-backend-tech-and-fronted-tech",
+  "status": 200,
+  "file": "blog-post.php_id_website-backend-tech-and-fronted-tech.html",
+  "bytes": 17601
+ },
+ {
+  "path": "/blog-post.php?id=what-is-cloud-computing-a-complete-guide",
+  "status": 200,
+  "file": "blog-post.php_id_what-is-cloud-computing-a-complete-guide.html",
+  "bytes": 23111
+ },
+ {
+  "path": "/blog-post.php?id=why-bigdata-a-big-deal",
+  "status": 200,
+  "file": "blog-post.php_id_why-bigdata-a-big-deal.html",
+  "bytes": 14469
+ },
+ {
+  "path": "/blog-post.php?id=will-java-script-kill-java",
+  "status": 200,
+  "file": "blog-post.php_id_will-java-script-kill-java.html",
+  "bytes": 17544
+ },
+ {
+  "path": "/blog.php",
+  "status": 200,
+  "file": "blog.php.html",
+  "bytes": 213425
+ },
+ {
+  "path": "/case-studies/ai-chatbot-development/",
+  "status": 200,
+  "file": "case-studies_ai-chatbot-development_.html",
+  "bytes": 40491
+ },
+ {
+  "path": "/case-studies/change-management-system/",
+  "status": 200,
+  "file": "case-studies_change-management-system_.html",
+  "bytes": 42177
+ },
+ {
+  "path": "/case-studies/cloud-migration-project/",
+  "status": 200,
+  "file": "case-studies_cloud-migration-project_.html",
+  "bytes": 40704
+ },
+ {
+  "path": "/case-studies/ecommerce-platform/",
+  "status": 200,
+  "file": "case-studies_ecommerce-platform_.html",
+  "bytes": 41640
+ },
+ {
+  "path": "/case-studies/mobile-app-development/",
+  "status": 200,
+  "file": "case-studies_mobile-app-development_.html",
+  "bytes": 46649
+ },
+ {
+  "path": "/chatbot-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": "chatbot-development-company-in-pondicherry.php.html",
+  "bytes": 61764
+ },
+ {
+  "path": "/chatbot-development-company-in-pondicherry.php/",
+  "status": 200,
+  "file": "chatbot-development-company-in-pondicherry.php_.html",
+  "bytes": 61764
+ },
+ {
+  "path": "/cloud-service-company-in-pondicherry.php",
+  "status": 200,
+  "file": "cloud-service-company-in-pondicherry.php.html",
+  "bytes": 77651
+ },
+ {
+  "path": "/cloud-services-company/",
+  "status": 200,
+  "file": "cloud-services-company_.html",
+  "bytes": 77651
+ },
+ {
+  "path": "/cloud-technology-service-company-in-pondicherry.php",
+  "status": 200,
+  "file": "cloud-technology-service-company-in-pondicherry.php.html",
+  "bytes": 77651
+ },
+ {
+  "path": "/contact/",
+  "status": 200,
+  "file": "contact_.html",
+  "bytes": 64262
+ },
+ {
+  "path": "/crm-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": "crm-development-company-in-pondicherry.php.html",
+  "bytes": 73443
+ },
+ {
+  "path": "/crm-development-company/",
+  "status": 200,
+  "file": "crm-development-company_.html",
+  "bytes": 73443
+ },
+ {
+  "path": "/custom-software-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": "custom-software-development-company-in-pondicherry.php.html",
+  "bytes": 68556
+ },
+ {
+  "path": "/custom-software-development-company/",
+  "status": 200,
+  "file": "custom-software-development-company_.html",
+  "bytes": 68556
+ },
+ {
+  "path": "/e-commerce-company-in-pondicherry.php",
+  "status": 200,
+  "file": "e-commerce-company-in-pondicherry.php.html",
+  "bytes": 66875
+ },
+ {
+  "path": "/e-commerce-company-in-pondicherry.php/",
+  "status": 200,
+  "file": "e-commerce-company-in-pondicherry.php_.html",
+  "bytes": 66875
+ },
+ {
+  "path": "/enterprise-software-development/",
+  "status": 200,
+  "file": "enterprise-software-development_.html",
+  "bytes": 45941
+ },
+ {
+  "path": "/erp-development-company/",
+  "status": 200,
+  "file": "erp-development-company_.html",
+  "bytes": 73558
+ },
+ {
+  "path": "/index.php",
+  "status": 200,
+  "file": "index.php.html",
+  "bytes": 135041
+ },
+ {
+  "path": "/index.php/",
+  "status": 200,
+  "file": "index.php_.html",
+  "bytes": 135041
+ },
+ {
+  "path": "/industries/education-software-development/",
+  "status": 200,
+  "file": "industries_education-software-development_.html",
+  "bytes": 65032
+ },
+ {
+  "path": "/industries/finance-software-development/",
+  "status": 200,
+  "file": "industries_finance-software-development_.html",
+  "bytes": 42536
+ },
+ {
+  "path": "/industries/healthcare-software-development/",
+  "status": 200,
+  "file": "industries_healthcare-software-development_.html",
+  "bytes": 41186
+ },
+ {
+  "path": "/industries/logistics-software-development/",
+  "status": 200,
+  "file": "industries_logistics-software-development_.html",
+  "bytes": 65110
+ },
+ {
+  "path": "/industries/manufacturing-software-development/",
+  "status": 200,
+  "file": "industries_manufacturing-software-development_.html",
+  "bytes": 65013
+ },
+ {
+  "path": "/industries/retail-software-development/",
+  "status": 200,
+  "file": "industries_retail-software-development_.html",
+  "bytes": 64819
+ },
+ {
+  "path": "/interactive-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": "interactive-development-company-in-pondicherry.php.html",
+  "bytes": 61037
+ },
+ {
+  "path": "/interactive-development-company-in-pondicherry.php/",
+  "status": 200,
+  "file": "interactive-development-company-in-pondicherry.php_.html",
+  "bytes": 61037
+ },
+ {
+  "path": "/iot-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": "iot-development-company-in-pondicherry.php.html",
+  "bytes": 59600
+ },
+ {
+  "path": "/iot-development-company-in-pondicherry.php/",
+  "status": 200,
+  "file": "iot-development-company-in-pondicherry.php_.html",
+  "bytes": 59600
+ },
+ {
+  "path": "/it-internship-provider-in-pondicherry.php",
+  "status": 200,
+  "file": "it-internship-provider-in-pondicherry.php.html",
+  "bytes": 51851
+ },
+ {
+  "path": "/machine-learning-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": "machine-learning-development-company-in-pondicherry.php.html",
+  "bytes": 68352
+ },
+ {
+  "path": "/machine-learning-development-company-in-pondicherry.php/",
+  "status": 200,
+  "file": "machine-learning-development-company-in-pondicherry.php_.html",
+  "bytes": 68352
+ },
+ {
+  "path": "/mobile-app-development-company/",
+  "status": 200,
+  "file": "mobile-app-development-company_.html",
+  "bytes": 73288
+ },
+ {
+  "path": "/mobile-application-company-in-pondicherry.php",
+  "status": 200,
+  "file": "mobile-application-company-in-pondicherry.php.html",
+  "bytes": 73288
+ },
+ {
+  "path": "/open-source-company-in-pondicherry.php",
+  "status": 200,
+  "file": "open-source-company-in-pondicherry.php.html",
+  "bytes": 74632
+ },
+ {
+  "path": "/open-source-company-in-pondicherry.php/",
+  "status": 200,
+  "file": "open-source-company-in-pondicherry.php_.html",
+  "bytes": 74632
+ },
+ {
+  "path": "/privacy-policy/",
+  "status": 200,
+  "file": "privacy-policy_.html",
+  "bytes": 49345
+ },
+ {
+  "path": "/qa-testing-company-in-pondicherry.php",
+  "status": 200,
+  "file": "qa-testing-company-in-pondicherry.php.html",
+  "bytes": 69203
+ },
+ {
+  "path": "/qa-testing-company-in-pondicherry.php/",
+  "status": 200,
+  "file": "qa-testing-company-in-pondicherry.php_.html",
+  "bytes": 69203
+ },
+ {
+  "path": "/saas-development-company/",
+  "status": 200,
+  "file": "saas-development-company_.html",
+  "bytes": 73964
+ },
+ {
+  "path": "/software-careers-in-pondicherry.php",
+  "status": 200,
+  "file": "software-careers-in-pondicherry.php.html",
+  "bytes": 48910
+ },
+ {
+  "path": "/software-careers-in-pondicherry.php/",
+  "status": 200,
+  "file": "software-careers-in-pondicherry.php_.html",
+  "bytes": 48910
+ },
+ {
+  "path": "/software-company-industrial-visit-pondicherry.php",
+  "status": 200,
+  "file": "software-company-industrial-visit-pondicherry.php.html",
+  "bytes": 61586
+ },
+ {
+  "path": "/software-company-industrial-visit-pondicherry.php/",
+  "status": 200,
+  "file": "software-company-industrial-visit-pondicherry.php_.html",
+  "bytes": 61586
+ },
+ {
+  "path": "/software-developement-company-in-pondicherry.php",
+  "status": 200,
+  "file": "software-developement-company-in-pondicherry.php.html",
+  "bytes": 56408
+ },
+ {
+  "path": "/software-developement-company-in-pondicherry.php/",
+  "status": 200,
+  "file": "software-developement-company-in-pondicherry.php_.html",
+  "bytes": 56408
+ },
+ {
+  "path": "/software-development-blog-in-pondicherry.php",
+  "status": 200,
+  "file": "software-development-blog-in-pondicherry.php.html",
+  "bytes": 213425
+ },
+ {
+  "path": "/software-development-blog-in-pondicherry.php/",
+  "status": 200,
+  "file": "software-development-blog-in-pondicherry.php_.html",
+  "bytes": 213425
+ },
+ {
+  "path": "/software-development-case-studies-in-pondicherry.php",
+  "status": 200,
+  "file": "software-development-case-studies-in-pondicherry.php.html",
+  "bytes": 40291
+ },
+ {
+  "path": "/web-application-company-in-pondicherry.php",
+  "status": 200,
+  "file": "web-application-company-in-pondicherry.php.html",
+  "bytes": 73662
+ },
+ {
+  "path": "/web-application-development-company/",
+  "status": 200,
+  "file": "web-application-development-company_.html",
+  "bytes": 73662
+ },
+ {
+  "path": "/web-development-company-in-pondicherry.php",
+  "status": 200,
+  "file": "web-development-company-in-pondicherry.php.html",
+  "bytes": 73662
+ }
+]

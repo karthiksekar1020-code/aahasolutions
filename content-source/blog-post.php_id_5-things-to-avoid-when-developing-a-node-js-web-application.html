@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5 Things to Avoid When Developing a Node.js Web Application – AAHA Solutions</title>
+  <meta name="description" content="We’re going to explore the common mistakes people make when working on a new project, specifically those that affect performance, scalability, and deadlines. Someone wants a new end-to-end web applica...">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="icon" href="/assets/images/favicon2.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Poppins', 'Inter', sans-serif; 
+      background: #fff; 
+      color: #334155; 
+      margin: 0; 
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    /* ── TOPBAR ── */
+    .bp-topbar { 
+      background: #0f172a; 
+      padding: 16px 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      border-bottom: 1px solid #1e293b; 
+    }
+    .bp-topbar-inner { 
+      max-width: 860px; 
+      margin: 0 auto; 
+      padding: 0 24px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .bp-brand { 
+      font-size: 1.2rem; 
+      font-weight: 800; 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: -0.02em;
+    }
+    .bp-brand span { 
+      color: #82C341; 
+    }
+    .bp-back { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 7px; 
+      color: #cbd5e1;
+      font-size: 15px; 
+      font-weight: 600;
+      text-decoration: none; 
+      padding: 7px 16px; 
+      border-radius: 8px;
+      border: 1px solid #334155; 
+      background: rgba(255,255,255,0.03);
+      transition: all .2s ease; 
+      cursor: pointer;
+    }
+    .bp-back:hover { 
+      color: #fff; 
+      border-color: #82C341; 
+      background: rgba(130,195,65,0.12);
+      text-decoration: none; 
+    }
+
+    /* ── CONTAINER ── */
+    .bp-container { 
+      max-width: 840px; 
+      margin: 0 auto; 
+      padding: 50px 24px 90px; 
+    }
+
+    /* ── HEADER ── */
+    .bp-header { 
+      margin-bottom: 32px; 
+    }
+    .bp-cat { 
+      display: inline-block; 
+      background: rgba(130,195,65,.12); 
+      color: #3b6e15;
+      font-size: 14px; 
+      font-weight: 700; 
+      padding: 5px 16px; 
+      border-radius: 20px;
+      border: 1px solid rgba(130,195,65,.3); 
+      margin-bottom: 18px; 
+      letter-spacing: .4px; 
+      text-transform: uppercase; 
+    }
+    .bp-title { 
+      font-size: 36px; 
+      font-weight: 800; 
+      color: #0f172a;
+      line-height: 1.25; 
+      margin: 0 0 20px; 
+      letter-spacing: -0.02em; 
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+    .bp-meta { 
+      display: flex; 
+      gap: 22px; 
+      flex-wrap: wrap; 
+      color: #475569; 
+      font-size: 15px; 
+      font-weight: 500; 
+    }
+    .bp-meta span { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .bp-featured-img { 
+      margin-bottom: 44px; 
+      width: 100%; 
+    }
+    .bp-featured-img img { 
+      width: 100%; 
+      max-height: 480px; 
+      object-fit: cover;
+      border-radius: 12px; 
+      box-shadow: 0 6px 25px rgba(0,0,0,.08); 
+      display: block; 
+    }
+
+    /* ── INSIDE ARTICLE CONTENT ── */
+    .bp-body { 
+      padding: 0; 
+    }
+    .bp-content { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important; 
+    }
+    
+    /* Headings inside content */
+    .bp-content h2, .bp-content h3, .bp-content h4 { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 800 !important; 
+      color: #0f172a !important; 
+      letter-spacing: -0.02em !important; 
+      line-height: 1.35 !important; 
+    }
+    .bp-content h2 { 
+      font-size: 32px !important; 
+      margin: 45px 0 18px !important; 
+    }
+    .bp-content h3 { 
+      font-size: 26px !important; 
+      margin: 38px 0 16px !important; 
+    }
+    .bp-content h4 { 
+      font-size: 22px !important; 
+      margin: 30px 0 14px !important; 
+    }
+    
+    .bp-content p,
+    .bp-content span,
+    .bp-content div { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important;
+    }
+
+    .bp-content p {
+      margin-bottom: 26px !important; 
+    }
+
+    .bp-content strong,
+    .bp-content b { 
+      color: #0f172a !important; 
+      font-weight: 700 !important; 
+    }
+    .bp-content a { 
+      color: #2563eb !important; 
+      text-decoration: underline !important; 
+    }
+    .bp-content a:hover { 
+      color: #1d4ed8 !important; 
+      text-decoration: none !important; 
+    }
+    
+    /* Quotes */
+    .bp-content blockquote, 
+    .bp-content p > em:only-child, 
+    .bp-content p > i:only-child { 
+      font-style: italic; 
+      font-size: 21px !important; 
+      color: #1e293b !important; 
+      line-height: 1.8 !important; 
+      border-left: 4px solid #82C341 !important; 
+      padding-left: 24px !important; 
+      margin: 32px 0 !important; 
+      display: block;
+      background: #f8fafc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    /* Lists */
+    .bp-content ul, .bp-content ol { 
+      margin: 0 0 26px 30px; 
+      font-size: 21px !important;
+      line-height: 1.85 !important;
+    }
+    .bp-content li { 
+      margin-bottom: 12px; 
+      color: #1e293b !important;
+      font-size: 21px !important;
+    }
+
+    /* ── FOOTER BAR ── */
+    .bp-footer-bar { 
+      border-top: 1px solid #e2e8f0; 
+      padding: 34px 0 0; 
+      margin-top: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+    .bp-back-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      background: #f8fafc;
+      color: #334155; 
+      padding: 11px 22px; 
+      border-radius: 10px; 
+      font-size: 15px;
+      font-weight: 700; 
+      text-decoration: none; 
+      transition: all .2s ease; 
+      border: 1px solid #cbd5e1; 
+      cursor: pointer;
+    }
+    .bp-back-btn:hover { 
+      background: #82C341; 
+      border-color: #82C341;
+      color: #fff; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(130,195,65,0.35);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="bp-topbar">
+  <div class="bp-topbar-inner">
+    <a href="/index.php" class="bp-brand">AAHA <span>Solutions</span></a>
+    <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back">← Back</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="bp-container">
+  <div class="bp-header">
+    <div class="bp-cat">Node JS</div>
+    <h1 class="bp-title">5 Things to Avoid When Developing a Node.js Web Application</h1>
+    <div class="bp-meta">
+      <span><i class="fas fa-calendar-alt" style="color: #82C341; margin-right: 4px;"></i> 14 December 2019</span>
+      <span><i class="fas fa-user" style="color: #82C341; margin-right: 4px;"></i> Admin</span>
+    </div>
+  </div>
+
+      <div class="bp-featured-img">
+      <img src="/assets/images/blog/5-things-to-avoid-when-developing-a-node-js-web-application-1781091356.jpg" alt="5 Things to Avoid When Developing a Node.js Web Application" onerror="this.parentElement.style.display='none';">
+    </div>
+  
+  <div class="bp-body">
+    <article class="bp-content">
+      <section class="post-full-content">
+<div class="post-content">
+<p>We’re going to explore the common mistakes people make when working on a new project, specifically those that affect <strong>performance, scalability, and deadlines</strong>.</p>
+<p>Someone wants a new end-to-end <a href="https://aahasolutions.com/web-application-company-in-pondicherry.php">web application</a>. You get the requirements, plan out your timelines and get going. You identify the models, build the back-end, build the front-end, add features, tackle scope creep as it comes up, add more features…</p>
+<p>Result? <strong>A tangled mess of spaghetti</strong> that gets worse as you touch it.</p>
+<p>If this sounds familiar, stick around. Let’s dive into the common issues developers encounter that affect the actual performance, scaling, and timelines of a full-stack<a href="https://aahasolutions.com/blog/2019/12/02/will-java-script-kill-java/"> Javascript application</a></p>
+<ul>
+<li>Underutilizing Build Tools</li>
+<li>Don’t Repeat Yourself</li>
+<li>Ignoring the Style Guide</li>
+<li>Bloated Dependencies<br />
+Here are the things which we have to avoid when developing NODE JS</li>
+</ul>
+<hr />
+<h2 id="1poordatabasechoice">1. Poor Database Choice</h2>
+<p>People like to wield stacks like creationists wield the Bible. They treat it as gospel. The alpha and omega.</p>
+<p>They use MEAN or MERN stacks and completely skip the possibility of using a relational database. I understand the convenience of using your models to define your database when prototyping an application, but <strong>not considering all your options is irresponsible</strong> and more importantly unfair to the stakeholders.</p>
+<h4 id="problem">Problem</h4>
+<p>As you scale, the optimizations you made in MongoDB for read operations by nesting your objects becomes the source of performance hits for write operations.</p>
+<p>We’ve had to tell a client, after investigation, that their early database choice was causing massive performance issues and helped them transition to a relational database.</p>
+<p><strong>Plan out your schemas</strong> ahead of time and decide what would work best given your timelines and what stage your application is in.</p>
+<hr />
+<h2 id="2underutilizingbuildtools">2. Underutilizing Build Tools</h2>
+<p>Build tools are one of the things that aid our development speed. Having worked on large enterprise Java applications where servers can take minutes to restart, the quickness of the build environment in Javascript brings a tear to my eye. Shout out to JRebel for bringing the Java restart times down.</p>
+<h4 id="problem">Problem</h4>
+<p>That being said, many teams are <strong>not leveraging build tools properly</strong>, impacting your development speed. I wrote an article recently touching on the popularity of build tools. But despite which tool you decide to go with, there should be certain core tasks it covers.</p>
+<p>Make sure your build tool accomplishes the following:</p>
+<ul>
+<li>Minifies CSS and JS for production builds</li>
+<li>Minifies images</li>
+<li>Uses source map files for preprocessor compiled code for dev environment debugging</li>
+<li>Lints on modification – did you know you can use OS notifications for better feedback? Gulp/Webpack</li>
+<li>Runs tests</li>
+<li>Correctly injects dependencies</li>
+<li>Injects JS and CSS to your browser on modification</li>
+<li>Makes use of environment variables</li>
+</ul>
+<p>You should also pay attention to CI with your development servers at the least. Check out our article on deploying Jenkins with Docker.</p>
+<section>
+<section class="post-cta">
+<h2 class="contact-one">Need help with Web Development?</h2>
+<h2 class="contact-two">Work with <a href="https://www.aahasolutions.com">AAHA SOLUTIONS.</a></h2>
+</section>
+</section>
+<hr />
+<h2 id="3dontrepeatyourselfdry">3. Don’t Repeat Yourself (DRY)</h2>
+<p>You should be familiar with the term DRY. This seems like a trivial thing to mention, but we’re in a unique position to have this discussion.</p>
+<h4 id="problems">Problems</h4>
+<p><strong>Code smell, spaghetti code, code bloat</strong>. It happens. Be sure to stay on top of it and optimize.</p>
+<p>We’ve taken over projects that have been built by other shops in the span of a few months that quickly got out of hand because of a lack of accountability or oversight on the developers. This is what leads to spaghetti.</p>
+<p>Plus, one of the beautiful things about using Javascript on client and server is the opportunity to <strong>reuse the same code</strong> front to back. Utils for your models and custom libraries can be used both in your Angular app and in your <a href="https://aahasolutions.com/application/nodejs.php">Node.js server.</a> Just be mindful that browser will have access to this code.</p>
+<p><strong>Modularize your code</strong>. Don’t optimize too early or over-engineer, but don’t ignore small changes out of laziness. You can move fast and break things a bit less.</p>
+<hr />
+<h2 id="4ignoringthestyleguide">4. Ignoring the Style Guide</h2>
+<p>Everyone always wants to dive right into the code and build as fast as possible. You’ll often find as you get closer to a finished product, you’ll run into more and more styling inconsistencies that seem to materialize out of nowhere.</p>
+<h4 id="problems">Problems</h4>
+<p>Not using a proper style guide for front-end patterns is a guaranteed way to create <strong>disparity throughout your HTML</strong>. This might not be a problem for you as a developer, but this can cause style inconsistencies, or worse, force you to create CSS styles on the fly to hack a solution often overlooking the correct markup for the elements.</p>
+<p>If you can, kick off with a style guide that includes HTML and Javascript code blocks for the front-end. This is essentially what Bootstrap and Foundation are. But who wants another web app that looks like a Bootstrap admin panel?</p>
+<hr />
+<h2 id="5bloateddependencies">5. Bloated Dependencies</h2>
+<h4 id="problem"><strong>Problem</strong></h4>
+<p>You see what’s happening here. You <strong>inflate your dependencies</strong> and end up with more requests to the server, or larger combined asset files.</p>
+<p>It makes sense during early development to have access to the entire library you’ve imported because you never know when you’ll need another function. But how do you intend to keep track of your usages until the time you need to optimize?</p>
+<p>This is when it makes sense to have your own set of modular libraries. Certain JS libraries also offer a slim version with reduced functionality.</p>
+<p>This is a bit more late game, but I think it’s important to keep track of what you’re using and how you’re using it.</p>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Starting off a project is always a balancing act of moving fast and optimizing. You want to make sure your application will <strong>perform as it grows but still hit your deadlines</strong>. We keep our balance with these key early decisions:</p>
+<ul>
+<li>Optimal database choice – relational DB vs NoSQL</li>
+<li>Configuring the perfect build setup – including CI with our dev servers</li>
+<li>Modularizing code and DRY</li>
+<li>Utilizing a front-end style guide</li>
+<li>Being mindful when adding dependencies</li>
+</ul>
+<p>There are <a href="https://pondyittraining.com/#">a ton of other topics I left out,</a> but let’s keep this article short and save them for next time.<br />
+Visit us at:<a href="https://www.aahasolutions.com"> https://www.aahasolutions.com</a></p>
+</div>
+</section>
+<section class="subscribe-form"></section>
+<footer class="post-full-footer">
+<section class="author-card">
+<section class="author-card-content">
+<h4 class="author-card-name"></h4>
+</section>
+</section>
+</footer>
+    </article>
+    
+    <div class="bp-footer-bar">
+      <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back-btn">← Back to Blog</a>
+      <span style="color:#64748b;font-size:14px">
+        © AAHA Solutions · 2026      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleGoBack(e) {
+  if (window.history.length > 1 && document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+    e.preventDefault();
+    window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

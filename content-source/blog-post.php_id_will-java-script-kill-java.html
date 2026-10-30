@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Will Java script kill Java? – AAHA Solutions</title>
+  <meta name="description" content="There are thoughts that JavaScript will definitely kill Java, one day. Is it really going to happen one day, and Java will not be one of the most popular programming languages, anymore? How will it ha...">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="icon" href="/assets/images/favicon2.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Poppins', 'Inter', sans-serif; 
+      background: #fff; 
+      color: #334155; 
+      margin: 0; 
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    /* ── TOPBAR ── */
+    .bp-topbar { 
+      background: #0f172a; 
+      padding: 16px 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      border-bottom: 1px solid #1e293b; 
+    }
+    .bp-topbar-inner { 
+      max-width: 860px; 
+      margin: 0 auto; 
+      padding: 0 24px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .bp-brand { 
+      font-size: 1.2rem; 
+      font-weight: 800; 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: -0.02em;
+    }
+    .bp-brand span { 
+      color: #82C341; 
+    }
+    .bp-back { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 7px; 
+      color: #cbd5e1;
+      font-size: 15px; 
+      font-weight: 600;
+      text-decoration: none; 
+      padding: 7px 16px; 
+      border-radius: 8px;
+      border: 1px solid #334155; 
+      background: rgba(255,255,255,0.03);
+      transition: all .2s ease; 
+      cursor: pointer;
+    }
+    .bp-back:hover { 
+      color: #fff; 
+      border-color: #82C341; 
+      background: rgba(130,195,65,0.12);
+      text-decoration: none; 
+    }
+
+    /* ── CONTAINER ── */
+    .bp-container { 
+      max-width: 840px; 
+      margin: 0 auto; 
+      padding: 50px 24px 90px; 
+    }
+
+    /* ── HEADER ── */
+    .bp-header { 
+      margin-bottom: 32px; 
+    }
+    .bp-cat { 
+      display: inline-block; 
+      background: rgba(130,195,65,.12); 
+      color: #3b6e15;
+      font-size: 14px; 
+      font-weight: 700; 
+      padding: 5px 16px; 
+      border-radius: 20px;
+      border: 1px solid rgba(130,195,65,.3); 
+      margin-bottom: 18px; 
+      letter-spacing: .4px; 
+      text-transform: uppercase; 
+    }
+    .bp-title { 
+      font-size: 36px; 
+      font-weight: 800; 
+      color: #0f172a;
+      line-height: 1.25; 
+      margin: 0 0 20px; 
+      letter-spacing: -0.02em; 
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+    .bp-meta { 
+      display: flex; 
+      gap: 22px; 
+      flex-wrap: wrap; 
+      color: #475569; 
+      font-size: 15px; 
+      font-weight: 500; 
+    }
+    .bp-meta span { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .bp-featured-img { 
+      margin-bottom: 44px; 
+      width: 100%; 
+    }
+    .bp-featured-img img { 
+      width: 100%; 
+      max-height: 480px; 
+      object-fit: cover;
+      border-radius: 12px; 
+      box-shadow: 0 6px 25px rgba(0,0,0,.08); 
+      display: block; 
+    }
+
+    /* ── INSIDE ARTICLE CONTENT ── */
+    .bp-body { 
+      padding: 0; 
+    }
+    .bp-content { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important; 
+    }
+    
+    /* Headings inside content */
+    .bp-content h2, .bp-content h3, .bp-content h4 { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 800 !important; 
+      color: #0f172a !important; 
+      letter-spacing: -0.02em !important; 
+      line-height: 1.35 !important; 
+    }
+    .bp-content h2 { 
+      font-size: 32px !important; 
+      margin: 45px 0 18px !important; 
+    }
+    .bp-content h3 { 
+      font-size: 26px !important; 
+      margin: 38px 0 16px !important; 
+    }
+    .bp-content h4 { 
+      font-size: 22px !important; 
+      margin: 30px 0 14px !important; 
+    }
+    
+    .bp-content p,
+    .bp-content span,
+    .bp-content div { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important;
+    }
+
+    .bp-content p {
+      margin-bottom: 26px !important; 
+    }
+
+    .bp-content strong,
+    .bp-content b { 
+      color: #0f172a !important; 
+      font-weight: 700 !important; 
+    }
+    .bp-content a { 
+      color: #2563eb !important; 
+      text-decoration: underline !important; 
+    }
+    .bp-content a:hover { 
+      color: #1d4ed8 !important; 
+      text-decoration: none !important; 
+    }
+    
+    /* Quotes */
+    .bp-content blockquote, 
+    .bp-content p > em:only-child, 
+    .bp-content p > i:only-child { 
+      font-style: italic; 
+      font-size: 21px !important; 
+      color: #1e293b !important; 
+      line-height: 1.8 !important; 
+      border-left: 4px solid #82C341 !important; 
+      padding-left: 24px !important; 
+      margin: 32px 0 !important; 
+      display: block;
+      background: #f8fafc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    /* Lists */
+    .bp-content ul, .bp-content ol { 
+      margin: 0 0 26px 30px; 
+      font-size: 21px !important;
+      line-height: 1.85 !important;
+    }
+    .bp-content li { 
+      margin-bottom: 12px; 
+      color: #1e293b !important;
+      font-size: 21px !important;
+    }
+
+    /* ── FOOTER BAR ── */
+    .bp-footer-bar { 
+      border-top: 1px solid #e2e8f0; 
+      padding: 34px 0 0; 
+      margin-top: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+    .bp-back-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      background: #f8fafc;
+      color: #334155; 
+      padding: 11px 22px; 
+      border-radius: 10px; 
+      font-size: 15px;
+      font-weight: 700; 
+      text-decoration: none; 
+      transition: all .2s ease; 
+      border: 1px solid #cbd5e1; 
+      cursor: pointer;
+    }
+    .bp-back-btn:hover { 
+      background: #82C341; 
+      border-color: #82C341;
+      color: #fff; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(130,195,65,0.35);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="bp-topbar">
+  <div class="bp-topbar-inner">
+    <a href="/index.php" class="bp-brand">AAHA <span>Solutions</span></a>
+    <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back">← Back</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="bp-container">
+  <div class="bp-header">
+    <div class="bp-cat">Technology</div>
+    <h1 class="bp-title">Will Java script kill Java?</h1>
+    <div class="bp-meta">
+      <span><i class="fas fa-calendar-alt" style="color: #82C341; margin-right: 4px;"></i> 02 December 2019</span>
+      <span><i class="fas fa-user" style="color: #82C341; margin-right: 4px;"></i> Admin</span>
+    </div>
+  </div>
+
+      <div class="bp-featured-img">
+      <img src="/assets/images/blog/will-java-script-kill-java-1781091359.jpg" alt="Will Java script kill Java?" onerror="this.parentElement.style.display='none';">
+    </div>
+  
+  <div class="bp-body">
+    <article class="bp-content">
+      <p>There are thoughts that<a href="https://www.aahasolutions.com/web-development-company-in-pondicherry.php"><strong> JavaScript</strong> </a>will definitely kill Java, one day. Is it really going to happen one day, and Java will not be one of the most popular programming languages, anymore? How will it happen? Specialists didn’t come to a common opinion yet. So, let’s review the most popular points of view, regarding that topic, and try to understand, what is the way that Java will be replaced by JavaScript.</p>
+<p>First of all, there is a need to understand the differences between some, most popular programming languages. For example, if programmers need to create a document database, most likely they would prefer to do it in Java, rather than using C++. A sophisticated garbage collector combined with JIT optimization, as well as astounding data structures, make the programming process much faster and more reliable.<br />
+While, for the creation of a binary or relational database, the choice would fall to C, rather than Java or assembler. The data structures at the byte level are much simpler to express, using the structures of the C programming language. The pointer dereference operation allows me to write incredibly clever code with which you can achieve excellent performance indicators during data manipulation operations. Doing this in assembler would take more effort.</p>
+<p>For low-level hardware operations, they would rather use an assembler than C or machine code. Doing the same in C can be difficult to understand, what operations are taking place, while the user is in the critical section. In addition, it will be extremely difficult to diagnose and eliminate bugs.<br />
+Despite all the described above, <a href="https://aahasolutions.com/blog/2019/11/29/technology-is-becoming-the-core-to-every-business/">all the technologies still exist.</a> Even though, it was assumed that they are going to be “destroyed” by new substitutes. Still, we quite often use older tools, because that is easier to create a needed staff with their help.</p>
+<p>Applying the above conclusions to Javascript, we will find that users would prefer to create a user interface in Javascript, rather than in Java. Javascript functional design, namely, a single-threaded non-blocking event cycle model, as well as embedded data structures, would allow the user to interact with the user qualitatively and deal with many parallel controls while writing minimal code. It is also possible to be done in Java, but the code will then be more cumbersome.</p>
+<p><strong>JavaScript</strong> can be managed almost single-handedly to destroy Java applets, Silverlight, and the Adobe Shockwave / Flash multimedia platform. At the moment, to work in the browser, JavaScript is most often used. So if we are talking about code, running in a web browser, that runs on a phone, tablet, laptop, or PC, then yes, JavaScript has destroyed Java.</p>
+<p>Moreover, it’s just a matter of price, there is a suggestion that the next language that JavaScript will destroy will be … JavaScript! The reason for this conclusion is simple and obvious to anyone, who has ever used JavaScript or any other respected programming language: for any significant application, the cost of supporting applications that run on JavaScript is much higher than the cost of replacing the same JavaScript applications. Or, as one old saying goes: “There is always not enough time to do the work, but time is needed to redo it.” Some developers claim that JavaScript is already dying under its own weight, but as long as there is no alternative that could replace it, the number of programs, written and rewritten in this language is only growing.</p>
+<p><strong>NOT JUST JAVA AND JAVASCRIPT ARE FACING SUCH PREDICTIONS<br />
+</strong><br />
+Honestly speaking, when something new is coming to a specific sphere, everyone says that everything that was used before is going to die. The same situation occurred with the <a href="https://www.aahasolutions.com/application/ruby.php">Ruby</a> and Ruby on Rails, even though, after 10 years nothing had changed, people work with Ruby/Ruby on Rails. Still, there are some situations when it is not going to be used by the programmers: Machine Learning /<a href="https://aahasolutions.com/blog/2019/11/28/3-ways-ai-is-changing-the-medical-industry/"> Artificial Intelligence</a>. Using the Python programming language, in this case, is more than obvious.</p>
+<p>Tasks for which the calculations or execution speed are important. In this case, is better to start with Crystal, and if there are not enough tools, switch to C ++ / C / assembler.</p>
+<p>Thanks to rapid prototyping technology, Rails is great for technology programs. Ruby is still nice enough to use (at that time, as in my personal opinion, Javascript is just not quite as easy to work with, but this is a purely subjective opinion).</p>
+<p>Are you going to be the creator of the next Facebook / Google / Snapchat? Then, perhaps, it would be nice for you to review the architecture of the code and start reorganizing its critical moments.</p>
+<p>If you want to continue using the tools you are used to, then this is not so bad, but it would be wise to choose a domain in which the chosen programming language/framework functions in the best possible way. Doing something with JavaScript only because it is universally used is not the most logical and sensible decision.</p>
+<p><strong>WHO WILL NEVER USE THE JAVASCRIPT?<br />
+</strong><br />
+People who used to work in the development of a web interface, but then realized that this area is not as profitable as they would like. Here is a partial list of people who will never do anything with JavaScript, while developing desktop applications:</p>
+<p>Large companies that are involved in the cycle of 95% of all finance in this area and seek to make only sound decisions regarding the increase in income. These are those who, when everything goes awry, is looking for a professional to solve problems, and do not say something like “Look, Bob, it’s written on the forum that such a company had a similar problem and it helped them this is the solution. Come on and we will try it? ”.</p>
+<p>JavaScript is extremely inappropriate for major players in this field, and there are no signs that would signal a change in this situation anytime soon. People need products that will be in demand for years or even decades. They say, in order for JavaScript to somehow try to start threatening the existence of Java, there is a need of nothing more than a revolution to start.</p>
+<p>This does not mean that Java is untouchable and is completely safe. It has a sufficient number of competitors, for example, C ++, C #, a huge number of JVM-languages, such as Scala, Groovy, Kotlin, and others. However, at the moment it is not possible to imagine JavaScript occupying a worthy place among them.</p>
+<p><strong>SUMMARIZING THE ABOVE<br />
+</strong><br />
+Basically, Javascript and Java are used for different purposes. The main advantage of JavaScript is that it runs in a browser. In addition, it can be used to work in server mode, and this language is precise can be used in both the first and second situations. But, at the same time, there are other languages developed which are much more suitable for working in server mode than JavaScript.</p>
+<p>At the same time, there is a huge amount of enterprise software that was written in Java and which is still being written in this language. Many companies do not recognize other programming languages as an alternative, because too few languages can give them what Java does.</p>
+<p>The main advantage of Java is not the language itself (cumbersome and often verbose), but the Java virtual machine (JVM) in which it runs. It is this virtual machine that has exactly the characteristics that attract people, namely, speed, reliability, power, and security. This does not mean that there is no place for other languages, such as, for example, JavaScript.</p>
+<p>Each language has its advantages and disadvantages, as well as a specific area of application. It’s great that new tools are being created that allow using JavaScript more efficiently, but this in no way means that this language will replace all others. It is already possible to create cross-platform applications based on Java and other languages. Why then do people still switch to JavaScript? This is because JavaScript has interesting features that, unfortunately, are not suitable for all situations. The advantages of Javascript make the working process more enjoyable. Even though there are some disadvantages which also have a place to be, and they will remain, as there is a need for backward compatibility.<br />
+Visit us at : <a href="https://www.aahasolutions.com">https://www.aahasolutions.com</a></p>
+<p> </p>
+    </article>
+    
+    <div class="bp-footer-bar">
+      <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back-btn">← Back to Blog</a>
+      <span style="color:#64748b;font-size:14px">
+        © AAHA Solutions · 2026      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleGoBack(e) {
+  if (window.history.length > 1 && document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+    e.preventDefault();
+    window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

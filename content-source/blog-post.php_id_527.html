@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Machine Learning – AAHA Solutions</title>
+  <meta name="description" content="Machine Learning is a trending field of Computer Science turning computer’s computations into usable data and giving a number of unique opportunities.
+
+It’s rapidly gaining in po...">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="icon" href="/assets/images/favicon2.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Poppins', 'Inter', sans-serif; 
+      background: #fff; 
+      color: #334155; 
+      margin: 0; 
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    /* ── TOPBAR ── */
+    .bp-topbar { 
+      background: #0f172a; 
+      padding: 16px 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      border-bottom: 1px solid #1e293b; 
+    }
+    .bp-topbar-inner { 
+      max-width: 860px; 
+      margin: 0 auto; 
+      padding: 0 24px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .bp-brand { 
+      font-size: 1.2rem; 
+      font-weight: 800; 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: -0.02em;
+    }
+    .bp-brand span { 
+      color: #82C341; 
+    }
+    .bp-back { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 7px; 
+      color: #cbd5e1;
+      font-size: 15px; 
+      font-weight: 600;
+      text-decoration: none; 
+      padding: 7px 16px; 
+      border-radius: 8px;
+      border: 1px solid #334155; 
+      background: rgba(255,255,255,0.03);
+      transition: all .2s ease; 
+      cursor: pointer;
+    }
+    .bp-back:hover { 
+      color: #fff; 
+      border-color: #82C341; 
+      background: rgba(130,195,65,0.12);
+      text-decoration: none; 
+    }
+
+    /* ── CONTAINER ── */
+    .bp-container { 
+      max-width: 840px; 
+      margin: 0 auto; 
+      padding: 50px 24px 90px; 
+    }
+
+    /* ── HEADER ── */
+    .bp-header { 
+      margin-bottom: 32px; 
+    }
+    .bp-cat { 
+      display: inline-block; 
+      background: rgba(130,195,65,.12); 
+      color: #3b6e15;
+      font-size: 14px; 
+      font-weight: 700; 
+      padding: 5px 16px; 
+      border-radius: 20px;
+      border: 1px solid rgba(130,195,65,.3); 
+      margin-bottom: 18px; 
+      letter-spacing: .4px; 
+      text-transform: uppercase; 
+    }
+    .bp-title { 
+      font-size: 36px; 
+      font-weight: 800; 
+      color: #0f172a;
+      line-height: 1.25; 
+      margin: 0 0 20px; 
+      letter-spacing: -0.02em; 
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+    .bp-meta { 
+      display: flex; 
+      gap: 22px; 
+      flex-wrap: wrap; 
+      color: #475569; 
+      font-size: 15px; 
+      font-weight: 500; 
+    }
+    .bp-meta span { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .bp-featured-img { 
+      margin-bottom: 44px; 
+      width: 100%; 
+    }
+    .bp-featured-img img { 
+      width: 100%; 
+      max-height: 480px; 
+      object-fit: cover;
+      border-radius: 12px; 
+      box-shadow: 0 6px 25px rgba(0,0,0,.08); 
+      display: block; 
+    }
+
+    /* ── INSIDE ARTICLE CONTENT ── */
+    .bp-body { 
+      padding: 0; 
+    }
+    .bp-content { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important; 
+    }
+    
+    /* Headings inside content */
+    .bp-content h2, .bp-content h3, .bp-content h4 { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 800 !important; 
+      color: #0f172a !important; 
+      letter-spacing: -0.02em !important; 
+      line-height: 1.35 !important; 
+    }
+    .bp-content h2 { 
+      font-size: 32px !important; 
+      margin: 45px 0 18px !important; 
+    }
+    .bp-content h3 { 
+      font-size: 26px !important; 
+      margin: 38px 0 16px !important; 
+    }
+    .bp-content h4 { 
+      font-size: 22px !important; 
+      margin: 30px 0 14px !important; 
+    }
+    
+    .bp-content p,
+    .bp-content span,
+    .bp-content div { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important;
+    }
+
+    .bp-content p {
+      margin-bottom: 26px !important; 
+    }
+
+    .bp-content strong,
+    .bp-content b { 
+      color: #0f172a !important; 
+      font-weight: 700 !important; 
+    }
+    .bp-content a { 
+      color: #2563eb !important; 
+      text-decoration: underline !important; 
+    }
+    .bp-content a:hover { 
+      color: #1d4ed8 !important; 
+      text-decoration: none !important; 
+    }
+    
+    /* Quotes */
+    .bp-content blockquote, 
+    .bp-content p > em:only-child, 
+    .bp-content p > i:only-child { 
+      font-style: italic; 
+      font-size: 21px !important; 
+      color: #1e293b !important; 
+      line-height: 1.8 !important; 
+      border-left: 4px solid #82C341 !important; 
+      padding-left: 24px !important; 
+      margin: 32px 0 !important; 
+      display: block;
+      background: #f8fafc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    /* Lists */
+    .bp-content ul, .bp-content ol { 
+      margin: 0 0 26px 30px; 
+      font-size: 21px !important;
+      line-height: 1.85 !important;
+    }
+    .bp-content li { 
+      margin-bottom: 12px; 
+      color: #1e293b !important;
+      font-size: 21px !important;
+    }
+
+    /* ── FOOTER BAR ── */
+    .bp-footer-bar { 
+      border-top: 1px solid #e2e8f0; 
+      padding: 34px 0 0; 
+      margin-top: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+    .bp-back-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      background: #f8fafc;
+      color: #334155; 
+      padding: 11px 22px; 
+      border-radius: 10px; 
+      font-size: 15px;
+      font-weight: 700; 
+      text-decoration: none; 
+      transition: all .2s ease; 
+      border: 1px solid #cbd5e1; 
+      cursor: pointer;
+    }
+    .bp-back-btn:hover { 
+      background: #82C341; 
+      border-color: #82C341;
+      color: #fff; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(130,195,65,0.35);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="bp-topbar">
+  <div class="bp-topbar-inner">
+    <a href="/index.php" class="bp-brand">AAHA <span>Solutions</span></a>
+    <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back">← Back</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="bp-container">
+  <div class="bp-header">
+    <div class="bp-cat">Machine Learning</div>
+    <h1 class="bp-title">Machine Learning</h1>
+    <div class="bp-meta">
+      <span><i class="fas fa-calendar-alt" style="color: #82C341; margin-right: 4px;"></i> 11 August 2021</span>
+      <span><i class="fas fa-user" style="color: #82C341; margin-right: 4px;"></i> Admin</span>
+    </div>
+  </div>
+
+      <div class="bp-featured-img">
+      <img src="https://aahasolutions.com/blog/wp-content/uploads/2021/08/Webp.net-resizeimage-13.jpg" alt="Machine Learning" onerror="this.parentElement.style.display='none';">
+    </div>
+  
+  <div class="bp-body">
+    <article class="bp-content">
+      Machine Learning is a trending field of Computer Science turning computer’s computations into usable data and giving a number of unique opportunities.
+
+It’s rapidly gaining in popularity – it’s common in modern web applications as well as in services such  as <i>Netflix</i>, <i>Spotify</i>, <i>Amazon</i> and <i>Facebook</i>. Machine Learning is a good solution for apps based on recommendations or some kind of predictions. If you want to build this kind of app you will need an efficient backend technology to support it – <a href="https://aahasolutions.com/blog/2021/01/26/role-of-iot-and-machine-learning-in-smart-cities/">Is Ruby on Rails the right choice?</a>
+<h3><strong>What is Machine Learning?</strong></h3>
+The most famous definition of Machine Learning is ‘<a href="https://aahasolutions.com/machine-learning-development-company-in-pondicherry.html"><i>the subfield of computer</i><i> scienc</i><i>e</i><i> giving computers the ability to learn without being explicitly programmed.’</i></a>
+
+It is used when we want to use computers to predict unknown results based on related bulky data sources. It’s a good way to discover any kind of uncertainty, such as recommendations, predictions or detections of described situations.
+
+We don’t need to plan and implement any algorithms – because the computer gains the ability to be smart and learn new things.
+<h3><strong>How Does It Work?</strong></h3>
+With Machine Learning you don’t need to specifically instruct a computer on what to do – if you want to be smart and predict uncertain values applications, use specific structures and tools e.g. neural nets.
+
+These technologies learn new facts and make predictions in a way which is similar to that of the human brain. For example, neural nets are composed of layers of units called <i>neurons – w</i>e see a clear analogy of how it could work.
+<h3><strong>How can I get started?</strong></h3>
+As Machine Learning is a part of<a href="https://aahasolutions.com/blog/2019/11/28/3-ways-ai-is-changing-the-medical-industry/"> Data Science</a> it is a composition of various mathematical computations. It means that an application using the technology needs to provide complex calculations, fast.
+
+Since it’s not a trivial software problem you need to ensure the best tools are chosen.
+<h3><strong>Is Ruby on Rails a Good Choice for Machine Learning?</strong></h3>
+Ruby is an elegant programming language which found its role in web development and scripts.
+
+With the help of the Ruby and Rails framework developers can build MVPs in a way which is both fast and stable – this is thanks to the availability of various packages called <i>gems</i>, which help solve diverse problems quickly.
+
+When looking at Machine Learning gems we can conclude the choice is not that rich – the problem is that the described solutions are not documented enough.
+
+They also do not provide efficient computation speed and only have a small community of developers. These factors show that there are more risks than advantages when using Ruby gems aszz, making it not the most suited choice.
+
+Moreover, tools and packages are as useful as the language of development. Ruby is definitely one of the most interesting programming languages. It has many proved purposes, but fast computing is not one of them. Ruby does not match Machine Learning, and we need to look into something better.
+<h3><strong>What’s the Alternative?</strong></h3>
+<a href="https://aahasolutions.com/blog/2021/02/06/python-and-php-a-comparison/">Python is also a popular programming language</a> which is often used in Data Science projects because:
+<ul>
+ 	<li>It has numerous packages for Machine Learning and other computations. The prime examples are <i>numpy, pandas, keras, tensorflow</i>. These packages are well-documented, which is helpful in starting with new projects and solutions – it also speeds up the process of fixing bugs.</li>
+ 	<li>Its libraries are simply powerful. It means that they comprise many features helpful in complex computations. The development is fast, efficient and stable. It is also common that they use a range of computation speed improvements – all of these advantages make these tools mature and reliable.</li>
+ 	<li>Another important advantage of using Python libraries is considerable support from the community as the developers can easily find tutorials and tips valuable in a development process. A stable community makes the start threshold lower – it is easier to use new technologies from scratch.</li>
+ 	<li>Python is a developer-friendly language which is easier to start with for Ruby on Rails developers compared to other, lower-level programming languages. The syntax is intuitive, and it parallels the one in Ruby more than other popular languages.If you want to learn more about Python our experienced team have put together some great information for you.</li>
+</ul>
+<h3><strong>Tensorflow</strong></h3>
+We need to choose the best Python library for Machine Learning purposes – we recommend using Tensorflow a popular and powerful tool from Google.
+
+It provides stable implementation for Python, C++ and many other programming languages. We decided to use Tensorflow for the benefits it provides:
+<ul>
+ 	<li>Excellent documentation, a bunch of helpful tutorials and howtos, which helps developers go deep into Machine Learning solutions;</li>
+ 	<li>All complex calculations “behind” Python – it uses a unique computational engine and leaves Python free of heavy operations;</li>
+ 	<li>The building of neural nets and other Machine Learning structures like graphs and chains of single operation blocks;</li>
+ 	<li>Allows a graphics Processing Unit for much better performance.</li>
+</ul>
+<h3><strong>Tensorflow 2.0 - worth to follow</strong></h3>
+If you were developing your Machine Learning application in Tensorflow 1.x and considering refactoring to Keras, try out Tensorflow 2! Keras used to be a powerful and simple wrapper for Google’s Machine Learning framework, now became a part of it. You no longer have to choose between one of them. More benefits of usage Tensorflow 2.0 are shown below:
+<ul>
+ 	<li>Easy model building with Keras and eager execution;</li>
+ 	<li>Robust model deployment in production on any platform;</li>
+ 	<li>Powerful experimentation for research;</li>
+ 	<li>Simplifying the API by cleaning up deprecated APIs and reducing duplication;</li>
+ 	<li>Compatibility with Tensorflow 1.x;</li>
+</ul>
+<h3><strong>RoR as a Web Application for ML
+</strong></h3>
+Ruby on Rails is the perfect choice for web development – it gives developers the possibility to kick off a stable MVP really fast.
+
+However, it does not guarantee the best performance in the quality of complex and heavy computations.
+
+Based on the above, it is a good idea to connect the brilliance of Ruby on Rails framework with Python as a microservice performing Machine Learning computations. This architecture gives us the mix of the best computation efficiency and web application development stability. It minimises the time of building a prototype and provides the best quality of usage.
+
+What are the main benefits of such a combination?
+<ul>
+ 	<li>It’s easy and convenient to connect our app with other microservices – the Rails framework provides many reliable ways of communication between different services. It does not break the integrity with the core services.</li>
+ 	<li>Rails is great for building MVPs – developers can build a web application fast and pitch it to investors.</li>
+ 	<li>It’s a stable solution with a really good documentation – there are many famous companies which trusted this framework and built efficient software. Its active community support also makes this a smart choice.</li>
+ 	<li>With the help of gems and Rails packages developers can quickly build more complex parts of an application.</li>
+</ul>
+<h3><strong>How to Connect Microservices in Python with RoR</strong></h3>
+So, we chose Ruby on Rails as a web application framework and Python with Tensorflow as a Machine Learning microservice. Great!
+
+The very last element of our technology chain is the efficient connection between these two endpoints. It is important to choose connection technology carefully.
+
+Let’s compare two most common options:
+<h3><strong>HTTP Communication</strong></h3>
+The first option is the <i>HTTP communication</i> – it’s definitely the most popular way of connecting the two services.
+
+But the most popular one may not be the best as HTTP protocols are getting older and older. There are still some boilerplates, issues and difficulties along the way. Moreover, it is said that the protocol does not provide the best speed in all cases – since we are looking for the best efficiency in each step of development, it’s worth finding something better.
+
+Secondly, this type of communication needs lots of effort in Rails and Python as it results in more time needed to build a stable communication solution.
+
+In the case of Ruby on Rails, it is quite straightforward, but we also need an endpoint in Python. If we chose HTTP, we would have to use an additional tool to build it on the Python side – it breaks the Single Responsibility Principle which we are aware of.
+
+Overall, HTTP is quite complex itself – we need a really simple and efficient way.
+<h3>RabbitMQ</h3>
+The second option is a tool called RabbitMQ – it’s stable, fast and it is growing in popularity among developers.
+
+The communication model is simpler and faster than the HTTP protocol – outstanding documentation and examples ensure that developers can easily start using this tool. Another important advantage is the presence of truly solid Ruby and Python libraries providing RabbitMQ communication in these languages – making its use really easy and stable.
+
+Using RabbitMQ is a good choice for connecting the Rails web application and Python microservice.
+
+If you want to get started quickly with RabbitMQ take a look at some of their tutorials to guide you.
+
+&nbsp;
+<h3><strong>RabbitMQ alternatives</strong></h3>
+Message brokers technology is growing fast. There are several options you can use. They are scalable, secure and efficient. Choose the best for you:
+<ul>
+ 	<li>Kafka - open-source stream-processing written in Scala and Java. Especially popular in Java-based solutions, enterprise systems and Big Data systems (with cooperation with Spark/Hadoop);</li>
+ 	<li>Amazon Simple Queue Service - if your application is hosted on Amazon Web Services you can connect it with queueing service with just a few clicks. AWS is a powerful platform capable of building both fast prototypes and scalable solutions. Amazon SQS is just another block to make your application more efficient and reliable;</li>
+</ul>
+<h3><strong>Summary</strong></h3>
+The proposed architecture of web applications using Machine Learning features has both its strong and weak sides.
+
+Web application development is stable, and it’s possible to use Ruby germs It ensures great efficiency of Mato build a application fast  machine Learning computations thanks to the Python and Tensorflow library. Additionally, the connection between both services is fast and safe.
+
+On the other hand, you should consider the downsides as well – it has a slightly more complex architecture model at the cost of creating an almost perfect solution.
+
+In the case of Machine Learning ecosystems, it’s better to mix different technologies and select the best tools to support them rather than rely on standalone choices which are not always as good as they seem.
+
+<a href="http://www.aahasolutions..com">If you need help getting started and want a team with 12+ years experience in developing web applications</a>    </article>
+    
+    <div class="bp-footer-bar">
+      <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back-btn">← Back to Blog</a>
+      <span style="color:#64748b;font-size:14px">
+        © AAHA Solutions · 2026      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleGoBack(e) {
+  if (window.history.length > 1 && document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+    e.preventDefault();
+    window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

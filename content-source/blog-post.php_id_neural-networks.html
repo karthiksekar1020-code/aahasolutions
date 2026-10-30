@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neural Networks – AAHA Solutions</title>
+  <meta name="description" content="A neural network is a machine learning model inspired by the way biological neurons process information. It consists of interconnected artificial neurons organized into multiple layers.">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="icon" href="/assets/images/favicon2.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Poppins', 'Inter', sans-serif; 
+      background: #fff; 
+      color: #334155; 
+      margin: 0; 
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    /* ── TOPBAR ── */
+    .bp-topbar { 
+      background: #0f172a; 
+      padding: 16px 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      border-bottom: 1px solid #1e293b; 
+    }
+    .bp-topbar-inner { 
+      max-width: 860px; 
+      margin: 0 auto; 
+      padding: 0 24px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .bp-brand { 
+      font-size: 1.2rem; 
+      font-weight: 800; 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: -0.02em;
+    }
+    .bp-brand span { 
+      color: #82C341; 
+    }
+    .bp-back { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 7px; 
+      color: #cbd5e1;
+      font-size: 15px; 
+      font-weight: 600;
+      text-decoration: none; 
+      padding: 7px 16px; 
+      border-radius: 8px;
+      border: 1px solid #334155; 
+      background: rgba(255,255,255,0.03);
+      transition: all .2s ease; 
+      cursor: pointer;
+    }
+    .bp-back:hover { 
+      color: #fff; 
+      border-color: #82C341; 
+      background: rgba(130,195,65,0.12);
+      text-decoration: none; 
+    }
+
+    /* ── CONTAINER ── */
+    .bp-container { 
+      max-width: 840px; 
+      margin: 0 auto; 
+      padding: 50px 24px 90px; 
+    }
+
+    /* ── HEADER ── */
+    .bp-header { 
+      margin-bottom: 32px; 
+    }
+    .bp-cat { 
+      display: inline-block; 
+      background: rgba(130,195,65,.12); 
+      color: #3b6e15;
+      font-size: 14px; 
+      font-weight: 700; 
+      padding: 5px 16px; 
+      border-radius: 20px;
+      border: 1px solid rgba(130,195,65,.3); 
+      margin-bottom: 18px; 
+      letter-spacing: .4px; 
+      text-transform: uppercase; 
+    }
+    .bp-title { 
+      font-size: 36px; 
+      font-weight: 800; 
+      color: #0f172a;
+      line-height: 1.25; 
+      margin: 0 0 20px; 
+      letter-spacing: -0.02em; 
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+    .bp-meta { 
+      display: flex; 
+      gap: 22px; 
+      flex-wrap: wrap; 
+      color: #475569; 
+      font-size: 15px; 
+      font-weight: 500; 
+    }
+    .bp-meta span { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .bp-featured-img { 
+      margin-bottom: 44px; 
+      width: 100%; 
+    }
+    .bp-featured-img img { 
+      width: 100%; 
+      max-height: 480px; 
+      object-fit: cover;
+      border-radius: 12px; 
+      box-shadow: 0 6px 25px rgba(0,0,0,.08); 
+      display: block; 
+    }
+
+    /* ── INSIDE ARTICLE CONTENT ── */
+    .bp-body { 
+      padding: 0; 
+    }
+    .bp-content { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important; 
+    }
+    
+    /* Headings inside content */
+    .bp-content h2, .bp-content h3, .bp-content h4 { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 800 !important; 
+      color: #0f172a !important; 
+      letter-spacing: -0.02em !important; 
+      line-height: 1.35 !important; 
+    }
+    .bp-content h2 { 
+      font-size: 32px !important; 
+      margin: 45px 0 18px !important; 
+    }
+    .bp-content h3 { 
+      font-size: 26px !important; 
+      margin: 38px 0 16px !important; 
+    }
+    .bp-content h4 { 
+      font-size: 22px !important; 
+      margin: 30px 0 14px !important; 
+    }
+    
+    .bp-content p,
+    .bp-content span,
+    .bp-content div { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important;
+    }
+
+    .bp-content p {
+      margin-bottom: 26px !important; 
+    }
+
+    .bp-content strong,
+    .bp-content b { 
+      color: #0f172a !important; 
+      font-weight: 700 !important; 
+    }
+    .bp-content a { 
+      color: #2563eb !important; 
+      text-decoration: underline !important; 
+    }
+    .bp-content a:hover { 
+      color: #1d4ed8 !important; 
+      text-decoration: none !important; 
+    }
+    
+    /* Quotes */
+    .bp-content blockquote, 
+    .bp-content p > em:only-child, 
+    .bp-content p > i:only-child { 
+      font-style: italic; 
+      font-size: 21px !important; 
+      color: #1e293b !important; 
+      line-height: 1.8 !important; 
+      border-left: 4px solid #82C341 !important; 
+      padding-left: 24px !important; 
+      margin: 32px 0 !important; 
+      display: block;
+      background: #f8fafc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    /* Lists */
+    .bp-content ul, .bp-content ol { 
+      margin: 0 0 26px 30px; 
+      font-size: 21px !important;
+      line-height: 1.85 !important;
+    }
+    .bp-content li { 
+      margin-bottom: 12px; 
+      color: #1e293b !important;
+      font-size: 21px !important;
+    }
+
+    /* ── FOOTER BAR ── */
+    .bp-footer-bar { 
+      border-top: 1px solid #e2e8f0; 
+      padding: 34px 0 0; 
+      margin-top: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+    .bp-back-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      background: #f8fafc;
+      color: #334155; 
+      padding: 11px 22px; 
+      border-radius: 10px; 
+      font-size: 15px;
+      font-weight: 700; 
+      text-decoration: none; 
+      transition: all .2s ease; 
+      border: 1px solid #cbd5e1; 
+      cursor: pointer;
+    }
+    .bp-back-btn:hover { 
+      background: #82C341; 
+      border-color: #82C341;
+      color: #fff; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(130,195,65,0.35);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="bp-topbar">
+  <div class="bp-topbar-inner">
+    <a href="/index.php" class="bp-brand">AAHA <span>Solutions</span></a>
+    <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back">← Back</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="bp-container">
+  <div class="bp-header">
+    <div class="bp-cat">AI &amp; Technology</div>
+    <h1 class="bp-title">Neural Networks</h1>
+    <div class="bp-meta">
+      <span><i class="fas fa-calendar-alt" style="color: #82C341; margin-right: 4px;"></i> 26 August 2026</span>
+      <span><i class="fas fa-user" style="color: #82C341; margin-right: 4px;"></i> admin</span>
+    </div>
+  </div>
+
+      <div class="bp-featured-img">
+      <img src="/assets/images/blog/neural-networks-1793097415.jpeg" alt="Neural Networks" onerror="this.parentElement.style.display='none';">
+    </div>
+  
+  <div class="bp-body">
+    <article class="bp-content">
+      <h2>Neural Networks: The Foundation of Modern AI</h2><p><strong>Neural networks are a fundamental technology behind modern Artificial Intelligence (AI). They enable machines to learn patterns from data, make predictions, recognize information, and solve complex problems without requiring every rule to be manually programmed.</strong></p><p>Today, neural networks power many technologies, including chatbots, recommendation systems, image recognition, voice assistants, fraud detection, autonomous systems, and generative AI.</p><h3>What Are Neural Networks?</h3><p><strong>A neural network is a machine learning model inspired by the way biological neurons process information. It consists of interconnected artificial neurons organized into multiple layers.</strong></p><p>A typical neural network contains:</p><p><strong>Input Layer – Receives the input data.</strong></p><p><strong>Hidden Layers – Process the information and learn patterns.</strong></p><p><strong>Output Layer – Produces the final prediction or result.</strong></p><p><strong>During training, the network adjusts parameters such as weights and biases to improve its performance. Neural networks can process different types of data, including text, images, audio, numerical data, and sensor information.</strong></p><h3>How Do Neural Networks Work?</h3><p><strong>A neural network receives input data and passes it through multiple layers. Each connection has a weight that determines the importance of the input, while biases provide additional flexibility.</strong></p><p><strong>The processed values are passed through activation functions, which allow the network to learn complex relationships. Common activation functions include ReLU, Sigmoid, Tanh, and Softmax.</strong></p><p>The final layer produces an output such as a prediction, classification, probability, or numerical value.</p><h4>How Does a Neural Network Learn?</h4><p><strong>Training allows a neural network to learn from examples. The model produces a prediction and compares it with the expected result using a loss function.</strong></p><p><strong>The network then uses backpropagation to calculate how its parameters contributed to the error. Optimization techniques such as Gradient Descent update the weights and biases.</strong></p><p>The process can be summarized as:</p><p><strong>Input → Prediction → Loss → Backpropagation → Parameter Update → Repeat</strong></p><p>Repeated training allows the model to gradually improve its predictions.</p><h3>Types of Neural Networks</h3><h4>Feedforward Neural Networks</h4><p>Feedforward networks are among the simplest architectures. Information moves from the input layer through hidden layers to the output layer. They are commonly used for classification, regression, and prediction.</p><h4>Convolutional Neural Networks</h4><p><strong>CNNs are mainly designed for image and visual data. They can identify features such as edges, textures, shapes, and objects.</strong></p><p>Common applications include image classification, object detection, facial recognition, medical imaging, and computer vision.</p><h4>Recurrent Neural Networks</h4><p><strong>RNNs are designed for sequential data. They can use information from previous steps and have been used for text processing, speech recognition, and time-series analysis.</strong></p><h4>LSTM Networks</h4><p><strong>Long Short-Term Memory (LSTM) networks are a specialized type of RNN designed to handle long-term dependencies more effectively. They are useful for language processing, forecasting, and sequence-based applications.</strong></p><h4>Transformers</h4><p><strong>Transformers are one of the most important architectures in modern AI. Their attention mechanism helps models understand relationships between different parts of the input.</strong></p><p>Transformers power large language models, text generation, translation, summarization, question answering, and multimodal AI.</p><h3>Applications of Neural Networks</h3><p>Neural networks are used across many industries.</p><p><strong>Computer Vision: Used for image recognition, object detection, medical imaging, quality inspection, and autonomous systems.</strong></p><p><strong>Natural Language Processing: Powers chatbots, virtual assistants, translation, sentiment analysis, search, summarization, and text generation.</strong></p><p><strong>Healthcare: Supports medical image analysis, risk prediction, and drug discovery.</strong></p><p><strong>Finance: Used for fraud detection, risk analysis, anomaly detection, and forecasting.</strong></p><p><strong>E-Commerce: Enables product recommendations, personalized search, customer behavior analysis, and demand forecasting.</strong></p><p><strong>Generative AI: Neural networks can generate text, images, audio, video, and code.</strong></p><h3>Advantages and Challenges</h3><p>Neural networks can automatically learn patterns, process complex relationships, and work with many types of data. Their flexibility makes them useful for a wide range of applications.</p><p><strong>However, they also have challenges. Advanced models can require large datasets, powerful hardware, and significant computing resources. Other concerns include overfitting, bias, privacy, security, and explainability.</strong></p><p><strong>Complex neural networks can sometimes behave like a black box, making it difficult to understand exactly why a particular prediction was produced.</strong></p><h3>The Future of Neural Networks</h3><p><strong>The future of neural networks will focus on creating AI systems that are more powerful, efficient, reliable, secure, and responsible.</strong></p><p>Researchers are developing models that can process multiple forms of information, including text, images, audio, and video.</p><p><strong>Edge AI is also becoming important, allowing AI models to run directly on devices such as smartphones, cameras, vehicles, and industrial machines.</strong></p><p>As AI continues to become part of everyday software, neural networks will help developers build smarter applications, automate tasks, analyze data, and create personalized digital experiences.</p><h3>Conclusion</h3><p><strong>Neural networks have become a core technology behind modern Artificial Intelligence. From CNNs and RNNs to LSTMs and Transformers, different architectures enable machines to process information and learn complex patterns.</strong></p><p>Despite challenges such as data requirements, computational cost, bias, and explainability, neural networks have enormous potential.</p><p><strong>As AI continues to evolve, neural networks will remain a key technology shaping the future of intelligent software and digital experiences.</strong></p>    </article>
+    
+    <div class="bp-footer-bar">
+      <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back-btn">← Back to Blog</a>
+      <span style="color:#64748b;font-size:14px">
+        © AAHA Solutions · 2026      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleGoBack(e) {
+  if (window.history.length > 1 && document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+    e.preventDefault();
+    window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

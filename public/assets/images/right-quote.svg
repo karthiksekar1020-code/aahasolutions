@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="108px" height="85px" viewBox="0 0 108 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>right-quote</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="right-quote" transform="translate(54.000000, 42.500000) scale(-1, -1) translate(-54.000000, -42.500000) " fill="#EFEFEF">
+            <g id="Group">
+                <path d="M60.75,47.5853977 L60.75,0 L108,0 L108,48.265189 C108,80.895176 77.625,84.9739244 77.625,84.9739244 L73.575,75.4568449 C73.575,75.4568449 87.075,73.4174707 89.775,62.5408083 C92.475,54.3833116 87.075,47.5853977 87.075,47.5853977 L60.75,47.5853977 Z" id="Shape"></path>
+                <path d="M0,47.5853977 L0,0 L47.25,0 L47.25,48.265189 C47.25,80.895176 16.875,84.9739244 16.875,84.9739244 L12.825,75.4568449 C12.825,75.4568449 26.325,73.4174707 29.025,62.5408083 C31.725,54.3833116 26.325,47.5853977 26.325,47.5853977 L0,47.5853977 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artificial Intelligence- A Simple Guide – AAHA Solutions</title>
+  <meta name="description" content="What AI is about? Artificial Intelligence (AI) becomes more and more discussed and… invested. Pitching AI driven idea is a real trend now. For now, Machine Learning (ML), Deep Learning and Neural Netw...">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="icon" href="/assets/images/favicon2.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Poppins', 'Inter', sans-serif; 
+      background: #fff; 
+      color: #334155; 
+      margin: 0; 
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    /* ── TOPBAR ── */
+    .bp-topbar { 
+      background: #0f172a; 
+      padding: 16px 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      border-bottom: 1px solid #1e293b; 
+    }
+    .bp-topbar-inner { 
+      max-width: 860px; 
+      margin: 0 auto; 
+      padding: 0 24px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .bp-brand { 
+      font-size: 1.2rem; 
+      font-weight: 800; 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: -0.02em;
+    }
+    .bp-brand span { 
+      color: #82C341; 
+    }
+    .bp-back { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 7px; 
+      color: #cbd5e1;
+      font-size: 15px; 
+      font-weight: 600;
+      text-decoration: none; 
+      padding: 7px 16px; 
+      border-radius: 8px;
+      border: 1px solid #334155; 
+      background: rgba(255,255,255,0.03);
+      transition: all .2s ease; 
+      cursor: pointer;
+    }
+    .bp-back:hover { 
+      color: #fff; 
+      border-color: #82C341; 
+      background: rgba(130,195,65,0.12);
+      text-decoration: none; 
+    }
+
+    /* ── CONTAINER ── */
+    .bp-container { 
+      max-width: 840px; 
+      margin: 0 auto; 
+      padding: 50px 24px 90px; 
+    }
+
+    /* ── HEADER ── */
+    .bp-header { 
+      margin-bottom: 32px; 
+    }
+    .bp-cat { 
+      display: inline-block; 
+      background: rgba(130,195,65,.12); 
+      color: #3b6e15;
+      font-size: 14px; 
+      font-weight: 700; 
+      padding: 5px 16px; 
+      border-radius: 20px;
+      border: 1px solid rgba(130,195,65,.3); 
+      margin-bottom: 18px; 
+      letter-spacing: .4px; 
+      text-transform: uppercase; 
+    }
+    .bp-title { 
+      font-size: 36px; 
+      font-weight: 800; 
+      color: #0f172a;
+      line-height: 1.25; 
+      margin: 0 0 20px; 
+      letter-spacing: -0.02em; 
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+    .bp-meta { 
+      display: flex; 
+      gap: 22px; 
+      flex-wrap: wrap; 
+      color: #475569; 
+      font-size: 15px; 
+      font-weight: 500; 
+    }
+    .bp-meta span { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .bp-featured-img { 
+      margin-bottom: 44px; 
+      width: 100%; 
+    }
+    .bp-featured-img img { 
+      width: 100%; 
+      max-height: 480px; 
+      object-fit: cover;
+      border-radius: 12px; 
+      box-shadow: 0 6px 25px rgba(0,0,0,.08); 
+      display: block; 
+    }
+
+    /* ── INSIDE ARTICLE CONTENT ── */
+    .bp-body { 
+      padding: 0; 
+    }
+    .bp-content { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important; 
+    }
+    
+    /* Headings inside content */
+    .bp-content h2, .bp-content h3, .bp-content h4 { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 800 !important; 
+      color: #0f172a !important; 
+      letter-spacing: -0.02em !important; 
+      line-height: 1.35 !important; 
+    }
+    .bp-content h2 { 
+      font-size: 32px !important; 
+      margin: 45px 0 18px !important; 
+    }
+    .bp-content h3 { 
+      font-size: 26px !important; 
+      margin: 38px 0 16px !important; 
+    }
+    .bp-content h4 { 
+      font-size: 22px !important; 
+      margin: 30px 0 14px !important; 
+    }
+    
+    .bp-content p,
+    .bp-content span,
+    .bp-content div { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important;
+    }
+
+    .bp-content p {
+      margin-bottom: 26px !important; 
+    }
+
+    .bp-content strong,
+    .bp-content b { 
+      color: #0f172a !important; 
+      font-weight: 700 !important; 
+    }
+    .bp-content a { 
+      color: #2563eb !important; 
+      text-decoration: underline !important; 
+    }
+    .bp-content a:hover { 
+      color: #1d4ed8 !important; 
+      text-decoration: none !important; 
+    }
+    
+    /* Quotes */
+    .bp-content blockquote, 
+    .bp-content p > em:only-child, 
+    .bp-content p > i:only-child { 
+      font-style: italic; 
+      font-size: 21px !important; 
+      color: #1e293b !important; 
+      line-height: 1.8 !important; 
+      border-left: 4px solid #82C341 !important; 
+      padding-left: 24px !important; 
+      margin: 32px 0 !important; 
+      display: block;
+      background: #f8fafc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    /* Lists */
+    .bp-content ul, .bp-content ol { 
+      margin: 0 0 26px 30px; 
+      font-size: 21px !important;
+      line-height: 1.85 !important;
+    }
+    .bp-content li { 
+      margin-bottom: 12px; 
+      color: #1e293b !important;
+      font-size: 21px !important;
+    }
+
+    /* ── FOOTER BAR ── */
+    .bp-footer-bar { 
+      border-top: 1px solid #e2e8f0; 
+      padding: 34px 0 0; 
+      margin-top: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+    .bp-back-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      background: #f8fafc;
+      color: #334155; 
+      padding: 11px 22px; 
+      border-radius: 10px; 
+      font-size: 15px;
+      font-weight: 700; 
+      text-decoration: none; 
+      transition: all .2s ease; 
+      border: 1px solid #cbd5e1; 
+      cursor: pointer;
+    }
+    .bp-back-btn:hover { 
+      background: #82C341; 
+      border-color: #82C341;
+      color: #fff; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(130,195,65,0.35);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="bp-topbar">
+  <div class="bp-topbar-inner">
+    <a href="/index.php" class="bp-brand">AAHA <span>Solutions</span></a>
+    <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back">← Back</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="bp-container">
+  <div class="bp-header">
+    <div class="bp-cat">Artificial Inteeligence</div>
+    <h1 class="bp-title">Artificial Intelligence- A Simple Guide</h1>
+    <div class="bp-meta">
+      <span><i class="fas fa-calendar-alt" style="color: #82C341; margin-right: 4px;"></i> 12 February 2021</span>
+      <span><i class="fas fa-user" style="color: #82C341; margin-right: 4px;"></i> Admin</span>
+    </div>
+  </div>
+
+      <div class="bp-featured-img">
+      <img src="/assets/images/blog/artificial-intelligence-a-simple-guide-1781091345.jpg" alt="Artificial Intelligence- A Simple Guide" onerror="this.parentElement.style.display='none';">
+    </div>
+  
+  <div class="bp-body">
+    <article class="bp-content">
+      <h2><strong>What AI is about?</strong></h2>
+<p><a href="https://s-pro.io/artificial-intelligence"><b>Artificial Intelligence</b></a> (AI) becomes more and more discussed and… invested. Pitching AI driven idea is a real trend now. For now, <a href="https://aahasolutions.com/machine-learning-development-company-in-pondicherry.html"><b>Machine Learning</b></a> (ML), <b>Deep Learning</b> and <b>Neural Networks</b> (NN, DNN) are key terms that seem to increase potential chance to get more funds from investors and yes, this is a part of something bigger, called AI.</p>
+<p><b>AI</b> is also about:</p>
+<ul>
+<li>Algorithms for <b>Robotics</b> (you might have seen recent Boston Dynamics achievements on YouTube), game <b>bots</b> behavior.</li>
+<li><b>Natural Language Processing</b> (NLP) and understanding the meaning of the text (<b>Natural Language Understanding</b> NLU)</li>
+<li><b>Computer Vision</b> with object classification/detection/locating, image segmentation.</li>
+<li><b>Risk Estimation</b> for banking, insurance and especially <b>Fraud Detection</b></li>
+<li>Biotech and Medicine for Diagnostics, Genome analysis</li>
+<li>Sure, there’s much more (Audio, Signal, Stock Exchange, etc.)</li>
+</ul>
+<h2><strong>Incredibility of modern Artificial Intelligence</strong></h2>
+<p>Artificial intelligence can:</p>
+<ul>
+<li><b>Find a car or hundreds of other objects in the picture</b></li>
+</ul>
+<p>The computer vision technology distinguishes what is present in the image and where. Self-driving cars strongly utilize this opportunity.</p>
+<p> </p>
+<ul>
+<li><b>  Understand a user mood and her/his opinion about discussed things</b></li>
+</ul>
+<p>AI may figure out the meaning of human emotions, understand their motivations, predict reactions and provide solutions for physical and mental health.</p>
+<p> </p>
+<ul>
+<li><b>Provide assistance when verbally asked for</b></li>
+</ul>
+<p>AI-driven assistants may be utilized both in work and personal human lives by providing guidance in decision-making and potentially even physical support.</p>
+<p> </p>
+<ul>
+<li><b>Predict fish migration</b></li>
+</ul>
+<p>Human and animal path prediction have intriguing high accuracy. AI in combination with ML provides a promising approach to animal movements forecast.</p>
+<p> </p>
+<ul>
+<li><b>Make robots acquire new skills</b></li>
+</ul>
+<p><a href="https://aahasolutions.com/artificial-intelligence-company-in-pondicherry.html">With AI robots learn from their shared experience</a> how to perform different actions: walk, help, work, assist.</p>
+<p> </p>
+<ul>
+<li><b>Provide an efficient diagnostics of breast cancer or leukemia</b></li>
+</ul>
+<p>An AI tool distinguishes whether cancer genes are present in cells with high accuracy that may exclude additional confirmatory tests done usually.</p>
+<p><strong>How AI has emerged and became what it is<br />
+</strong>There’s no strict definition of what AI actually is. Some algorithms and solutions that used to be considered as “AI” in the 50s are now just a simple part or general computer science as they look trivial now.</p>
+<p>Interest in AI wasn’t the same on a whole history interval. Once people find a promising technology in this field that potentially can influence the market, interest goes up. But at a certain point technology reaches a plateau, that makes it almost impossible to do better. When this happens it brings humanity to the so-called AI winter—a period when funding and interest in AI research have been reduced.</p>
+<p>Using this terminology, nowadays we observe an AI spring because we have a set of new breakthroughs that look extremely promising. Just recently the input data size intended to be analyzed has grown. It increases the computational power (including the possibility to compute on Graphic Cards (GPU), Tensor Processing Units (TPU) and many special devices like Neural Compute Stick). Neural Networks and Deep Learning changed things a lot and we still see many new fantastic results every day.</p>
+<h2><strong>People, influencers and institutions who do all this stuff</strong></h2>
+<p>MIT, Harward, Berkeley, Stanford  Lots of universities are contributing to AI research for many years. You can find the list of such institutions easily by googling them. Many famous names appeared in scientific and business crossroads, each of them is a person who made real breakthroughs in AI:</p>
+<ul>
+<li>Andrew Ng</li>
+<li>Joanna Bryson</li>
+<li>Yann LeCun</li>
+<li>Peter Norvig</li>
+<li>Sebastian Thrun</li>
+<li>Andrej Karpathy</li>
+<li>Ian Goodfellow</li>
+<li>Yoshua Bengio</li>
+</ul>
+<p>Of course, there are many more. They have many speeches, books, and publicly available MOOCs. But for AI engineers and researchers the central place to hear voices and to be heard is arXiv.org—one of the most popular spaces to publish a paper on AI/ML.</p>
+<h2><strong>Satellite Technologies</strong></h2>
+<p>Traditionally, open source and universities based technologies were available for students and the scientific community. This made sound loud following things in AI:</p>
+<ul>
+<li>Unix/Linux</li>
+<li>Java</li>
+<li><a href="https://aahasolutions.com/blog/2021/02/06/python-and-php-a-comparison/">Python</a></li>
+<li>C/C++</li>
+<li>Octave</li>
+<li>R</li>
+<li>GNU</li>
+<li>GPL</li>
+<li>BSD</li>
+</ul>
+<p>But of course, there are many proprietary software and big companies that influenced AI like Intel, AT&T, Nvidia, etc.</p>
+<h2><strong>Learn Artificial Intelligence</strong></h2>
+<p>One can<a href="https://aahasolutions.com/blog/2020/02/29/the-ways-ai-can-help-small-business/"> learn AI via various sources</a>, including traditional University-based education. Onsite learning is available even for business people through different MBA programs.</p>
+<p>One of the most popular ways to start and move on is to use MOOCs like Udacity, Corsera, Khan Academy, Edx, etc. Here’s a short list of some nice courses on AI:</p>
+<ul>
+<li>Intro to Artificial Intelligence, Udacity</li>
+<li>Natural Language Processing, Coursera</li>
+<li>Introduction to<a href="https://aahasolutions.com/machine-learning-development-company-in-pondicherry.html"> Deep Learning,</a> Coursera</li>
+</ul>
+<h2><strong>Final thoughts</strong></h2>
+<p>Nowadays <a href="https://aahasolutions.com/blog/2021/02/06/python-and-php-a-comparison/">AI can perform very specific things.</a> Which is already enough to make an incredible impact on our lives. Imagine how exponentially useful it may become as it gets more advanced within the next years.</p>
+    </article>
+    
+    <div class="bp-footer-bar">
+      <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back-btn">← Back to Blog</a>
+      <span style="color:#64748b;font-size:14px">
+        © AAHA Solutions · 2026      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleGoBack(e) {
+  if (window.history.length > 1 && document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+    e.preventDefault();
+    window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

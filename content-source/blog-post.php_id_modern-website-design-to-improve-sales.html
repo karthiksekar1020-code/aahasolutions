@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modern Website Design To Improve Sales – AAHA Solutions</title>
+  <meta name="description" content="Year after year, technology is rapidly changing and so do the challenges faced by businesses, especially those dealing in the digital world. One of the biggest challenges in 2020 is to have a modern w...">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="icon" href="/assets/images/favicon2.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Poppins', 'Inter', sans-serif; 
+      background: #fff; 
+      color: #334155; 
+      margin: 0; 
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    /* ── TOPBAR ── */
+    .bp-topbar { 
+      background: #0f172a; 
+      padding: 16px 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      border-bottom: 1px solid #1e293b; 
+    }
+    .bp-topbar-inner { 
+      max-width: 860px; 
+      margin: 0 auto; 
+      padding: 0 24px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .bp-brand { 
+      font-size: 1.2rem; 
+      font-weight: 800; 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: -0.02em;
+    }
+    .bp-brand span { 
+      color: #82C341; 
+    }
+    .bp-back { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 7px; 
+      color: #cbd5e1;
+      font-size: 15px; 
+      font-weight: 600;
+      text-decoration: none; 
+      padding: 7px 16px; 
+      border-radius: 8px;
+      border: 1px solid #334155; 
+      background: rgba(255,255,255,0.03);
+      transition: all .2s ease; 
+      cursor: pointer;
+    }
+    .bp-back:hover { 
+      color: #fff; 
+      border-color: #82C341; 
+      background: rgba(130,195,65,0.12);
+      text-decoration: none; 
+    }
+
+    /* ── CONTAINER ── */
+    .bp-container { 
+      max-width: 840px; 
+      margin: 0 auto; 
+      padding: 50px 24px 90px; 
+    }
+
+    /* ── HEADER ── */
+    .bp-header { 
+      margin-bottom: 32px; 
+    }
+    .bp-cat { 
+      display: inline-block; 
+      background: rgba(130,195,65,.12); 
+      color: #3b6e15;
+      font-size: 14px; 
+      font-weight: 700; 
+      padding: 5px 16px; 
+      border-radius: 20px;
+      border: 1px solid rgba(130,195,65,.3); 
+      margin-bottom: 18px; 
+      letter-spacing: .4px; 
+      text-transform: uppercase; 
+    }
+    .bp-title { 
+      font-size: 36px; 
+      font-weight: 800; 
+      color: #0f172a;
+      line-height: 1.25; 
+      margin: 0 0 20px; 
+      letter-spacing: -0.02em; 
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+    .bp-meta { 
+      display: flex; 
+      gap: 22px; 
+      flex-wrap: wrap; 
+      color: #475569; 
+      font-size: 15px; 
+      font-weight: 500; 
+    }
+    .bp-meta span { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .bp-featured-img { 
+      margin-bottom: 44px; 
+      width: 100%; 
+    }
+    .bp-featured-img img { 
+      width: 100%; 
+      max-height: 480px; 
+      object-fit: cover;
+      border-radius: 12px; 
+      box-shadow: 0 6px 25px rgba(0,0,0,.08); 
+      display: block; 
+    }
+
+    /* ── INSIDE ARTICLE CONTENT ── */
+    .bp-body { 
+      padding: 0; 
+    }
+    .bp-content { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important; 
+    }
+    
+    /* Headings inside content */
+    .bp-content h2, .bp-content h3, .bp-content h4 { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 800 !important; 
+      color: #0f172a !important; 
+      letter-spacing: -0.02em !important; 
+      line-height: 1.35 !important; 
+    }
+    .bp-content h2 { 
+      font-size: 32px !important; 
+      margin: 45px 0 18px !important; 
+    }
+    .bp-content h3 { 
+      font-size: 26px !important; 
+      margin: 38px 0 16px !important; 
+    }
+    .bp-content h4 { 
+      font-size: 22px !important; 
+      margin: 30px 0 14px !important; 
+    }
+    
+    .bp-content p,
+    .bp-content span,
+    .bp-content div { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important;
+    }
+
+    .bp-content p {
+      margin-bottom: 26px !important; 
+    }
+
+    .bp-content strong,
+    .bp-content b { 
+      color: #0f172a !important; 
+      font-weight: 700 !important; 
+    }
+    .bp-content a { 
+      color: #2563eb !important; 
+      text-decoration: underline !important; 
+    }
+    .bp-content a:hover { 
+      color: #1d4ed8 !important; 
+      text-decoration: none !important; 
+    }
+    
+    /* Quotes */
+    .bp-content blockquote, 
+    .bp-content p > em:only-child, 
+    .bp-content p > i:only-child { 
+      font-style: italic; 
+      font-size: 21px !important; 
+      color: #1e293b !important; 
+      line-height: 1.8 !important; 
+      border-left: 4px solid #82C341 !important; 
+      padding-left: 24px !important; 
+      margin: 32px 0 !important; 
+      display: block;
+      background: #f8fafc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    /* Lists */
+    .bp-content ul, .bp-content ol { 
+      margin: 0 0 26px 30px; 
+      font-size: 21px !important;
+      line-height: 1.85 !important;
+    }
+    .bp-content li { 
+      margin-bottom: 12px; 
+      color: #1e293b !important;
+      font-size: 21px !important;
+    }
+
+    /* ── FOOTER BAR ── */
+    .bp-footer-bar { 
+      border-top: 1px solid #e2e8f0; 
+      padding: 34px 0 0; 
+      margin-top: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+    .bp-back-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      background: #f8fafc;
+      color: #334155; 
+      padding: 11px 22px; 
+      border-radius: 10px; 
+      font-size: 15px;
+      font-weight: 700; 
+      text-decoration: none; 
+      transition: all .2s ease; 
+      border: 1px solid #cbd5e1; 
+      cursor: pointer;
+    }
+    .bp-back-btn:hover { 
+      background: #82C341; 
+      border-color: #82C341;
+      color: #fff; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(130,195,65,0.35);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="bp-topbar">
+  <div class="bp-topbar-inner">
+    <a href="/index.php" class="bp-brand">AAHA <span>Solutions</span></a>
+    <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back">← Back</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="bp-container">
+  <div class="bp-header">
+    <div class="bp-cat">Web App Development</div>
+    <h1 class="bp-title">Modern Website Design To Improve Sales</h1>
+    <div class="bp-meta">
+      <span><i class="fas fa-calendar-alt" style="color: #82C341; margin-right: 4px;"></i> 19 August 2021</span>
+      <span><i class="fas fa-user" style="color: #82C341; margin-right: 4px;"></i> Admin</span>
+    </div>
+  </div>
+
+      <div class="bp-featured-img">
+      <img src="/assets/images/blog/modern-website-design-to-improve-sales-1781091337.jpg" alt="Modern Website Design To Improve Sales" onerror="this.parentElement.style.display='none';">
+    </div>
+  
+  <div class="bp-body">
+    <article class="bp-content">
+      <div id="content" class="site-content">
+<div class="ast-container">
+<div id="primary" class="content-area primary">
+<p><span style="">Year after year, technology is rapidly changing and so do the challenges faced by businesses, especially those dealing in the digital world. One of the biggest challenges in 2020 is to have a modern website design that can capture the user’s attention. And for that, users give you only 5 seconds and immediately bounce back from your website if it does not inspire them well. How do I know whether my website is modernized? Are you able to generate more leads? Are you successfully managing a low bounce rate? Is your website capable of explaining your core products or services to users within 5 seconds? Are users able to reach their desired product within 4 clicks?</span></p>
+<article id="post-347" class="post-347 post type-post status-publish format-standard has-post-thumbnail hentry category-web-design ast-article-single">
+<div class="ast-post-format- single-layout-1">
+<div class="entry-content clear">
+<p>If the answer to these questions is ‘No’ then you’re certainly in a problem. It means it’s time to revamp your website design and make it more attractive to turn No to Yes. But the question arises,</p>
+<p>How to revamp your website design to target more sales?</p>
+<p>In this blog post, we will discuss some useful information on how to get a modern web design that can get you more sales in 2020. It includes:</p>
+<ul>
+<li>Skills and techniques to level up your website</li>
+<li>5 ways to make modern website design</li>
+<li>SEO tips</li>
+<li>Best practices for CRO</li>
+</ul>
+<p>So let’s get started with the skills and techniques you need to know to make a modern website design that can attract more sales for your business.</p>
+<h2><strong>Skills and Techniques to Make a Modern Website Design to Improve Sales in 2020</strong></h2>
+<p>Here we’re going to talk about the most popular skills and techniques being practiced in 2020 that can get you modern website design and through which you can attract more sales. According to the research, 48% of individuals say that website’s design is the most important factor for them in determining the credibility of a business Let’s have a look at the following and note down which ones you need to consider immediately to revamp your website design:</p>
+<h3><strong>Implementation of Marketing and Communication Design</strong></h3>
+<p>Your website design should have marketing and communication design preferences that can hit the right target audience. The website design has its own way of communicating the company’s message to the target audience, so it must be done considering the type of business the website is being designed for. While designing, there are 3 important things you must do such as understanding the trends of the target audience, considering the kind of business & website, and aligning the design of the website with the content.</p>
+<h3><strong>Focus on User Experience Design & Interactive Design</strong></h3>
+<p>There are two major elements of website design that enhance a user’s chances to continue using the website. These elements define the usefulness of the website for a user. The better these are, the more sales there are. Let’s have a look at these how they are helpful:</p>
+<h4><strong>User experience (UX) design</strong></h4>
+<p>It helps to have a clear user understanding of the content of how the website works. It depends on:</p>
+<ul>
+<li>Layout</li>
+<li>Clear instructions</li>
+<li>and labeling on a website</li>
+</ul>
+<p><strong>Interactive Design: </strong>It helps to have a clear user understanding of how to interact on a site</p>
+<h3><strong>Consider Quality of Page layout</strong></h3>
+<p>The quality of the page layout holds great significance for a better user interface (UI) and retaining users on the website for a longer period of time. The objects on the web page need to be appropriately aligned using the correct page pixel width. In 2020, the commonly followed trend is to have center-aligned web pages to deal with the concerns of good aesthetics on larger screens.</p>
+<h3><strong>Use Effective Typography</strong></h3>
+<figure class="wp-block-image size-large"></figure>
+<p>Typography is another essential factor that keeps the user’s attention by displaying content in a more meaningful way. There is a wide range of typefaces and type styles, but designers avoid using except a few, perhaps stemming from the inability of most browsers to recognize different fonts as safe. So in that sense, it is beneficial to research which font styles are recognizable by various browsers and then go for the safe ones.</p>
+<h3><strong>Add Motion Graphics</strong></h3>
+<figure class="wp-block-image size-large"></figure>
+<p>You can also improve your website’s user interface and page layout using good quality and appropriate motion graphics. They help to attract user’s attention more quickly, especially if you have an entertainment-oriented website. However, if your target audience is formal such as business people, then motion graphics can be unproductive. Still, you can use them if you can place it well and not distract your audience’s attention from your main goals.</p>
+<h3><strong>Quality of code</strong></h3>
+<figure class="wp-block-image size-large"></figure>
+<p>The quality of the website depends largely on how well the codes are written. In 2020, designers are making serious headway dealing with the quality of codes to conform to industry standards. There are some essential factors that must be taken into consideration to enhance the quality of the code for your websites such as errors in code, well-organized layout for code, and proper identification of IDs & classes.</p>
+<h2><strong>5 Ways to Make Modern Website Design that Improve Sales in 2020</strong></h2>
+<p>You already have an awesome website, but you’re still struggling with sales? Well, you need to consider the following 5 most effective ways that can surely hone your website design to get more sales this year. Figure out which ones you’re missing and then zero in those loopholes in your website design.</p>
+<h3><strong>1. Keep Website Speed in Check</strong></h3>
+<figure class="wp-block-image size-large"></figure>
+<p>In this technological era where everyone wants everything to happen at the fastest pace possible, website speed plays a significant role in improving website traffic. According to Google, visitors tend to bounce back if a web page’s loading time takes more than 3 seconds. As a result, a lot of harm can be done to your revenue because a delay of 1 second:</p>
+<ul>
+<li>Lose page views by 11%</li>
+<li>Reduce the conversion rate by 7%</li>
+<li>And decreases customer satisfaction by 16%.</li>
+</ul>
+<p>So always keep your loading time in check!</p>
+<h3><strong>2. Mobile Friendly</strong></h3>
+<figure class="wp-block-image size-large"></figure>
+<p>Half of the internet users now use mobile phones due to the ease and convenience of access. According to the research, 62% of companies increased their sales by ensuring their websites are optimized for mobile devices. In 2020, this trend has given rise to a definite need for a <a href="https://aahasolutions.com/blog/2021/04/28/best-languages-for-web-application-development-in-2021/">modern website design</a> accessible through mobile devices. And that’s one way on how you can generate more traffic, and turn them into new potential sales. The latest trend in 2020 is to design a website choosing two of the following formats for mobile device:</p>
+<ul>
+<li><strong>Responsive website:</strong> the webpage content moves in response to the screen size.</li>
+<li><strong>Adaptive website:</strong> the webpage layout is the same and adaptive to different screen sizes.</li>
+</ul>
+<h3><strong>3. Use Awesome Visuals</strong></h3>
+<figure class="wp-block-image size-large"></figure>
+<p>The most catchy and captivating element of your website design is visuals. In 2020, real pictures instead of stock images are more in trend, as they attract more of a user’s attention. Here we are giving some top tips to making attractive visuals and imagery for your website:</p>
+<ul>
+<li>Focus on minimalism</li>
+<li>Use contrasting colors</li>
+<li>Use your white space wisely</li>
+<li>Do not overcrowd your web pages with too many images</li>
+</ul>
+<h3><strong>4. Organize Navigation & Web Structure</strong></h3>
+<figure class="wp-block-image size-large"></figure>
+<p>Organized navigation and web structure provide an engaging user experience because users find it easy to get to the page where they want to without wasting their time. Ideally, the user should easily reach the desired webpage within four clicks. It’s even more imperative if you have an e-commerce website where customers navigate through different categories and subcategories to find the required product. Considering this, easy navigation can get you higher customer satisfaction and will generate more sales.</p>
+<h3><strong>5. Implement Social Media Share and Follow</strong></h3>
+<figure class="wp-block-image size-large"></figure>
+<p>Your website also needs social recognition, and you can do it by making a presence on several social media platforms. In your website design, manage an attractive space to put social media shares and follow buttons that can help to improve your social reach. Having a strong social reach will eventually generate more lead and sales.</p>
+<h2><strong>SEO Tips to Improve Website Design for Increased Conversions</strong></h2>
+<p>On average, every second 70,000 searches are done on Google. It reveals how important it is to rank on the top of Google to get more traffic on your website. It can only be done with a robust SEO strategy, and the design of the website has a significant role to play in ranking the website higher on Google. We have made a list of On-Page SEO tips based primarily on design to improve your website conversions in 2020.</p>
+<ul>
+<li>Clean site structure & architecture for better user experience</li>
+<li>Mobile-friendly & responsive design to retain users on the website for a longer period of time</li>
+<li>Excellent usability to engage users on the website</li>
+<li>Easily readable and understandable design for better user experience</li>
+<li>Optimize images on the website to improve the relevance</li>
+<li>Optimize the website to having an improved site speed</li>
+<li>Conversion-focused web design to drive more leads</li>
+</ul>
+<h2><strong>Best Practices for Conversion Rate Optimization (CRO)</strong></h2>
+<p>Here’s some secrets on how you can improve Your Web Design in 2020</p>
+<p>If you’re looking for a significant increase in your sales through your website, you need to pay attention to getting a conversion-focused web design. And for that, we have compiled the best practices in conversion rate optimization (CRO) that you must apply to your web design. And yes, these practices can surely turn your visitors into potential customers.</p>
+<h3><strong>Design a Clear Call-To-Action (CTA)</strong></h3>
+<p>CTA is the final step in converting a visitor to a paying customer. For having such importance, it must be designed and placed strategically on the website to make visitors click through to get to the next step of their buying decision.</p>
+<h3><strong>Place a Simple Contact Form</strong></h3>
+<p>To convert your visitors to potential buyers, you need their contact information to reach them again. And for that, you need a contact form on your website in line with the CTA. Make sure the form is short and simple so that it doesn’t turn off the visitor. Also, always mention your contact information clearly because 44% of website visitors bounce back from the website if no contact information is mentioned.</p>
+<h3><strong>Pay More Attention to Your Homepage</strong></h3>
+<p>Your homepage should be the best part of your website, as this is the first thing visitors look at. On average, visitors spend 5.95 seconds on the homepage and that’s an opportunity where you can transform a casual user visit into a potential purchase. While you’re designing your home page, make sure its design and content are compelling enough to clearly communicate your value proposition and effectively present what users are looking for on your website.</p>
+<h3><strong>Keep Mobile-Responsiveness in Check</strong></h3>
+<p>If you look at your website’s analytics, you will notice that a significant amount of traffic is coming from mobile devices. This is due to the ease users have in using their<a href="https://aahasolutions.com/mobile-application-company-in-pondicherry.php"> mobile devices.</a> But users quickly get pissed off with inadequate mobile responsiveness of a site and don’t give a positive response to the poorly designed website. So to capture your target audience to improve more sales in 2020, efficient mobile responsiveness is a way to do it.</p>
+<h3><strong>Show Some Trust Symbols</strong></h3>
+<p>Your content and design can attract customers and make up their minds to buy products or services from your website. However, they need proof and some symbols of trust to proceed with their buying process. You can show that your trustworthiness by using</p>
+<ul>
+<li>client testimonials</li>
+<li>awards</li>
+<li>brand partnerships</li>
+<li>security badges</li>
+</ul>
+<h3><strong>Perform A/B Testing</strong></h3>
+<p>All the above discussed best practices for CRO can make a great improvement to get more sales, and their execution may vary for a specific kind of website. However, the most critical factor is to perform <a href="https://aahasolutions.com/blog/2021/02/16/software-testing/">A/B testing </a>for every design element to figure out the best version for your website.</p>
+<h2><strong>Summary</strong></h2>
+<p>Effective and attractive web design can grab users’ attention instantly and that’s how they can successfully enter into a process where their simple visit is transformed into a potential sale. After all, humans believe what they see and a good modern website design can be more impactful and lucrative for your business. In this blog post you have learned:</p>
+<ul>
+<li>Skills and techniques to make a modern website design to improve sales in 2020</li>
+<li>5 ways to make modern website design that improve sales in 2020</li>
+<li>SEO tips to improve website traffic for increased conversions</li>
+<li>Best practices for conversion rate optimization (CRO) to improvise your web design in 2020</li>
+</ul>
+<p>And as always, if you need help with new website design or revamp the existing one, <a href="http://www.aahasolutions.com">feel free to contact us</a> for a free consultation.</p>
+</div>
+</div>
+</article>
+<nav class="navigation post-navigation" role="navigation" aria-label="Posts"></nav>
+<p> </p>
+</div>
+</div>
+</div>
+<footer id="colophon" class="ast-site-footer site-footer">
+<div class="ast-main-footer-wrap">
+<div class="site-primary-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-3-equal ast-builder-grid-row-tablet-3-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-primary-footer-builder">
+<div class="ast-builder-grid-row-container-inner">
+<div class="ast-builder-footer-grid-columns site-primary-footer-inner-wrap ast-builder-grid-row">
+<div class="site-footer-primary-section-2 site-footer-section site-footer-section-2">
+<aside class="footer-widget-area widget-area site-footer-focus-item" data-section="sidebar-widgets-footer-widget-2">
+<div class="footer-widget-area-inner site-info-inner">
+<section id="custom_html-4" class="widget_text widget widget_custom_html">
+<div class="textwidget custom-html-widget">
+<div class="branches_adress">
+<p> </p>
+</div>
+</div>
+</section>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</div>
+<div class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-2-equal ast-builder-grid-row-tablet-2-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-below-footer-builder">
+<div class="ast-builder-grid-row-container-inner">
+<div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
+<div class="site-footer-below-section-2 site-footer-section site-footer-section-2">
+<div class="footer-widget-area widget-area site-footer-focus-item" data-section="section-footer-menu">
+<div class="footer-bar-navigation">
+<nav id="site-navigation" class="ast-flex-grow-1 navigation-accessibility footer-navigation" aria-label="Site Navigation">
+<div class="footer-nav-wrap"></div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+    </article>
+    
+    <div class="bp-footer-bar">
+      <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back-btn">← Back to Blog</a>
+      <span style="color:#64748b;font-size:14px">
+        © AAHA Solutions · 2026      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleGoBack(e) {
+  if (window.history.length > 1 && document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+    e.preventDefault();
+    window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

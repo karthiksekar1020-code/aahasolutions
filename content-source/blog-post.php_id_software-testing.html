@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software Testing – AAHA Solutions</title>
+  <meta name="description" content="How to become a Good tester As it is well known, software development is an activity that is subject to human mistakes, therefore it is likely to be found in any development with defects or the well k...">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="icon" href="/assets/images/favicon2.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Poppins', 'Inter', sans-serif; 
+      background: #fff; 
+      color: #334155; 
+      margin: 0; 
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    /* ── TOPBAR ── */
+    .bp-topbar { 
+      background: #0f172a; 
+      padding: 16px 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      border-bottom: 1px solid #1e293b; 
+    }
+    .bp-topbar-inner { 
+      max-width: 860px; 
+      margin: 0 auto; 
+      padding: 0 24px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .bp-brand { 
+      font-size: 1.2rem; 
+      font-weight: 800; 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: -0.02em;
+    }
+    .bp-brand span { 
+      color: #82C341; 
+    }
+    .bp-back { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 7px; 
+      color: #cbd5e1;
+      font-size: 15px; 
+      font-weight: 600;
+      text-decoration: none; 
+      padding: 7px 16px; 
+      border-radius: 8px;
+      border: 1px solid #334155; 
+      background: rgba(255,255,255,0.03);
+      transition: all .2s ease; 
+      cursor: pointer;
+    }
+    .bp-back:hover { 
+      color: #fff; 
+      border-color: #82C341; 
+      background: rgba(130,195,65,0.12);
+      text-decoration: none; 
+    }
+
+    /* ── CONTAINER ── */
+    .bp-container { 
+      max-width: 840px; 
+      margin: 0 auto; 
+      padding: 50px 24px 90px; 
+    }
+
+    /* ── HEADER ── */
+    .bp-header { 
+      margin-bottom: 32px; 
+    }
+    .bp-cat { 
+      display: inline-block; 
+      background: rgba(130,195,65,.12); 
+      color: #3b6e15;
+      font-size: 14px; 
+      font-weight: 700; 
+      padding: 5px 16px; 
+      border-radius: 20px;
+      border: 1px solid rgba(130,195,65,.3); 
+      margin-bottom: 18px; 
+      letter-spacing: .4px; 
+      text-transform: uppercase; 
+    }
+    .bp-title { 
+      font-size: 36px; 
+      font-weight: 800; 
+      color: #0f172a;
+      line-height: 1.25; 
+      margin: 0 0 20px; 
+      letter-spacing: -0.02em; 
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+    .bp-meta { 
+      display: flex; 
+      gap: 22px; 
+      flex-wrap: wrap; 
+      color: #475569; 
+      font-size: 15px; 
+      font-weight: 500; 
+    }
+    .bp-meta span { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .bp-featured-img { 
+      margin-bottom: 44px; 
+      width: 100%; 
+    }
+    .bp-featured-img img { 
+      width: 100%; 
+      max-height: 480px; 
+      object-fit: cover;
+      border-radius: 12px; 
+      box-shadow: 0 6px 25px rgba(0,0,0,.08); 
+      display: block; 
+    }
+
+    /* ── INSIDE ARTICLE CONTENT ── */
+    .bp-body { 
+      padding: 0; 
+    }
+    .bp-content { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important; 
+    }
+    
+    /* Headings inside content */
+    .bp-content h2, .bp-content h3, .bp-content h4 { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 800 !important; 
+      color: #0f172a !important; 
+      letter-spacing: -0.02em !important; 
+      line-height: 1.35 !important; 
+    }
+    .bp-content h2 { 
+      font-size: 32px !important; 
+      margin: 45px 0 18px !important; 
+    }
+    .bp-content h3 { 
+      font-size: 26px !important; 
+      margin: 38px 0 16px !important; 
+    }
+    .bp-content h4 { 
+      font-size: 22px !important; 
+      margin: 30px 0 14px !important; 
+    }
+    
+    .bp-content p,
+    .bp-content span,
+    .bp-content div { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important;
+    }
+
+    .bp-content p {
+      margin-bottom: 26px !important; 
+    }
+
+    .bp-content strong,
+    .bp-content b { 
+      color: #0f172a !important; 
+      font-weight: 700 !important; 
+    }
+    .bp-content a { 
+      color: #2563eb !important; 
+      text-decoration: underline !important; 
+    }
+    .bp-content a:hover { 
+      color: #1d4ed8 !important; 
+      text-decoration: none !important; 
+    }
+    
+    /* Quotes */
+    .bp-content blockquote, 
+    .bp-content p > em:only-child, 
+    .bp-content p > i:only-child { 
+      font-style: italic; 
+      font-size: 21px !important; 
+      color: #1e293b !important; 
+      line-height: 1.8 !important; 
+      border-left: 4px solid #82C341 !important; 
+      padding-left: 24px !important; 
+      margin: 32px 0 !important; 
+      display: block;
+      background: #f8fafc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    /* Lists */
+    .bp-content ul, .bp-content ol { 
+      margin: 0 0 26px 30px; 
+      font-size: 21px !important;
+      line-height: 1.85 !important;
+    }
+    .bp-content li { 
+      margin-bottom: 12px; 
+      color: #1e293b !important;
+      font-size: 21px !important;
+    }
+
+    /* ── FOOTER BAR ── */
+    .bp-footer-bar { 
+      border-top: 1px solid #e2e8f0; 
+      padding: 34px 0 0; 
+      margin-top: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+    .bp-back-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      background: #f8fafc;
+      color: #334155; 
+      padding: 11px 22px; 
+      border-radius: 10px; 
+      font-size: 15px;
+      font-weight: 700; 
+      text-decoration: none; 
+      transition: all .2s ease; 
+      border: 1px solid #cbd5e1; 
+      cursor: pointer;
+    }
+    .bp-back-btn:hover { 
+      background: #82C341; 
+      border-color: #82C341;
+      color: #fff; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(130,195,65,0.35);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="bp-topbar">
+  <div class="bp-topbar-inner">
+    <a href="/index.php" class="bp-brand">AAHA <span>Solutions</span></a>
+    <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back">← Back</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="bp-container">
+  <div class="bp-header">
+    <div class="bp-cat">Software Testing</div>
+    <h1 class="bp-title">Software Testing</h1>
+    <div class="bp-meta">
+      <span><i class="fas fa-calendar-alt" style="color: #82C341; margin-right: 4px;"></i> 16 February 2021</span>
+      <span><i class="fas fa-user" style="color: #82C341; margin-right: 4px;"></i> Admin</span>
+    </div>
+  </div>
+
+      <div class="bp-featured-img">
+      <img src="/assets/images/blog/software-testing-1781091344.jpg" alt="Software Testing" onerror="this.parentElement.style.display='none';">
+    </div>
+  
+  <div class="bp-body">
+    <article class="bp-content">
+      <div class="container">
+<div class="row">
+<div class="col-md-10 m-auto">
+<article class="post-1339 post type-post status-publish format-standard has-post-thumbnail hentry category-software-development tag-automation tag-development tag-software tag-testing">
+<header class="header_single_post">
+<h1 class="entry__title"><strong>How to become a Good tester</strong></h1>
+</header>
+<div class="entry__content">
+<p>As it is well known, software development is an activity that is subject to human mistakes, therefore it is likely to be found in any development with defects or the well known “bugs”.</p>
+<p>When the software project is ready to be delivered to the client, it is crucial to ensure the quality the client expects, as well as to check that the criteria that were agreed upon in the definition of the project are met. But, how do we provide quality software to the clients? The answer is by doing testing.</p>
+<h2><strong>What is testing?</strong></h2>
+<p>According to my experience in software projects, testing is a destructive process in which the main objective is to find defects in the code of the software. So, if you find defects your testing will be successful.</p>
+<h2><strong>The role of the tester in the development process</strong></h2>
+<p>The concept of the tester arises from the commitment to quality. Every development team in a software company should have at least one person responsible for ensuring the proper functioning of the software that was developed and is ready to be delivered to the customer. This person will test and ensure the quality of the software.</p>
+<p>The tester should not be interpreted as someone who judges the work of the developer or who is constantly correcting what others are doing wrong, on the contrary, the tester should be seen as the one who is going to work together and in a team with the developer to improve the requirements requested by the clients and preventing them from finding errors.</p>
+<p>That is why it is very important that both tester and developer work together to achieve the expected results in an efficient way. But, how do we achieve this? One of the central points for me is good communication. The tester should be able to clearly communicate the detected errors to the developer and cooperate with as much information as possible in order to reproduce them and avoid misunderstandings.</p>
+<h3><strong>Testers should also:</strong></h3>
+<ul>
+<li>Work calmly under pressure</li>
+<li>Pay attention to details</li>
+<li>Be organized</li>
+<li>Able to solve problems</li>
+<li>Be methodic and creative</li>
+<li>Recommend ways to improve the software.</li>
+</ul>
+<h2><strong>Validate vs. Verify</strong></h2>
+<p>These two closely related concepts in the world of testing have similarities but not the same meaning.</p>
+<p>On the one hand, when we Validate, we should ask ourselves the following question: Are we building the right system? The software should do what the customer actually asked for.</p>
+<p>On the other hand, when we Verify, we should ask ourselves this question: Are we building the system correctly?. Verify that the software conforms to your specification.</p>
+<p>With these two concepts, we can answer the question of Why testing is necessary? to verify that the software meets the requirements and validate that the functions are implemented correctly.</p>
+<h4><strong>Moreover, other reasons are:</strong></h4>
+<ul>
+<li>To reduce risks</li>
+<li>To build confidence in my product</li>
+<li>Because failures are very expensive</li>
+<li><img class="alignnone  wp-image-553" src="https://aahasolutions.com/blog/wp-content/uploads/2021/02/tes-300x118.jpg" alt="" width="346" height="136" srcset="https://aahasolutions.com/blog/wp-content/uploads/2021/02/tes-300x118.jpg 300w, https://aahasolutions.com/blog/wp-content/uploads/2021/02/tes.jpg 357w" sizes="(max-width: 346px) 100vw, 346px" /></li>
+</ul>
+<h2><strong>Principles of testing</strong></h2>
+<p><a href="https://aahasolutions.com/blog/2021/01/27/automated-testing-on-projects-with-frequently-changing-code/">There are several principles of testing</a>. Some of the most important to me when testing is:</p>
+<ul>
+<li>Testing shows the presence of defects. We have to be sure that the software we are going to test has defects and I, as a tester will find them.</li>
+<li>Exhaustive testing is impossible. It is considered impossible to test all software. I’m going to have to make a decision about what I’m going to test, and this depends on the scope of the tests defined in the plan.</li>
+<li>Early testing. Testing can begin from the moment the customer requests changes to the software or defines its requirements. It is not necessary to wait for the developer to deliver a version to be tested.</li>
+<li>Defects are grouped together. Defects in a given software or application tend to be grouped together. If I find a defect in a software module, I will have to pay attention because other defects may exist or be caused.</li>
+<li>Pesticide Paradox. Like the continued use of a pesticide, a set of test cases that are used repeatedly will decrease ineffectiveness, as new defects will not be found. It is necessary to define new test cases and include them in the plan or to change the data with which it will be tested.</li>
+<li>Testing depends on the context. The same test object will be different in diverse test contexts.</li>
+<li>The absence of errors is a fallacy. It is necessary to consider that all software or applications at the moment of being tested have errors. There is always something we can improve or solve.</li>
+</ul>
+<div class="wp-block-image"></div>
+<h2><strong>Testing and documentation</strong></h2>
+<p>Although documenting is a tedious task, I think it’s very important to do it because it’s evidence of all the testing we do on certain software. Besides, it’s a way of communicating with the team.</p>
+<p>It is used to repeat test cycles when defects need to be corrected.</p>
+<p>A good way to document for a tester is to make the definition of test cases. But, how should a test case be composed?</p>
+<h4><strong>Some parts of the test cases could be:</strong></h4>
+<ul>
+<li>Test Case name</li>
+<li>Purpose of Test Case</li>
+<li>Priority</li>
+<li>Test type</li>
+<li>Steps of execution</li>
+<li>Results obtained</li>
+<li>Expected results</li>
+<li>Status of executed test case</li>
+<li>Tester</li>
+</ul>
+<p>You can also add a</p>
+<p>s documentation the testing plan, and something very important for me and necessary is to document the defect, so you can track it and it can be easily reproduced by the developer.</p>
+<h2><img class="alignnone size-medium wp-image-552" style="color: #737373;  " src="https://aahasolutions.com/blog/wp-content/uploads/2021/02/writing-good-test-cases-300x158.png" alt="" width="300" height="158" srcset="https://aahasolutions.com/blog/wp-content/uploads/2021/02/writing-good-test-cases-300x158.png 300w, https://aahasolutions.com/blog/wp-content/uploads/2021/02/writing-good-test-cases-1024x538.png 1024w, https://aahasolutions.com/blog/wp-content/uploads/2021/02/writing-good-test-cases-768x403.png 768w, https://aahasolutions.com/blog/wp-content/uploads/2021/02/writing-good-test-cases.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /></h2>
+<p> </p>
+<div class="wp-block-image"></div>
+<h2><strong>Some t</strong><strong>oo</strong><strong>ls to help testing</strong></h2>
+<p>It is increasingly necessary to use tools that help us perform our testing in a more efficient and organized way. In the world of software, there are many. Some of the best known to keep in mind are:</p>
+<ul>
+<li><a href="https://aahasolutions.com/qa-testing-company-in-pondicherry.php">Selenium </a>(Web Application Testing)</li>
+<li>Appium (Mobile Testing)</li>
+<li>TestLink (Test Management)</li>
+<li>TestRail (Test Management)</li>
+<li>Postman (API Testing)</li>
+<li>Katalon Studio (Automation Testing)</li>
+</ul>
+<p>To conclude, thanks to testing we now can obtain many benefits and not only related to the quality of the products that we develop or the services we provide, but also in increase security, accelerate the product development cycle, minimize costs, drive efficiency, reduces risk and increases customer satisfaction.</p>
+<p>Do you have any questions for us? <a href="http://www.aahasolutions.com">Get in touch!</a> Do you want to know more about AAHA Solutions? Check out more <a href="https://aahasolutions.com/software-developement-company-in-pondicherry.php">here.</a></p>
+</div>
+<div class="bottom_tags_social">
+<div class="content_tags">
+<div class="item_tag">AUTOMATION</div>
+<div class="item_tag">DEVELOPMENT</div>
+<div class="item_tag">SOFTWARE</div>
+<div class="item_tag">TESTING</div>
+</div>
+<div class="bottom_social_icons d-flex">
+<div class="icons_social"></div>
+<div class="icons_social"></div>
+<div class="icons_social"></div>
+<div class="icons_social"></div>
+</div>
+</div>
+<footer></footer>
+</article>
+</div>
+</div>
+</div>
+<div class="container">
+<hr class="mt-4 mb-3" />
+<section class="post_list">
+<div class="py-3">
+<h2 class="title"></h2>
+</div>
+</section>
+</div>
+    </article>
+    
+    <div class="bp-footer-bar">
+      <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back-btn">← Back to Blog</a>
+      <span style="color:#64748b;font-size:14px">
+        © AAHA Solutions · 2026      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleGoBack(e) {
+  if (window.history.length > 1 && document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+    e.preventDefault();
+    window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

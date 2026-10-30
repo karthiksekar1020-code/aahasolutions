@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to learn laravel (step by step) – AAHA Solutions</title>
+  <meta name="description" content="Laravel framework is one of the most popular frameworks at the moment. The framework has earned its popularity due to the rapid development, the built-in script and styles, and most importantly, its o...">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="icon" href="/assets/images/favicon2.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Poppins', 'Inter', sans-serif; 
+      background: #fff; 
+      color: #334155; 
+      margin: 0; 
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    /* ── TOPBAR ── */
+    .bp-topbar { 
+      background: #0f172a; 
+      padding: 16px 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      border-bottom: 1px solid #1e293b; 
+    }
+    .bp-topbar-inner { 
+      max-width: 860px; 
+      margin: 0 auto; 
+      padding: 0 24px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .bp-brand { 
+      font-size: 1.2rem; 
+      font-weight: 800; 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: -0.02em;
+    }
+    .bp-brand span { 
+      color: #82C341; 
+    }
+    .bp-back { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 7px; 
+      color: #cbd5e1;
+      font-size: 15px; 
+      font-weight: 600;
+      text-decoration: none; 
+      padding: 7px 16px; 
+      border-radius: 8px;
+      border: 1px solid #334155; 
+      background: rgba(255,255,255,0.03);
+      transition: all .2s ease; 
+      cursor: pointer;
+    }
+    .bp-back:hover { 
+      color: #fff; 
+      border-color: #82C341; 
+      background: rgba(130,195,65,0.12);
+      text-decoration: none; 
+    }
+
+    /* ── CONTAINER ── */
+    .bp-container { 
+      max-width: 840px; 
+      margin: 0 auto; 
+      padding: 50px 24px 90px; 
+    }
+
+    /* ── HEADER ── */
+    .bp-header { 
+      margin-bottom: 32px; 
+    }
+    .bp-cat { 
+      display: inline-block; 
+      background: rgba(130,195,65,.12); 
+      color: #3b6e15;
+      font-size: 14px; 
+      font-weight: 700; 
+      padding: 5px 16px; 
+      border-radius: 20px;
+      border: 1px solid rgba(130,195,65,.3); 
+      margin-bottom: 18px; 
+      letter-spacing: .4px; 
+      text-transform: uppercase; 
+    }
+    .bp-title { 
+      font-size: 36px; 
+      font-weight: 800; 
+      color: #0f172a;
+      line-height: 1.25; 
+      margin: 0 0 20px; 
+      letter-spacing: -0.02em; 
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+    .bp-meta { 
+      display: flex; 
+      gap: 22px; 
+      flex-wrap: wrap; 
+      color: #475569; 
+      font-size: 15px; 
+      font-weight: 500; 
+    }
+    .bp-meta span { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+    }
+
+    /* ── FEATURED IMAGE ── */
+    .bp-featured-img { 
+      margin-bottom: 44px; 
+      width: 100%; 
+    }
+    .bp-featured-img img { 
+      width: 100%; 
+      max-height: 480px; 
+      object-fit: cover;
+      border-radius: 12px; 
+      box-shadow: 0 6px 25px rgba(0,0,0,.08); 
+      display: block; 
+    }
+
+    /* ── INSIDE ARTICLE CONTENT ── */
+    .bp-body { 
+      padding: 0; 
+    }
+    .bp-content { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important; 
+    }
+    
+    /* Headings inside content */
+    .bp-content h2, .bp-content h3, .bp-content h4 { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 800 !important; 
+      color: #0f172a !important; 
+      letter-spacing: -0.02em !important; 
+      line-height: 1.35 !important; 
+    }
+    .bp-content h2 { 
+      font-size: 32px !important; 
+      margin: 45px 0 18px !important; 
+    }
+    .bp-content h3 { 
+      font-size: 26px !important; 
+      margin: 38px 0 16px !important; 
+    }
+    .bp-content h4 { 
+      font-size: 22px !important; 
+      margin: 30px 0 14px !important; 
+    }
+    
+    .bp-content p,
+    .bp-content span,
+    .bp-content div { 
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-size: 21px !important; 
+      line-height: 1.85 !important; 
+      color: #1e293b !important; 
+      font-weight: 400 !important;
+    }
+
+    .bp-content p {
+      margin-bottom: 26px !important; 
+    }
+
+    .bp-content strong,
+    .bp-content b { 
+      color: #0f172a !important; 
+      font-weight: 700 !important; 
+    }
+    .bp-content a { 
+      color: #2563eb !important; 
+      text-decoration: underline !important; 
+    }
+    .bp-content a:hover { 
+      color: #1d4ed8 !important; 
+      text-decoration: none !important; 
+    }
+    
+    /* Quotes */
+    .bp-content blockquote, 
+    .bp-content p > em:only-child, 
+    .bp-content p > i:only-child { 
+      font-style: italic; 
+      font-size: 21px !important; 
+      color: #1e293b !important; 
+      line-height: 1.8 !important; 
+      border-left: 4px solid #82C341 !important; 
+      padding-left: 24px !important; 
+      margin: 32px 0 !important; 
+      display: block;
+      background: #f8fafc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    /* Lists */
+    .bp-content ul, .bp-content ol { 
+      margin: 0 0 26px 30px; 
+      font-size: 21px !important;
+      line-height: 1.85 !important;
+    }
+    .bp-content li { 
+      margin-bottom: 12px; 
+      color: #1e293b !important;
+      font-size: 21px !important;
+    }
+
+    /* ── FOOTER BAR ── */
+    .bp-footer-bar { 
+      border-top: 1px solid #e2e8f0; 
+      padding: 34px 0 0; 
+      margin-top: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+    .bp-back-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      background: #f8fafc;
+      color: #334155; 
+      padding: 11px 22px; 
+      border-radius: 10px; 
+      font-size: 15px;
+      font-weight: 700; 
+      text-decoration: none; 
+      transition: all .2s ease; 
+      border: 1px solid #cbd5e1; 
+      cursor: pointer;
+    }
+    .bp-back-btn:hover { 
+      background: #82C341; 
+      border-color: #82C341;
+      color: #fff; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(130,195,65,0.35);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="bp-topbar">
+  <div class="bp-topbar-inner">
+    <a href="/index.php" class="bp-brand">AAHA <span>Solutions</span></a>
+    <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back">← Back</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="bp-container">
+  <div class="bp-header">
+    <div class="bp-cat">Laravel development</div>
+    <h1 class="bp-title">How to learn laravel (step by step)</h1>
+    <div class="bp-meta">
+      <span><i class="fas fa-calendar-alt" style="color: #82C341; margin-right: 4px;"></i> 24 January 2020</span>
+      <span><i class="fas fa-user" style="color: #82C341; margin-right: 4px;"></i> Admin</span>
+    </div>
+  </div>
+
+      <div class="bp-featured-img">
+      <img src="/assets/images/blog/how-to-learn-laravel-a-step-by-step-guide-1781091354.png" alt="How to learn laravel (step by step)" onerror="this.parentElement.style.display='none';">
+    </div>
+  
+  <div class="bp-body">
+    <article class="bp-content">
+      <p><a href="https://www.aahasolutions.com/application/laravel.php">Laravel framework</a> is one of the most popular frameworks at the moment. The framework has earned its popularity due to the rapid development, the built-in script and styles, and most importantly, its own and very convenient template engine. On top of that, a very flexible formation of routes, which is undoubtedly a huge plus.</p>
+<p>Official documentation is best suited to learn Laravel. Moreover, an excellent video course from Laracasts is an integral part of studying this framework. This is a beautiful resource. With it, you can find not only useful video tutorials on the Laravel framework. But also additional tools for developing a full <a href="https://www.aahasolutions.com/web-application-company-in-pondicherry.php">web application </a>based on Laravel. That in addition to solid principles in PHP for correct construction of your application, and video tutorials on Vue.js framework, which I recommend as the front-end part of your web application.</p>
+<h3><strong>THE BLADE TEMPLATING ENGINE</strong></h3>
+<p> </p>
+<p>One significant plus in Laravel is its blade templating engine.</p>
+<p>After successfully reading the documentation and watching the video course, you will be ready to create a web application. This process is very entertaining and absorbs you completely. For example, we take the construction of a blog with the possibility of expanding it to the web store, as implemented in <a href="https://www.aahasolutions.com/application/wordpress.php">WordPress</a> + Woocommerce.</p>
+<p>The best practice will be to use a modular system for building an application. This is very convenient and most importantly, a proper hierarchy of all your files, which is an advantage if other developers will use your code in the future. Best of all, you will learn to order in your web application.</p>
+<p>Now we come to one of the most important things in this learning experience: creating a database for a future web application. On the one hand, the database should be straightforward. On the other hand, it has to be quite flexible.</p>
+<p>In the database, we will need to keep a lot of different data, such as data of users, posts, pages, categories, tags, comments, user roles and user permissions. A wise thing to do is to the good is to create a table for the media library, and maintain a connection between media files on your disk and some posts. Then, once a month, you can delete all media files, but not media which were uploaded previously and belong to some pages, posts or products. And for the store, we should also keep data categories of tags and prices: the standard price and the discount price. For all of that, we need different tables in our database.</p>
+<p>Laravel has a command line interface through which you can create all the necessary files for work, such as modules, controllers, models, migrations, etc.</p>
+<h3><strong>THE CREATION PROCESS</strong></h3>
+<p> </p>
+<p>The creation process is straightforward. We create a migration path for the user table via the command line interface (there is a standard artisan command). Then we need to create a controller, model, and migration for roles, user permissions, and then for user roles. We do all that so in the end, we can connect everything. And in the future, each user will have a role, and each, in turn, will have its permissions for the user.</p>
+<p>If using a standard command to create a controller, model and migration, there will not be enough fields in the new table for the user in the migration file. For this specific reason, the first thing we need to do is add the missing fields.</p>
+<p><strong>FEATURES</strong></p>
+<p>Another important feature is to realize the activation of the user account. For this, there are two ways. The first way is to activate it through Laravel. The second way is to enable it on its own, which is not difficult. When using the standard method through Laravel, you speed up the development process, because everything is written thinking of you. This is a massive advantage of this framework in comparison with the rest.<br />
+Once all of the above has been completed, you can begin installing a modular system for a web application.</p>
+<p> </p>
+<p><strong style=" ">THE MODULAR SYSTEM</strong></p>
+<div class="main-wrapper">
+<div class="main-container">
+<div class="page-wrapper">
+<div class="sections-container">
+<article id="post-70762" class="page-body style-color-xsdn-bg post-70762 post type-post status-publish format-standard has-post-thumbnail hentry category-technology category-web tag-laravel tag-laravel-developers tag-vue">
+<div class="post-wrapper">
+<div class="post-body">
+<div class="post-content">
+<div class="row-container">
+<div class="row row-parent style-light double-top-padding double-bottom-padding">
+<p>The modular system in Laravel is an add-on that is installed via composer, after which new commands are automatically added to the command line interface. That can be used to create, enable or disable modules. There are many commands added. I just listed a few of them.</p>
+<p>Now you can create modules. You can find detailed commands here.</p>
+<p>At this stage it is necessary to create several modules:</p>
+<ul>
+<li>Administrative panel module;</li>
+<li>Site module;</li>
+<li>Blog module;</li>
+<li>Store module;</li>
+</ul>
+<p>After building all these modules, I would recommend creating your middleware. That will allow you to filter http requests (for example, give access to a specific group of routes and filter all requests to access the administrative panel).</p>
+<h3><strong>WHAT ARE ROUTE GROUPS AND HOW TO BEST USE THEM</strong></h3>
+<p> </p>
+<p>Route groups is a process that happens when we combine different routes into one group. We filter all http requests through this group using middleware. It is more logical and convenient when there is a need to filter all routes according to the same rules for different methods and controllers.</p>
+<p>One of the necessities for any form is validation. And here Laravel provides us with two options. We can do it directly in the Controller for each method, or we can use special classes. Doing that, we will be able to pass requests and still in this class write validation for forms. In this case, there is no universal method, and everyone chooses your preferred method.</p>
+<p>Also in this framework, there is a beautiful thing from the box, like flash messages, that we can return after working out any of the methods with a simple command. For example, show the user that the form was submitted successfully or not.</p>
+<p> </p>
+<h3><strong>CONCLUSION</strong></h3>
+<p> </p>
+<p>Laravel works excellent with the front-end framework Vue.js and this link allows you to make genuinely excellent web applications. For example, to create a spa <a href="https://aahasolutions.com/blog/2019/12/04/how-a-mobile-application-can-strengthen-your-business/">application</a> where Laravel will be responsible for the back-end, and Vue.js will be responsible for the front-end.In such a bundle of frameworks, we get an application that works very quickly. That, in the end, will please not only you but also the users who will use your web application. As with proper construction, you can eliminate many unnecessary page reloads and implement form validation on the fly.</p>
+<p>At that moment, when the user is just beginning to enter data into the form fields, validation is already taking place. And it happens on Laravel. The returned results are done not by Vue.js, but by Laravel.</p>
+<p>When you start writing Laravel, you will not stop anymore. It’s addictive; trust me. After working with this framework, it will be hard to abandon it and switch to something else.</p>
+<p>We hope you enjoyed this step-by-step guide to Laravel.<br />
+Visit us at: <a href="https://www.aahasolutions.com">https://www.aahasolutions.com</a></p>
+<h3><strong> </strong></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<h3><strong> </strong></h3>
+<h3><strong> </strong></h3>
+    </article>
+    
+    <div class="bp-footer-bar">
+      <a href="/software-development-blog-in-pondicherry.php" onclick="handleGoBack(event)" class="bp-back-btn">← Back to Blog</a>
+      <span style="color:#64748b;font-size:14px">
+        © AAHA Solutions · 2026      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleGoBack(e) {
+  if (window.history.length > 1 && document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+    e.preventDefault();
+    window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

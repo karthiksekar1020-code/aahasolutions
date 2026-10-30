@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study: How AAHA Solutions developed a centralized web-based E-Commerce Platform streamlining product discovery, checkout, and inventory.">
+    <meta name="keywords" content="e-commerce platform case study, online shopping platform, inventory management, product discovery, digital commerce solution">
+    <title>E-Commerce Platform Case Study | E-Commerce Solutions | AAHA Solutions</title>
+    
+    <link href="../assets/images/favicon2.png" rel="icon" sizes="32x32" type="image/png">
+    <!-- Preload LCP Background Image -->
+    <link rel="preload" fetchpriority="high" as="image" href="../assets/images/mobile-application.jpg" type="image/jpeg">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/master.css">
+    <link href="../assets/css/services.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/fontstyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link href="../assets/css/maincss.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Critical LCP Banner CSS */
+        .services-banner {
+            background-image: url('../assets/images/mobile-application.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center top;
+            background-size: cover;
+            background-color: #000;
+            padding: 110px 0 40px;
+        }
+        .services-banner.microsoftbg {
+            background-image: url('../assets/images/mobile-application.jpg');
+        }
+
+        h2.aaha {
+            position: relative;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        h2.aaha:before {
+            content: '';
+            width: 99px;
+            height: 4px;
+            background: #82C341;
+            border-radius: 100px;
+            position: absolute;
+            display: inline-block;
+            bottom: -8px;
+            left: 50%;
+            margin-left: -49.5px;
+        }
+        .cs-details {
+            background: #f5f7fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #82C341;
+            color: #fff;
+            cursor: pointer;
+            padding: 2px 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body id="home" data-offset="80" data-target=".navbar" data-spy="scroll">
+    <header class="header">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <!-- Google tag (gtag.js) - Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T3KLLXP5G6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-T3KLLXP5G6');
+    </script>
+
+    <!-- Microsoft Clarity (Lazy Loaded on User Interaction) -->
+    <script type="text/javascript">
+        (function() {
+            var clarityLoaded = false;
+            function loadClarity() {
+                if (clarityLoaded) return;
+                clarityLoaded = true;
+                
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    // Run Clarity cookie-less by default to resolve third-party cookie alerts
+                    c[a]('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window,document,"clarity","script","p8q7v2y6l1");
+                
+                // Clean up event listeners
+                window.removeEventListener('scroll', loadClarity);
+                window.removeEventListener('mousemove', loadClarity);
+                window.removeEventListener('touchstart', loadClarity);
+                window.removeEventListener('keydown', loadClarity);
+            }
+            window.addEventListener('scroll', loadClarity, { passive: true });
+            window.addEventListener('mousemove', loadClarity, { passive: true });
+            window.addEventListener('touchstart', loadClarity, { passive: true });
+            window.addEventListener('keydown', loadClarity, { passive: true });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    
+    <!-- Font Styles & Icons -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/simple-line-icons.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/fontstyle.css">
+    <link rel="stylesheet" href="/assets/css/all.css">
+    <style>
+        /* Smooth navbar transition and stabilize logo dimensions on scroll */
+        .navbar-brand img {
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar .navbar-brand .inverse-logo, 
+        .navbar .navbar-brand .normal-logo {
+            width: 150px !important;
+            height: auto !important;
+        }
+
+        /* FAQ chevron fixes */
+        #faq-accordion a.collapsed .fa-chevron-down,
+        .faq-header a.collapsed .fa-chevron-down {
+            transform: rotate(0deg) !important;
+        }
+        #faq-accordion a:not(.collapsed) .fa-chevron-down,
+        .faq-header a:not(.collapsed) .fa-chevron-down {
+            transform: rotate(180deg) !important;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header class="header">
+        <nav id="nav" class="navbar navbar-default navbar-fixed-top navbg-sm " role="navigation">
+            <div class="logo-back">
+                <div class="shape-01"></div>
+            </div>
+            <div class="container relative-nav-container">
+                <a class="toggle-button visible-xs-block" id="navbartogglebtn">
+                    <i class="fa fa-navicon" id="iconC"></i>
+                </a>
+                <a class="navbar-brand scroll" href="/" src="/assets/images/logo.svg">
+                    <img class="normal-logo hidden-xs" src="/assets/images/logo.svg" width="150" height="50" alt="AAHA solutions" />
+                    <img class="inverse-logo hidden-xs hidden-sm" src="/assets/images/logo.svg" width="150" height="50" alt="AAHA solutions" />
+                    <img class="inverse-logo colntactlogo hidden-xs hidden-sm" src="/assets/images/logo.svg" width="150" height="50" alt="AAHA solutions" />
+                    <img class="inverse-logo sm-logo  visible-sm" src="/assets/images/logo.svg" width="150" height="50" alt="AAHA solutions" />
+                    <img class="visible-xs-block black" src="/assets/images/logo.svg" width="150" height="50" alt="AAHA solutions" />
+                    <img class="visible-xs-block white" src="/assets/images/logo.svg" width="150" height="50" alt="AAHA solutions" />
+                </a>
+                <div class="navbar-collapse floated" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-with-inside clearfix navbar-right with-border">
+                        <li class="haschild "><a>COMPANY</a>
+                            <div class="wrap-inside-nav">
+                                <div class="inside-col">
+                                    <ul class="inside-nav">
+                                        <li><a href="/software-developement-company-in-pondicherry.php">About Us</a></li>
+                                        <li><a href="/software-careers-in-pondicherry.php">Careers</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="haschild "><a>SERVICES</a>
+                            <div class="wrap-inside-nav">
+                                <div class="inside-col">
+                                    <ul class="inside-nav">
+                                        <li><a href="/cloud-services-company/">Cloud services</a></li>
+                                        <li><a href="/application-services-company-in-pondicherry.php">Application Services</a></li>
+                                        <li><a href="/interactive-development-company-in-pondicherry.php">Interactive Development</a></li>
+                                        <li><a href="/web-application-development-company/">Web Development</a></li>
+                                        <li><a href="/custom-software-development-company/">Custom Software Development</a></li>
+                                        <li><a href="/qa-testing-company-in-pondicherry.php">QA &amp; Testing</a></li>
+                                        <li><a href="/machine-learning-development-company-in-pondicherry.php">Machine Learning</a></li>
+                                        <li><a href="/iot-development-company-in-pondicherry.php">Internet of Things (IoT)</a></li>
+                                        <li><a href="/chatbot-development-company-in-pondicherry.php">Chatbot</a></li>
+                                        <li><a href="/blockchain-development-company-in-pondicherry.php">BlockChain</a></li>
+                                        <li><a href="/saas-development-company/">SaaS Development</a></li>
+                                        <li><a href="/enterprise-software-development/">Enterprise Software</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="haschild "><a>TECHNOLOGY</a>
+                            <div class="wrap-inside-nav">
+                                <div class="inside-col">
+                                    <ul class="inside-nav">
+                                        <li><a href="/ai-development-company-india/">Artificial Intelligence (AI)</a></li>
+                                        <li><a href="/mobile-app-development-company/">Mobile Application</a></li>
+                                        <li><a href="/web-application-development-company/">Web Application</a></li>
+                                        <li><a href="/cloud-services-company/">Cloud</a></li>
+                                        <li><a href="/e-commerce-company-in-pondicherry.php">E-Commerce</a></li>
+                                         <li><a href="/crm-development-company/">CRM</a></li>
+                                         <li><a href="/erp-development-company/">ERP</a></li>
+                                        <li><a href="/open-source-company-in-pondicherry.php">Open Source</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="haschild "><a>INDUSTRIES</a>
+                            <div class="wrap-inside-nav">
+                                <div class="inside-col">
+                                    <ul class="inside-nav">
+                                        <li><a href="/industries/healthcare-software-development/">Healthcare</a></li>
+                                        <li><a href="/industries/retail-software-development/">Retail</a></li>
+                                        <li><a href="/industries/logistics-software-development/">Logistics</a></li>
+                                        <li><a href="/industries/manufacturing-software-development/">Manufacturing</a></li>
+                                        <li><a href="/industries/education-software-development/">Education</a></li>
+                                        <li><a href="/industries/finance-software-development/">Finance</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="haschild "><a>INSIGHTS</a>
+                            <div class="wrap-inside-nav">
+                                <div class="inside-col">
+                                    <ul class="inside-nav">
+                                        <li><a href="/software-development-blog-in-pondicherry.php">Blog</a></li>
+                                        <li><a href="/it-internship-provider-in-pondicherry.php">Internship</a></li>
+                                        <li><a href="/software-company-industrial-visit-pondicherry.php">Industrial Visit</a></li>
+                                        <li><a href="/software-development-case-studies-in-pondicherry.php">Case Studies</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="/contact/" id="cont">CONTACT US</a>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header><!--/.header -->
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js" defer></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+  document.getElementById("navbartogglebtn").addEventListener("click", displayNavbar);
+
+  function displayNavbar() {
+    var element = document.getElementById("home");
+    element.classList.toggle("shownav");
+  }
+</script>
+<script>
+    $(".floated .navbar-nav  li ").on("click", function(i) {
+      $(window).width() <= 768 && ($(this).find(".wrap-inside-nav").toggle().toggleClass("visible"), $(this).toggleClass("uparrow"))
+    });
+  </script>
+  <script>
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  function scrollFunction() {
+    var nav = document.getElementById("nav");
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        nav.style.backgroundColor = "#434343";
+        nav.classList.add("navbar-alt");
+    } else {
+        nav.style.backgroundColor = "transparent";
+        nav.classList.remove("navbar-alt");
+    }
+  }
+
+  function keerthiSeelan() {
+    document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? document.getElementById("myBtn").style.display = "block" : document.getElementById("myBtn").style.display = "none"
+  }
+
+  function aahaSolution() {
+    document.documentElement.scrollTop = 0
+  }
+  window.addEventListener('scroll', function() {
+    scrollFunction();
+    keerthiSeelan();
+  });
+</script>
+  
+  
+</html>    </header>
+    <main id="main-content">
+
+    <div id="bannersection" class="section">
+        <div class="services-banner technologybanner microsoftbg">
+            <div class="container customcontainer">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="color: #fff; opacity: 1;">E-Commerce Platform
+                            <span style="color: #fff; opacity: 1;">A comprehensive online shopping solution to manage products, customers, orders, and sales.</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container relativepos">
+            <div class="btnpositionTop">
+                <a href="/contact/" class="btn redbtn">Talk to our team</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="inner-content" style="padding-bottom: 10px;">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><a href="/software-development-case-studies-in-pondicherry.php">Case Studies</a></li>
+                <li class="active"><a>E-Commerce Platform</a></li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="whiteBg" style="padding:1px 0 60px 0;">
+        <div class="container customcontainer">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="aaha">Case Study: E-Commerce Platform</h2>
+                    <p style="text-align:justify; margin-top:20px;" class="parawidth">
+                        The client required a comprehensive online shopping solution to provide customers with a convenient and engaging digital shopping experience while enabling the business to manage products, customers, inventory, orders, and sales activities from a centralized platform. The existing shopping and product-management activities required a structured digital solution that could bring product discovery, purchasing, order processing, and customer management together in one place.
+                    </p>
+                    <p style="text-align:justify; margin-top:14px;" class="parawidth">
+                        AAHA Solutions developed a web-based E-Commerce Platform designed to streamline the complete online shopping lifecycle. The platform enables customers to browse products, explore categories, search and filter products, manage wishlists and shopping carts, place orders, make payments, and track purchases. It also provides administrators with centralized control over products, categories, inventory, customers, orders, and promotional activities.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Parameters & Results -->
+            <div class="cs-details">
+                <h2 style="font-weight:700; margin-bottom:15px; font-size: 20px;">Project Parameters & Results</h2>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li><strong>Objective</strong>: Provide a complete online shopping platform that simplifies product discovery and purchasing for customers while improving the management of products, inventory, customers, orders, and sales activities for the business.</li>
+                    <li><strong>Solution</strong>: A centralized web-based E-Commerce Platform with product and category management, search and filtering, product details, wishlist and cart functionality, customer accounts, checkout, payment processing, order management, order tracking, reviews and ratings, inventory management, and administrative controls.</li>
+                    <li><strong>Result</strong>: Successfully established a structured digital shopping ecosystem that enables customers to browse and purchase products conveniently while providing the business with better visibility, control, and management of its complete e-commerce operations.</li>
+                </ul>
+            </div>
+
+            <!-- Visual Framework / Platform Mockup -->
+            <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+                <div class="col-md-10 col-md-offset-1 text-center">
+                    <div style="background: #fff; padding: 15px; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                        <img src="../assets/images/ecommerce-platform-preview.jpg" alt="Enterprise E-Commerce Platform Dashboard & Storefront" class="img-responsive" style="margin: 0 auto; max-height: 550px; object-fit: contain; width: 100%; border-radius: 8px;">
+                        <p style="margin-top: 10px; font-size: 13px; color: #888; font-style: italic;">Platform Overview: Enterprise E-Commerce Storefront, Orders &amp; Inventory Management</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Capabilities -->
+            <div class="cs-details" style="margin-top: 30px;">
+                <h2 style="font-weight:700; margin-bottom:15px; font-size: 20px;">Key Capabilities</h2>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li><strong>Customer Shopping Experience</strong>: Provides customers with a structured shopping journey, from discovering products and exploring categories to adding items to their wishlist or cart and completing purchases.</li>
+                    <li><strong>Product Discovery & Categories</strong>: Organizes products into relevant categories and collections, enabling customers to easily browse and discover products based on their interests and requirements.</li>
+                    <li><strong>Product Search & Filtering</strong>: Allows customers to quickly find relevant products using search, categories, price ranges, brands, ratings, discounts, and other product attributes.</li>
+                    <li><strong>Product Details</strong>: Provides comprehensive product information, including images, descriptions, pricing, discounts, ratings, reviews, availability, and product options to support informed purchasing decisions.</li>
+                    <li><strong>Wishlist Management</strong>: Enables customers to save products they are interested in for future purchases without immediately adding them to their shopping cart.</li>
+                    <li><strong>Shopping Cart</strong>: Allows customers to add products, manage quantities, remove items, review prices, and view the total purchase value before proceeding to checkout.</li>
+                    <li><strong>Guest & Registered Shopping</strong>: Supports both guest and registered customers, allowing users to browse products and manage shopping activities before completing the registration or login process.</li>
+                    <li><strong>Customer Account</strong>: Provides customers with a centralized account area to manage personal information, delivery addresses, wishlist items, orders, and other shopping-related activities.</li>
+                    <li><strong>Checkout & Order Placement</strong>: Provides a structured checkout process where customers can confirm delivery details, review selected products, verify pricing, select a payment method, and place orders.</li>
+                    <li><strong>Payment & Order Confirmation</strong>: Supports the purchase process by enabling customers to complete payments and receive confirmation containing relevant order and purchase information.</li>
+                    <li><strong>Order Management & Tracking</strong>: Enables customers to view current and previous orders and monitor order progress through stages such as confirmation, packing, shipping, and delivery.</li>
+                    <li><strong>Returns & Cancellations</strong>: Provides a structured process for eligible customers to request order cancellation or product returns based on applicable business policies.</li>
+                    <li><strong>Product Reviews & Ratings</strong>: Allows customers to provide ratings and reviews after purchasing products, helping other customers make informed purchasing decisions while providing valuable feedback to the business.</li>
+                    <li><strong>Inventory Management</strong>: Enables the business to manage product availability, monitor stock levels, and identify products that require replenishment.</li>
+                    <li><strong>Admin Dashboard</strong>: Provides management with an overview of important e-commerce activities, including products, customers, orders, inventory, and sales-related information.</li>
+                    <li><strong>Product & Category Management</strong>: Enables administrators to add, update, organize, and manage products and categories, including product images, descriptions, pricing, offers, and availability.</li>
+                    <li><strong>Order Management</strong>: Allows administrators to review customer orders, monitor order progress, update order statuses, and manage the overall order fulfillment process.</li>
+                    <li><strong>Customer Management</strong>: Provides administrators with centralized visibility into registered customers, their account information, and purchase activities.</li>
+                    <li><strong>Offers & Promotions</strong>: Supports promotional activities such as discounts, special offers, seasonal campaigns, and featured products to improve customer engagement and encourage sales.</li>
+                    <li><strong>Role-Based Access</strong>: Provides appropriate access levels for customers and administrators, ensuring that users can access the functions relevant to their responsibilities.</li>
+                </ul>
+            </div>
+
+            <!-- Business Impact -->
+            <div class="cs-details" style="margin-top: 30px;">
+                <h2 style="font-weight:700; margin-bottom:15px; font-size: 20px;">Business Impact</h2>
+                <p style="text-align:justify; margin-bottom: 12px;">
+                    The E-Commerce Platform provides the business with a centralized solution for managing the complete online shopping lifecycle, from product presentation and customer engagement through order placement, fulfillment, and post-purchase activities.
+                </p>
+                <p style="text-align:justify; margin-bottom: 12px;">
+                    By bringing product management, inventory, customer management, wishlist, shopping cart, checkout, orders, reviews, and promotional activities into a single platform, the solution reduces fragmented processes and provides better operational visibility, customer convenience, order management, and business control.
+                </p>
+                <p style="text-align:justify; margin-bottom: 12px;">
+                    For customers, the platform creates a convenient and organized shopping experience by allowing them to discover products, compare available options, save products for later, manage purchases, and track orders from a single platform.
+                </p>
+                <p style="text-align:justify; margin-bottom: 12px;">
+                    For the business, the solution provides improved visibility into products, inventory, customers, and orders while establishing a structured foundation for managing and expanding online sales.
+                </p>
+                <p style="text-align:justify; margin-bottom: 0;">
+                    Through this centralized approach, AAHA Solutions helped establish a more organized, customer-focused, efficient, and scalable e-commerce operation, enabling the business to deliver a consistent digital shopping experience while maintaining greater control over its online sales activities.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="aahaSolution()" id="myBtn" title="Go to top">Top</button>
+
+    </main>
+    <footer class="home-footer dark-map" id="contact">
+        <div class="container" itemscope itemtype="https://schema.org/Organization">
+    <meta itemprop="name" content="AAHA Solutions">
+    <meta itemprop="url" content="https://www.aahasolutions.com">
+    <meta itemprop="description" content="AAHA Solutions is an AI Development Company, Software Development Company, and Cloud Consulting Company in Pondicherry, India with an office in the UK.">
+
+    <div class="footer-links" id="footer">
+        <div class="row">
+            <!-- Brand + Socials + Directories -->
+            <div class="col-md-3 col-sm-12 c0" style="text-align:left">
+                <p style="font-weight:700;font-size:17px;color:#fff;margin-bottom:6px;">AAHA Solutions</p>
+                <p style="font-size:13.5px;color:#ccc;line-height:1.6;margin-bottom:14px;">
+                    AI Development Company &bull; Software Development Company &bull; Cloud Consulting Company<br>
+                    Pondicherry, India &bull; UK
+                </p>
+                <ul class="copyright-links list-inline" style="margin-bottom:10px;display:flex;gap:10px;align-items:center;padding:0;list-style:none;">
+                    <li><a href="https://www.facebook.com/AAHAsolutions/" target="_blank" rel="noopener nofollow" aria-label="AAHA Solutions Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#1877F2;text-decoration:none;transition:all .3s;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="#fff" d="M17 2h-3c-2.8 0-5 2.2-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7c0-.6.4-1 1-1h3V2z"/></svg></a></li>
+                    <li><a href="https://www.linkedin.com/company/aaha-solutions-uk-limited" target="_blank" rel="noopener nofollow" aria-label="AAHA Solutions LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#0A66C2;text-decoration:none;transition:all .3s;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="#fff" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM5 8H0v16h5V8zm7.982 0H8.014v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0V24H24V13.869c0-7.88-8.922-7.593-11.018-3.714V8z"/></svg></a></li>
+                    <li><a href="https://twitter.com/SolutionsAaha" target="_blank" rel="noopener nofollow" aria-label="AAHA Solutions X Twitter" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#1a1a1a;text-decoration:none;transition:all .3s;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="#fff" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.738-8.835L1.254 2.25H8.08l4.253 5.622 5.912-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+                    <li><a href="https://www.instagram.com/aaha_solutions?igsh=anQ3bzZ1eW9oanNu" target="_blank" rel="noopener nofollow" aria-label="AAHA Solutions Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);text-decoration:none;transition:all .3s;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="#fff" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></li>
+                </ul>
+                <a href="/contact/" class="contact-link" rel="nofollow" style="display:inline-block;margin-top:10px;">Contact Us</a><br><br>
+                <p style="font-size:12px;color:#aaa;">Company No. 06889040</p>
+                <p style="font-size:12px;color:#aaa;">SIC 62020 – IT Consultancy</p>
+            </div>
+
+            <!-- About -->
+            <div class="col-md-1 col-sm-12 p0">
+                <h5>About</h5>
+                <ul>
+                    <li><a href="software-developement-company-in-pondicherry.php" rel="nofollow">About Us</a></li>
+                    <li><a href="software-careers-in-pondicherry.php" rel="nofollow">Careers</a></li>
+                    <li><a href="/contact/" rel="nofollow">Contact Us</a></li>
+                    <li><a href="/software-development-blog-in-pondicherry.php" rel="nofollow">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-md-2 col-sm-12">
+                <h5>Services &amp; Support</h5>
+                <ul>
+                    <li><a href="/ai-development-company-india/">AI Development</a></li>
+                    <li><a href="/saas-development-company/">SaaS Development</a></li>
+                    <li><a href="/cloud-services-company/">Cloud Services</a></li>
+                    <li><a href="/web-application-development-company/">Web Development</a></li>
+                    <li><a href="/custom-software-development-company/">Custom Software</a></li>
+                    <li><a href="/mobile-app-development-company/">Mobile App</a></li>
+                    <li><a href="/erp-development-company/">ERP Development</a></li>
+                    <li><a href="/crm-development-company/">CRM Development</a></li>
+                    <li><a href="qa-testing-company-in-pondicherry.php">QA &amp; Testing</a></li>
+                    <li><a href="machine-learning-development-company-in-pondicherry.php">Machine Learning</a></li>
+                </ul>
+            </div>
+
+            <!-- Industries -->
+            <div class="col-md-2 col-sm-12">
+                <h5>Industries &amp; Technologies</h5>
+                <ul>
+                    <li><a href="/ai-development-company-india/">Artificial Intelligence (AI)</a></li>
+                    <li><a href="/industries/healthcare-software-development/">Healthcare</a></li>
+                    <li><a href="/industries/retail-software-development/">Retail</a></li>
+                    <li><a href="/industries/logistics-software-development/">Logistics</a></li>
+                    <li><a href="/industries/manufacturing-software-development/">Manufacturing</a></li>
+                    <li><a href="/industries/education-software-development/">Education</a></li>
+                    <li><a href="/industries/finance-software-development/">Finance</a></li>
+                    <li><a href="e-commerce-company-in-pondicherry.php">E-Commerce</a></li>
+                    <li><a href="iot-development-company-in-pondicherry.php">IoT</a></li>
+                    <li><a href="blockchain-development-company-in-pondicherry.php">Blockchain</a></li>
+                </ul>
+            </div>
+
+            <!-- UK Office -->
+            <div class="col-md-2 col-sm-12 p0" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                <h5>UNITED KINGDOM</h5>
+                <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal;">
+                    <p itemprop="streetAddress">54 HollyHill Road,</p>
+                    <p><span itemprop="addressLocality">Erith</span>, <span itemprop="postalCode">DA8 1QD</span>.</p>
+                    <p itemprop="telephone"><a href="tel:+447438661112" style="color:inherit;">+44 7438661112</a></p>
+                </address>
+            </div>
+
+            <!-- India HQ Office -->
+            <div class="col-md-2 col-sm-12 p0" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                <h5>INDIA</h5>
+                <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal;">
+                    <p itemprop="streetAddress">No.27, 3rd Cross, Brindavan,</p>
+                    <p><span itemprop="addressLocality">Puducherry</span> – Pondicherry,</p>
+                    <p><span itemprop="postalCode">605 013</span>.</p>
+                    <p itemprop="telephone"><a href="tel:+918098299921" style="color:inherit;">+91 8098299921</a></p>
+                    <p><a href="mailto:info@aahasolutions.com" style="color:#82C341;font-size:14.5px;font-weight:600;">info@aahasolutions.com</a></p>
+                </address>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright-alt">
+        <div id="snackbar"></div>
+        <div id="snackbar1"></div>
+        <div class="ftr-strip">
+            <p class="lnk"><a href="/privacy-policy/" rel="nofollow" style="color:inherit;">Privacy Policy</a></p>
+            <p class="" id="aaha-secret-trigger" style="cursor:default;user-select:none" title="">
+                Copyright &copy; 2026 AAHA Solutions – AI Development Company | Software Development Company | Cloud Consulting Company. Pondicherry, India.
+            </p>
+            <script>
+            (function(){
+              var el=document.getElementById('aaha-secret-trigger'),clicks=0,t;
+              el.addEventListener('click',function(){
+                clicks++;
+                clearTimeout(t);
+                if(clicks>=3){window.location.href='/admin/blog/index.php';clicks=0;return;}
+                t=setTimeout(function(){clicks=0;},600);
+              });
+            })();
+            </script>
+        </div>
+    </div>
+</div>
+
+<script>
+window.addEventListener('load', function() {
+  function initFAQ(accordionId) {
+    var accordion = document.getElementById(accordionId);
+    if (!accordion) return;
+    
+    var items = accordion.querySelectorAll('.panel');
+    items.forEach(function(item) {
+      var trigger = item.querySelector('a[data-toggle="collapse"]');
+      var targetId = trigger ? (trigger.getAttribute('href') || trigger.getAttribute('data-target')) : null;
+      var target = targetId ? item.querySelector(targetId) : null;
+      var chevron = trigger ? trigger.querySelector('.fa-chevron-down') : null;
+      
+      if (trigger && target) {
+        // Initialize state: all collapsed by default
+        trigger.classList.add('collapsed');
+        target.classList.remove('in');
+        target.style.display = 'none';
+        if (chevron) {
+          chevron.style.transform = 'none';
+        }
+        
+        // Remove existing event listeners by cloning the trigger
+        var newTrigger = trigger.cloneNode(true);
+        trigger.parentNode.replaceChild(newTrigger, trigger);
+        
+        newTrigger.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          var isCollapsed = newTrigger.classList.contains('collapsed');
+          
+          // Collapse all other items in this accordion
+          items.forEach(function(otherItem) {
+            var otherTrigger = otherItem.querySelector('a[data-toggle="collapse"]');
+            var otherTargetId = otherTrigger ? (otherTrigger.getAttribute('href') || otherTrigger.getAttribute('data-target')) : null;
+            var otherTarget = otherTargetId ? otherItem.querySelector(otherTargetId) : null;
+            var otherChevron = otherTrigger ? otherTrigger.querySelector('.fa-chevron-down') : null;
+            
+            if (otherTrigger && otherTarget && otherTrigger !== newTrigger) {
+              otherTrigger.classList.add('collapsed');
+              otherTarget.classList.remove('in');
+              if (window.jQuery) {
+                jQuery(otherTarget).slideUp(200);
+              } else {
+                otherTarget.style.display = 'none';
+              }
+              if (otherChevron) {
+                otherChevron.style.transform = 'none';
+              }
+            }
+          });
+          
+          var curChevron = newTrigger.querySelector('.fa-chevron-down');
+          if (isCollapsed) {
+            newTrigger.classList.remove('collapsed');
+            target.classList.add('in');
+            if (window.jQuery) {
+              jQuery(target).slideDown(200);
+            } else {
+              target.style.display = 'block';
+            }
+            if (curChevron) {
+              curChevron.style.transform = 'rotate(180deg)';
+            }
+          } else {
+            newTrigger.classList.add('collapsed');
+            target.classList.remove('in');
+            if (window.jQuery) {
+              jQuery(target).slideUp(200);
+            } else {
+              target.style.display = 'none';
+            }
+            if (curChevron) {
+              curChevron.style.transform = 'none';
+            }
+          }
+        });
+      }
+    });
+  }
+  
+  initFAQ('faq-accordion');
+  initFAQ('service-faq');
+});
+</script>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="40">
+  <!-- Top small cube -->
+  <polygon points="65,12 79,20 65,28 51,20" fill="#FF2D20"/>
+  <polygon points="51,20 65,28 65,43 51,35" fill="#E6281B"/>
+  <polygon points="65,28 79,20 79,35 65,43" fill="#CC2317"/>
+  
+  <!-- Main L-shaped isometric block -->
+  <polygon points="35,24 49,32 35,40 21,32" fill="#FF2D20"/>
+  <polygon points="21,32 35,40 35,70 21,62" fill="#E6281B"/>
+  <polygon points="35,70 65,53 79,61 49,78 35,70" fill="#E6281B"/>
+  <polygon points="35,40 49,32 49,61 79,44 79,61 49,78 35,70" fill="#CC2317"/>
+</svg>
